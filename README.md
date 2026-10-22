@@ -1,5 +1,7 @@
 # Horizons ’77
 
+[Read the magazine →](https://anselm.github.io/tenerife-horizons-77/)
+
 A 36-page alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German.
 
 The complete issue is one continuous numbered sequence. Printed “see page…” references work quietly as links. Viewer controls sit outside the magazine paper. All articles, translations, atlas annotations and conference inserts appear in the reading flow.
@@ -16,7 +18,7 @@ Then visit `http://127.0.0.1:8777`. No build, dependencies, accounts or external
 
 ## GitHub Pages
 
-In repository **Settings → Pages**, choose **Deploy from a branch**, then **main** and **/ (root)**. The site uses relative asset paths and works as a project page. Pages hosting is not enabled by this commit.
+The magazine is published at [anselm.github.io/tenerife-horizons-77](https://anselm.github.io/tenerife-horizons-77/). GitHub Pages serves the `main` branch from the repository root; pushed changes update the site automatically.
 
 ## Reading order
 
