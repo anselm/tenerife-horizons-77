@@ -35,3 +35,35 @@ html{scroll-behavior:auto}
 @media(max-width:760px){.alexander-opening .sheet-title h1{font-size:44px}.alexander-plate img{height:240px;object-position:42% 50%}.alexander-continuation .alexander-prose{font-size:19px;line-height:1.7}.alexander-revelation{font-size:34px}.pattern-schedule>p{font-size:13px}}
 @media print{.alexander-plate img{height:48mm}.alexander-prose,.alexander-continuation .alexander-prose{font-size:10pt;line-height:1.5}.alexander-opening .sheet-title h1{font-size:32pt}.alexander-revelation{font-size:21pt}.pattern-schedule{break-inside:avoid}}
 @media(min-width:761px){.alexander-plate img{height:400px;object-position:center 45%}}
+
+/* A folded sheet of aged stock: crease, oxidation and paper fibres. */
+.mag-sheet{
+  background-color:#e6d4a5;
+  background-image:
+    linear-gradient(90deg,#95632935 0%,#b6893e12 2%,transparent 7%,transparent 93%,#b6893e16 98%,#80572830 100%),
+    radial-gradient(ellipse at 18% 7%,#f9efcd66 0%,transparent 46%),
+    radial-gradient(ellipse at 88% 94%,#9a69231b 0%,transparent 50%);
+  box-shadow:0 1px 2px #27221777,0 10px 25px #28261c40,inset 0 0 55px #88612f24;
+  isolation:isolate;
+}
+.mag-sheet:before{
+  content:'';position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 46.8%,#72532706 48.3%,#68482012 49.55%,#543d202c 49.94%,#fff5d253 50.08%,#fff4cf1b 50.6%,#77552709 51.8%,transparent 54%),
+    linear-gradient(180deg,#85602b18 0%,transparent 3%,transparent 97%,#85602b20 100%);
+  mix-blend-mode:multiply;
+}
+.mag-sheet:after{
+  opacity:.105;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72 .91' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='.7'/%3E%3C/svg%3E");
+}
+.mag-sheet:nth-child(3n+2){background-color:#e7d7ad}
+.mag-sheet:nth-child(4n){background-color:#e3d0a0}
+@media(max-width:760px){
+  .mag-sheet:before{opacity:.65}
+  .mag-sheet:after{opacity:.085}
+}
+@media print{
+  .mag-sheet{background:#f4ecd8;box-shadow:none}
+  .mag-sheet:before,.mag-sheet:after{display:none}
+}
