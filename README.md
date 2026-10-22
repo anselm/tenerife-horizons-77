@@ -54,3 +54,14 @@ The Alexander essay, coastal excursion, revelation and influence on the completi
 Cousteau, Goodall and Gilliam conference features are original alternative-history fiction grounded in their 1977 work. All visits, conversations and Tenerife influences are invented; historical sources are linked in the final edition notes.
 
 The horse photograph was supplied for this edition and is a contemporary image, not a recovered 1977 photograph.
+
+## Development log
+
+Dated snapshots across the project’s two working years. The 2025 entries were reconstructed on October 22, 2026 from the surviving conversation; the 2026 entries record the resumed build.
+
+- [2025-03-30 — An island is a beginning](devlog/20250330-an-island-is-a-beginning.md)
+- [2025-03-30 — Specific islands and a common sea](devlog/20250330-specific-islands-and-a-common-sea.md)
+- [2026-10-22 — From retrospective to magazine](devlog/20261022-from-retrospective-to-magazine.md)
+- [2026-10-22 — People at the table](devlog/20261022-people-at-the-table.md)
+- [2026-10-22 — The island through lived experience](devlog/20261022-the-island-through-lived-experience.md)
+- [2026-10-22 — First edition and contributors](devlog/20261022-first-edition-and-contributors.md)
