@@ -76,3 +76,8 @@ html{scroll-behavior:auto}
 .sheet-illustration>img.observatory-plate{height:360px;object-position:center 47%}
 @media(max-width:760px){.sheet-illustration>img.observatory-plate{height:230px}}
 @media print{.sheet-illustration>img.observatory-plate{height:48mm}}
+
+.sheet-illustration>img.coast-plate{height:360px;object-position:center 52%}
+@media(max-width:760px){.sheet-illustration>img.coast-plate{height:240px}}
+@media print{.sheet-illustration>img.coast-plate{height:48mm}.place-memory{break-inside:avoid}}
+@media(min-width:761px){.sheet-illustration>img.coast-plate{height:460px;object-position:center 20%}}
