@@ -57,11 +57,29 @@ The horse photograph was supplied for this edition and is a contemporary image, 
 
 ## Development log
 
-Dated snapshots across the project’s two working years. The 2025 entries were reconstructed on October 22, 2026 from the surviving conversation; the 2026 entries record the resumed build.
+Small steps through the project, grouped by year and numbered in reading order. Numbers mark the narrative sequence, not months or separate workdays. The original conversation began March 30, 2025; the web edition was built October 22, 2026. These notes were assembled on October 22, 2026 from the surviving conversation and repository history. No activity is implied in the intervening gap.
 
-- [2025-03-30 — An island is a beginning](devlog/20250330-an-island-is-a-beginning.md)
-- [2025-03-30 — Specific islands and a common sea](devlog/20250330-specific-islands-and-a-common-sea.md)
-- [2026-10-22 — From retrospective to magazine](devlog/20261022-from-retrospective-to-magazine.md)
-- [2026-10-22 — People at the table](devlog/20261022-people-at-the-table.md)
-- [2026-10-22 — The island through lived experience](devlog/20261022-the-island-through-lived-experience.md)
-- [2026-10-22 — First edition and contributors](devlog/20261022-first-edition-and-contributors.md)
+### 2025
+
+- [01 · An island is a beginning](devlog/2025/01-an-island-is-a-beginning.md)
+- [02 · Specific islands and a common sea](devlog/2025/02-specific-islands-and-a-common-sea.md)
+
+### 2026
+
+- [01 · Returning to the magazine](devlog/2026/01-returning-to-the-magazine.md)
+- [02 · An object from another timeline](devlog/2026/02-an-object-from-another-timeline.md)
+- [03 · One continuous issue](devlog/2026/03-one-continuous-issue.md)
+- [04 · Fifty years ahead](devlog/2026/04-fifty-years-ahead.md)
+- [05 · Restoring the fold](devlog/2026/05-restoring-the-fold.md)
+- [06 · A home for the issue](devlog/2026/06-a-home-for-the-issue.md)
+- [07 · The village that built us](devlog/2026/07-the-village-that-built-us.md)
+- [08 · People at the table](devlog/2026/08-people-at-the-table.md)
+- [09 · The sky, by lift](devlog/2026/09-the-sky-by-lift.md)
+- [10 · An afternoon without a shore](devlog/2026/10-an-afternoon-without-a-shore.md)
+- [11 · The place teaches](devlog/2026/11-the-place-teaches.md)
+- [12 · A future of his own](devlog/2026/12-a-future-of-his-own.md)
+- [13 · Less detail, more print](devlog/2026/13-less-detail-more-print.md)
+- [14 · Keeping the sea in its time](devlog/2026/14-keeping-the-sea-in-its-time.md)
+- [15 · Whose future?](devlog/2026/15-whose-future.md)
+- [16 · First edition](devlog/2026/16-first-edition.md)
+- [17 · Contributors](devlog/2026/17-contributors.md)
