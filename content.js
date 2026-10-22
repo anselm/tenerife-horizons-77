@@ -167,3 +167,56 @@ const alexanderEssay = {
  ]}
  ]
 };
+
+const cousteauArticle = {
+ id:'cousteau',tag:'CINÉMA / THE LIVING SEA',
+ title:'A window long enough to care',
+ subtitle:'Jacques-Yves Cousteau leaves Tenerife with the beginnings of a new odyssey.',
+ author:'Lucien Morel · Television notebook',language:'EN + FR',art:'observatory',
+ body:[
+ 'At the ocean workshop, the most consequential drawing was not the submarine tram. It was a room with somewhere to sit. Beyond its curved window lay a stretch of seabed; inside, a bench, a table and the possibility of remaining. Cousteau stayed beside this drawing after the discussion had moved on. By the end of the conference it had become the first scene in a new television proposal.',
+ 'He had arrived with a lifetime of looking beneath the surface already behind him. His underwater-house experiments had made the seabed a place where people could work and remain. His films had brought that world into homes far from any coast. What Tenerife offered was a different company around the window: architects discussing the shape of attention, painters interested in the changing light, musicians asking what could be heard when the room fell quiet.',
+ 'The proposed habitat would receive small groups of artists, naturalists and neighbours. Its viewing platforms were places to return to, at different hours, until the apparently empty patch of rock became a place of recognisable lives. A fish which crossed the window each morning could become more than an example of its species. The observer might begin to notice its absences. The architecture had provided enough time for a relation to form.',
+ 'This was the impulse Cousteau carried into the new series, The Cousteau Odyssey. The camera would still travel with Calypso, follow a difficult dive and enter the mysteries of a wreck. But the conference had given the journey another centre: the patient encounter, and the passage from admiration to affection. A television set could become a temporary room beneath the water, with a whole family gathered at its window.',
+ 'On peut montrer la mer comme une succession de merveilles. On peut aussi laisser au spectateur le temps de rencontrer une vie. Une fenêtre, un peu de silence, le retour d’un même poisson: l’étonnement devient attention, puis attachement. Le film commence lorsque nous cessons de demander à la mer de nous distraire.',
+ 'In the viewing-room study, art was part of learning to stay. A drawing took longer than a glance. A composer listening through a hydrophone might hear a pattern which the visitor had dismissed as background. The shared work could travel back to the surface as a film, a score, a page of marks. The few people who descended would make something for the many who could not. Compassion might pass through those forms without becoming an instruction.',
+ 'The Cousteau Society, founded in 1973, gives this new resolve a life beyond the screen. The work of witnessing pollution, making it visible and pressing for its reduction belongs beside the work of making a film. The short films of Oasis in Space place the sea within a larger living world. Here in Tenerife, these strands have found a common table. The habitat is an observatory, a studio and a small school of concern; the broadcasts carry its windows into other rooms.',
+ 'The hospital ship Britannic and other submerged histories will draw viewers towards the new odyssey. Around those histories, the sea continues its own affairs. A wreck is also a place where creatures shelter, feed and begin again. The workshop’s departing thought is that a film can hold both kinds of attention: the grief and curiosity of human memory, and the independent lives which have made a home beside it. The sea need not become useful to us before it deserves our care.'
+ ],
+ note:'TELEVISION NOTICE / 22 NOVEMBER 1977. The Cousteau Odyssey begins on KCET. From the workshop notebook: let a scene last long enough for its inhabitants to stop being scenery.'
+};
+
+const goodallArticle = {
+ id:'goodall',tag:'CONSERVATION / LA VIDA EN COMÚN',
+ title:'A place for other lives',
+ subtitle:'Jane Goodall, a new institute, and the forest beyond the conference table.',
+ author:'Elena Suárez · From the common table',language:'EN + ES',art:'fieldnotes',
+ body:[
+ 'There is a moment in the housing discussion when Jane Goodall draws beyond the edge of the plan. The architect has marked a house, a garden and a place for neighbours to meet. Her pencil follows a line out of the garden and into the trees. The drawing has acquired inhabitants who will never be issued a delegate’s pass.',
+ 'Goodall brings to Tenerife the long attention of Gombe, where her study of wild chimpanzees began in 1960. It is an attention to particular lives, continued across years: relationships, habits, departures and returns. At the ocean workshop, she recognises something familiar in the proposal to remain beside a window until an animal ceases to be an anonymous part of the view. The window looks into the sea; the obligation of looking continues far beyond it.',
+ 'In the conversations which follow, the idea of an institute becomes a practical form for that obligation. A field notebook can preserve an observation. An organisation might preserve the conditions in which the next observation can be made: a research station, a living forest, the time of the people doing the work. The Jane Goodall Institute, founded in the United States this year, carries the discussions away from Tenerife with a larger horizon than any single expedition.',
+ 'The conference helps make its purpose tangible. Research needs continuity, and continuity needs friends who can act at a distance. A teacher, a donor, a person making a film and a neighbour living beside the forest can each sustain a different part of the work. The problem is how to connect them without allowing the distant committee to become more important than the place it exists to serve.',
+ 'La vida de un animal no empieza cuando lo vemos ni termina cuando apartamos la mirada. El bosque continúa detrás de la fotografía. También continúan las vidas de quienes habitan cerca de él. Una institución que quiera cuidar ese lugar tendrá que aprender a escuchar en más de una dirección.',
+ 'At the common table, this becomes a proposal for conservation with people rather than around them. The knowledge and decisions of neighbouring communities must help shape the work. The forest cannot be protected for long by treating its human neighbours as an inconvenience; nor can its other inhabitants be reduced to a resource which earns its place by paying for itself. Both errors begin by leaving somebody out of the drawing.',
+ 'Goodall’s account of chimpanzee life also prevents an easy sentimental conclusion. Kinship does not depend on finding our neighbours in the forest endlessly gentle, or conveniently like ourselves. A creature has a life of its own, including purposes we may find difficult to understand. Care has to survive that discovery. The institute’s task is large enough to hold patient research, education and protection together, without requiring a comforting picture at every turn.',
+ 'By the final afternoon, the architect has redrawn the boundary of the original plan. It now shows where the garden ends, where a path continues and where the trees are to remain. There is no ceremonial unveiling. A little more of the world has been allowed to stay in the picture. It is the kind of change an institute might spend a lifetime learning to make.'
+ ],
+ note:'FROM THE COMMON TABLE / 1977. Keep the fieldwork continuous. Let the people closest to a place help decide its care. Make room in the account for lives which cannot attend the meeting.'
+};
+
+const gilliamArticle = {
+ id:'gilliam',tag:'CINÉMA / WORLDS IN THE MAKING',
+ title:'A future with fingerprints',
+ subtitle:'Terry Gilliam, after Jabberwocky, among the drawings of tomorrow.',
+ author:'Lucien Morel · Film desk',language:'EN',art:'storyboard',
+ body:[
+ 'The future has been drawn very carefully. The floor is clean, the chairs agree with one another, and the person beside the window appears to have no possessions which the architect has not approved. Terry Gilliam studies the perspective for some time. His contribution is a small mark beside the entrance: a place to leave something muddy.',
+ 'He comes to Tenerife in the year of Jabberwocky, his first feature as sole director after sharing the direction of Monty Python and the Holy Grail with Terry Jones in 1975. The new film makes a world out of weight, wear, crowding and inconvenient bodies. Its medieval streets have been lived in before the story arrives. The conference, meanwhile, is drawing streets whose inhabitants have scarcely been allowed to enter.',
+ 'The encounter proves useful to both sides. An architectural perspective can show a room in which life is possible. A film asks what happens when somebody actually lives there: where the coat falls, which door sticks, how a person carrying a tray gets past a person carrying a grievance. A world acquires conviction through the small negotiations its design cannot entirely settle.',
+ 'At the housing table, the communal kitchen becomes a scene. The wide view is handsome, but the closer view needs a place to put down a hot pan while somebody looks for the right cupboard. The machine-room drawing acquires a panel large enough to remove. The perfect terrace is given a chair which belongs to a person rather than to the composition. These alterations do not diminish the proposal. They make its future easier to believe.',
+ 'Gilliam’s own transition is part of the conversation. A film can begin inside a familiar company and still need to find a shape which belongs to it alone. The island workshops recognise this difficulty. They are trying to make new forms of living without pretending that their inhabitants will arrive without histories, habits, foolishness or private dreams.',
+ 'What he takes away from Tenerife is the possibility that an invented world might do more than expose the absurdity of the present. It might make another arrangement imaginable. What the planners take from his company is permission to let their arrangements become particular. A common room can hold kindness and an awkward silence. A useful machine may look as though someone has had to reach inside it. Even a better future will have a back door.',
+ 'As the drawings are packed, a few of the people in them have ceased to stand politely at the edge. One is busy. Another has moved a chair. The building has begun to accommodate a life which is not entirely under its author’s control. This seems a promising condition in which to leave it.'
+ ],
+ note:'FROM THE FILM DESK / 1977. Three views of the same proposal: the room before its inhabitants arrive; the room in use; the room being repaired. Keep all three in the drawing set.'
+};
