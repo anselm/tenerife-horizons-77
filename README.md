@@ -43,7 +43,7 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 | 43–44 | Closing editorial |
 | 45 | Edition notes and provenance |
 
-The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See page 45 and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` for provenance.
+The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See page 45 and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` and `COAST-NOTEBOOK-ART-V2.txt` for provenance.
 
 Conceived in a 2025 conversation; digital edition made in October 2026.
 
