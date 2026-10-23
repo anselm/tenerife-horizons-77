@@ -83,3 +83,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [15 · Whose future?](devlog/2026/15-whose-future.md)
 - [16 · First edition](devlog/2026/16-first-edition.md)
 - [17 · Contributors](devlog/2026/17-contributors.md)
+- [18 · The fool’s privilege](devlog/2026/18-the-fools-privilege.md)
