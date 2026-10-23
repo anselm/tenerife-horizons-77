@@ -89,3 +89,8 @@ html{scroll-behavior:auto}
 .nursery-art{background:#d7c99f;color:#3e5140;padding:30px 34px;text-align:center;border:1px solid #8b916d}.nursery-art small{font:10px Arial,sans-serif;letter-spacing:2px}.seedling-row{font:100px Georgia,serif;line-height:1.3;color:#546442}.nursery-art p{font:11px Arial,sans-serif;letter-spacing:3px}.nursery-art em{font:22px Georgia,serif}.rahman-page .sheet-prose{margin-top:35px}
 
 .nursery-art{height:100%;box-sizing:border-box;padding:16px 24px}.seedling-row{font-size:0;line-height:1;margin:8px 0}.nursery-art p{margin:6px 0}.nursery-art em{font-size:18px}
+
+/* Compose paragraphs without a stranded final word; balance display copy. */
+.mag-sheet p,.mag-sheet dd,.contents-entry strong{text-wrap:pretty}
+.sheet-title h1,.continuation-title h2,.sheet-deck,.cover-deck{text-wrap:balance}
+.paragraph-ending{white-space:nowrap;hyphens:none}

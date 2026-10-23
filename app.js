@@ -44,6 +44,21 @@ function addHorse(){
  const a=horseArticle;
  addSheet('horse',a.title,'horse-page',`<div class="sheet-title"><span class="eyebrow">VIDA COMPARTIDA / WORKING TOGETHER</span><h1>${a.title}</h1><p class="sheet-deck">${a.subtitle}</p><div class="sheet-byline">From an island notebook</div></div><div class="horse-layout"><figure class="horse-plate"><img src="assets/andalusian-stallion.jpg" alt="Pale Andalusian stallion grazing, with a long mane and golden tail"><figcaption>EL CABALLO / TENERIFE</figcaption></figure><div class="horse-prose">${a.body.map(p=>`<p>${p}</p>`).join('')}</div></div><p class="printed-crossref" data-crossref="goodall"></p>`);
 }
+function composeParagraphEndings(){
+ // Keep a short closing pair together while allowing the rest to reflow.
+ // Work on the final text node so inline links and language markup survive.
+ main.querySelectorAll('.sheet-prose p,.horse-prose p,.workshop-note p,.colophon-text p,.island-notes p,.insert-body>p').forEach(p=>{
+  if(p.textContent.trim().length<70)return;
+  const walker=document.createTreeWalker(p,NodeFilter.SHOW_TEXT);
+  let node,last;while(node=walker.nextNode())if(node.textContent.trim())last=node;
+  if(!last||last.parentElement.closest('.paragraph-ending'))return;
+  const match=last.textContent.match(/(\S+\s+\S+)(\s*)$/u);
+  if(!match||match[1].length>24)return;
+  const ending=last.splitText(match.index);
+  const span=document.createElement('span');span.className='paragraph-ending';
+  ending.replaceWith(span);span.append(ending);
+ });
+}
 function buildIssue(){
  home();
  const cover=document.querySelector('.magazine-cover').innerHTML;
@@ -87,6 +102,7 @@ function buildIssue(){
   a.setAttribute('href',`#page/${n}`);
   if(!a.closest('.printed-contents'))a.textContent=`See page ${n}`;
  });
+ composeParagraphEndings();
  const coverEl=document.querySelector('.mag-sheet.cover');
  coverEl.querySelectorAll('.cover-bottom a').forEach(a=>{const n=Number(a.hash.split('/')[1]);const target=sheets[n-1];a.innerHTML=`${target.title}<span class="cover-page-ref">See page ${n}</span>`;});
  const editionLink=main.querySelector('.edition-notes .text-link');if(editionLink)editionLink.textContent='Cover, page 1';
