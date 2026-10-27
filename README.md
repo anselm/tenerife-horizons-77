@@ -6,6 +6,20 @@ A 48-page alternative-history magazine assembled at the close of an imagined Ten
 
 The complete issue is one continuous numbered sequence. Printed “see page…” references work quietly as links. Viewer controls sit outside the magazine paper. All articles, translations, atlas annotations and conference inserts appear in the reading flow.
 
+## Print today
+
+A separate **52-page Letter print edition**, with clean white pages and fixed
+pagination, is ready for small-run printing. The complete 48-sheet web edition
+is unchanged.
+
+- [Reader-order PDF — preferred for a print shop](output/pdf/Horizons-77-print-letter.pdf)
+- [Already-imposed 11 × 17 booklet PDF](output/pdf/Horizons-77-booklet-tabloid.pdf)
+- [Print instructions for twelve copies](output/pdf/PRINTING.txt)
+
+Finished size: 8.5 × 11 inches. Folded booklet: 13 tabloid sheets per copy.
+Choose **one** PDF workflow; do not apply booklet mode to the imposed file.
+Ask for a folded duplex proof before the run. See [print source notes](print/README.md).
+
 ## View locally
 
 Open `index.html`, or serve this folder:
@@ -85,3 +99,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [17 · Contributors](devlog/2026/17-contributors.md)
 - [18 · The fool’s privilege](devlog/2026/18-the-fools-privilege.md)
 - [19 · Paragraph endings](devlog/2026/19-paragraph-endings.md)
+- [20 · A copy to carry](devlog/2026/20-a-copy-to-carry.md)
