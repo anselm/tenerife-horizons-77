@@ -148,3 +148,15 @@ footer{max-width:1500px;color:#e4d1aa;font-family:var(--sans)}
 
 .mag-sheet .sheet-illustration>img:not(.study-plate){height:auto;max-height:none;width:100%;object-fit:contain}.mag-sheet .alexander-plate img{height:auto;max-height:none}
 @media(min-width:1101px) and (max-width:1399px){.mag-sheet .sheet-prose{text-align:left}}
+
+/* Softer, less regular display lettering; retain the quieter text faces. */
+@font-face{font-family:H77Display;src:url('assets/fonts/HorizonsDisplay-Soft.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:H77Display;src:url('assets/fonts/HorizonsDisplay-SoftItalic.ttf') format('truetype');font-weight:400 700;font-style:italic;font-display:swap}
+:root{--display:H77Display,H77Bookman,serif}
+.mag-sheet .sheet-title h1{letter-spacing:-1.6px;line-height:1.01}
+.mag-sheet .continuation-title h2{font-family:H77Bookman,serif;font-weight:400;letter-spacing:-1px}
+.contents-entry strong{font-family:H77Bookman,serif}
+.mag-sheet figure{display:block;position:relative}
+.mag-sheet figure>figcaption{display:block;position:static;float:none;clear:both;text-align:left;margin:8px 0 0;max-width:100%;font:8px/1.35 var(--sans);letter-spacing:.7px}
+.workshop-leaf figure>figcaption{font-size:7px;margin-top:7px}
+.mag-sheet .sheet-title h1{letter-spacing:-.65px}header .brand{letter-spacing:-.8px}.mag-sheet.cover .cover-masthead{letter-spacing:-3px}

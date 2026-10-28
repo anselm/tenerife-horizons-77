@@ -108,3 +108,19 @@ const workshopLeaves = {
     "text": "Isabel Martín, one of the interpreters, turns the three proposals back towards the people listening. She asks each table to name one thing it would change after hearing the local respondents. The answers are written beneath the drawings, in a different hand. A proposal should be able to carry the trace of a person who disagreed with it."
   }
 };
+
+const plateCaptions={
+ 'study-section':'CORTE ESQUEMÁTICO / DEL MAR A LAS CUMBRES / NO A ESCALA',
+ 'study-wind':'VIENTO, SOMBRA Y AGUA / ESTUDIOS DE ORIENTACIÓN',
+ 'study-calendar':'LA MESA COMÚN / HORARIO DE TRABAJO',
+ 'study-court':'PIANTA DI UNA CORTE COMUNE / ESTUDIO DE UMBRALES',
+ 'study-cycle':'GENERATION UND BEDARF / TAGESBILANZ',
+ 'study-scales':'FORMA, MEMORIA, SISTEMA / TRES ESCALAS DE ATENCIÓN',
+ 'terrace':'TALLER DE ARQUITECTURA / COCINA Y TERRAZA COMPARTIDAS',
+ 'landscape':'TALLER DE ARQUITECTURA / COCINA Y TERRAZA COMPARTIDAS',
+ 'coast':'MONTAÑA AMARILLA / CUADERNO DE COSTA',
+ 'observatory':'SALA DE OBSERVACIÓN / ATELIER DU REGARD',
+ 'habitat':'HABITAT LITTORAL / CORTE DE TRABAJO / NO A ESCALA',
+ 'airlift':'ASCENSOS SUCESIVOS / DIAGRAMA DEL PRINCIPIO',
+ 'storyboard':'LA MISMA HABITACIÓN / ANTES, EN USO, EN REPARACIÓN'
+};

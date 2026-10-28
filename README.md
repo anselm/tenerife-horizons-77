@@ -102,3 +102,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [19 · Paragraph endings](devlog/2026/19-paragraph-endings.md)
 - [20 · A copy to carry](devlog/2026/20-a-copy-to-carry.md)
 - [21 · Typeset as a magazine](devlog/2026/21-typeset-as-a-magazine.md)
+- [22 · Lettering and captions](devlog/2026/22-lettering-and-captions.md)

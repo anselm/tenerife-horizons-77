@@ -5,7 +5,7 @@ const context={document:{querySelector:()=>({})}};vm.createContext(context);
 vm.runInContext(fs.readFileSync(root+'/content.js','utf8'),context);
 vm.runInContext(fs.readFileSync(root+'/workshop-leaves.js','utf8'),context);
 let app=fs.readFileSync(root+'/app.js','utf8');app=app.slice(0,app.indexOf("main.setAttribute('tabindex'"));vm.runInContext(app,context);
-const data=vm.runInContext('({workshopLeaves,articles,editorialTranslations,alexanderEssay,cousteauArticle,goodallArticle,gilliamArticle,coastArticle,horseArticle,maathaiArticle,rahmanArticle,islands,docs,habitat,airlift})',context);
+const data=vm.runInContext('({plateCaptions,workshopLeaves,articles,editorialTranslations,alexanderEssay,cousteauArticle,goodallArticle,gilliamArticle,coastArticle,horseArticle,maathaiArticle,rahmanArticle,islands,docs,habitat,airlift})',context);
 let match=app.match(/function colophon\(\)\{main.innerHTML=`([\s\S]*?)`;window.scrollTo/);data.notes=match[1]; data.map=vm.runInContext("mapMarkup()",context).match(/<svg[\s\S]*?<\/svg>/)[0];
 fs.writeFileSync(path.join(tmp,'content.json'),JSON.stringify(data,null,2));
 const sharp=require('sharp');

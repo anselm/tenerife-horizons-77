@@ -14,7 +14,7 @@ from pypdf import PdfReader,PdfWriter,Transformation
 ROOT=Path(os.environ.get('HORIZONS_ROOT',Path(__file__).resolve().parents[1])); TMP=Path(os.environ.get('HORIZONS_PRINT_TMP',str(Path(tempfile.gettempdir())/'horizons-print')));OUT=ROOT/'output'/'pdf';OUT.mkdir(exist_ok=True,parents=True)
 D=json.loads((TMP/'content.json').read_text())
 F=str(ROOT/'assets'/'fonts')+'/'
-for name,file in [('G','NimbusRoman-Regular.ttf'),('GI','NimbusRoman-Italic.ttf'),('GB','NimbusRoman-Bold.ttf'),('A','NimbusSans-Regular.ttf'),('AB','NimbusSans-Bold.ttf'),('BD','URWBookman-Demi.ttf'),('BL','URWBookman-Light.ttf'),('BI','URWBookman-LightItalic.ttf')]:pdfmetrics.registerFont(TTFont(name,F+file))
+for name,file in [('G','NimbusRoman-Regular.ttf'),('GI','NimbusRoman-Italic.ttf'),('GB','NimbusRoman-Bold.ttf'),('A','NimbusSans-Regular.ttf'),('AB','NimbusSans-Bold.ttf'),('BD','HorizonsDisplay-Soft.ttf'),('BL','URWBookman-Light.ttf'),('BI','HorizonsDisplay-SoftItalic.ttf')]:pdfmetrics.registerFont(TTFont(name,F+file))
 pdfmetrics.registerFontFamily('G',normal='G',bold='GB',italic='GI',boldItalic='GI')
 pdfmetrics.registerFontFamily('A',normal='A',bold='AB',italic='A',boldItalic='AB')
 W,H=612,792;INK=CMYKColor(0,.25,.42,.78);RUST=CMYKColor(0,.66,.86,.27);TEAL=CMYKColor(.18,.06,.43,.58);GRAY=CMYKColor(0,.13,.25,.42)
@@ -66,16 +66,22 @@ def image(path,x,y,w,h,crop=False):
   C.saveState();clip=C.beginPath();clip.rect(x,y,w,h);C.clipPath(clip,stroke=0,fill=0)
  C.drawImage(im,x+(w-dw)/2,y+(h-dh)/2,dw,dh,mask='auto')
  if crop:C.restoreState()
+ return (x+(w-dw)/2 if not crop else x,y+(h-dh)/2 if not crop else y,dw if not crop else w,dh if not crop else h)
+def caption(label,rect):
+ x,y,w,h=rect
+ p=para(label,6.8,9,'A',GRAY);_,hh=p.wrap(w,35);p.drawOn(C,x,y-7-hh)
+ return y-7-hh
+
 def art(kind,top,h=165):
- y=top-h
+ y=top-h;bounds=None
  if kind=='storyboard':
-  image(TMP/'study-rooms.png',44,y,524,h)
+  bounds=image(TMP/'study-rooms.png',44,y,524,h)
  elif kind.startswith('study-'):
-  image(TMP/(kind+'.png'),44,y,524,h)
- elif kind=='terrace':image(ROOT/'assets/terrace-workshop.png',44,y,524,h,crop=True)
+  bounds=image(TMP/(kind+'.png'),44,y,524,h)
+ elif kind=='terrace':bounds=image(ROOT/'assets/terrace-workshop.png',44,y,524,h,crop=True)
  elif kind in ['landscape','coast','observatory']:
-  name={'landscape':'terrace-workshop.png','coast':'montana-amarilla-v2.png','observatory':'ocean-observatory.png'}[kind];image(ROOT/'assets'/name,44,y,524,h,crop=True)
- elif kind in ['habitat','airlift']:image(TMP/(kind+'.png'),44,y,524,h)
+  name={'landscape':'terrace-workshop.png','coast':'montana-amarilla-v2.png','observatory':'ocean-observatory.png'}[kind];bounds=image(ROOT/'assets'/name,44,y,524,h,crop=True)
+ elif kind in ['habitat','airlift']:bounds=image(TMP/(kind+'.png'),44,y,524,h)
  else:
   C.setFillColor(CMYKColor(.03,.02,.09,0));C.rect(44,y,524,h,fill=1,stroke=0)
   label={'nursery':'KENYA / SEED · SOIL · WATER · TENDING','fieldnotes':'GOMBE / OBSERVATION · CONTINUITY · CARE','storyboard':'FILM DESK / THREE VIEWS OF A POSSIBLE ROOM','energy':'FIG. 04 / THE COMMON LEDGER','ledger':'COOPERATIVA DEL PORVENIR','routes':'ISLAS CANARIAS / STUDY 03'}.get(kind,'1977 / 2027')
@@ -99,7 +105,7 @@ def art(kind,top,h=165):
    text('1960 — 1977',62,y+76,35,'G',TEAL);text('The forest continues beyond the drawing.',62,y+29,13,'GI')
   else:
    text('1977',65,y+73,58,'G',RUST);text('2027',340,y+35,58,'GI',TEAL)
- text('HORIZONS ’77 / CUADERNO DE TRABAJO',44,y-12,6.5,'A')
+ caption(D['plateCaptions'].get(kind,'HORIZONS ’77 / CUADERNO DE TRABAJO'),bounds or (44,y,524,h))
  return y-28
 
 def layout(paras,top,bottom=67,size=11,note=None,cols=2,width=524,x=44,draw=True):
@@ -177,7 +183,8 @@ def supporting_leaf(key,bottom):
  if height<145:return
  rule(top,44,524);text(leaf['label'],44,top-15,7,'AB',RUST)
  path=ROOT/'assets/evening-screening.png' if leaf['art']=='screening' else TMP/('study-'+leaf['art']+'.png')
- image(path,44,top-height+5,250,height-30)
+ bounds=image(path,44,top-height+23,250,height-48)
+ caption('PROYECCIÓN / TENERIFE, 1977' if leaf['art']=='screening' else 'LÁMINA DE TRABAJO / 1977',bounds)
  pp=para(leaf['title'],18,19,'BD');_,hh=pp.wrap(250,70);pp.drawOn(C,318,top-34-hh);yy=top-44-hh
  for size in [10.5,10,9.5]:
   pp=para(leaf['text'],size,size*1.3);_,hh=pp.wrap(250,height-55)
@@ -222,12 +229,13 @@ for s in sheets:
   bottom=prose(s['body'],y,note,size=11.3 if opening else 11.7)
  elif k=='alexander':
   a=D['alexanderEssay'];i=s['index'];sec=s['part'];y=titleblock(a['title'] if i==0 else sec['heading'],a['subtitle'] if i==0 else '', 'LIFE & FORM / CHRISTOPHER ALEXANDER',a['author'] if i==0 else '',continued=i>0)
-  if i==0:image(ROOT/'assets/bocacangrejo.png',44,y-178,524,170);text('BOCACANGREJO / CUADERNO DE LA EXCURSIÓN / 1977',44,y-190,6.5,'A');y-=210
+  if i==0:
+   bounds=image(ROOT/'assets/bocacangrejo.png',44,y-178,524,170);caption('BOCACANGREJO / CUADERNO DE LA EXCURSIÓN / 1977',bounds);y-=210
   note='The conquest of Tenerife ended in 1496. It brought enslavement and assimilation, but Indigenous people and customs persisted. The island did not begin with the conquerors’ maps.' if i==2 else None
   bottom=prose(sec['body'],y,note,size=11.3)
   if i>0:pattern_leaf(bottom,i)
  elif k=='horse':
-  a=s['a'];y=titleblock(a['title'],a['subtitle'],'VIDA COMPARTIDA / WORKING TOGETHER','From an island notebook');image(ROOT/'assets/andalusian-stallion.jpg',44,y-205,524,195);y-=225;bottom=prose(a['body'],y,size=11.5)
+  a=s['a'];y=titleblock(a['title'],a['subtitle'],'VIDA COMPARTIDA / WORKING TOGETHER','From an island notebook');bounds=image(ROOT/'assets/andalusian-stallion.jpg',44,y-205,524,195);caption('EL CABALLO / TENERIFE',bounds);y-=230;bottom=prose(a['body'],y,size=11.5)
  elif k=='rahman':
   a=s['a'];y=titleblock(a['title'],a['subtitle'],'DELHI / THE PUBLIC TRUST','From the public works desk');bottom=prose(a['body'],y,note='Who may object? Who must listen? Who can refuse?',size=12)
  elif k=='atlas':

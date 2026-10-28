@@ -6,7 +6,7 @@ The 48-sheet web version retains its numbered sequence and now opens in facing s
 [`output/pdf/`](../output/pdf/).
 
 The PDFs use white paper, no simulated seam, no bleed and generous margins.
-Typesetting uses embedded URW Bookman, Nimbus Roman and Nimbus Sans, balanced columns, and protected
+Typesetting uses a soft Fraunces-derived display cut, URW Bookman, Nimbus Roman and Nimbus Sans, balanced columns, and protected
 short paragraph endings. Fixed print pagination is generated independently of
 web folios. The cover image appears only once. A new terrace plate, a screening-room
 illustration and original working diagrams provide subject-specific artwork. Source citations print as readable titles and
