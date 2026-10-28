@@ -241,9 +241,9 @@ const coastArticle = {
 
 const horseArticle = {
  title:'A future of his own',
- subtitle:'An Andalusian stallion, brought from Seville. Notes on learning to ask.',
+ subtitle:'Oleaje, Shanee’s Andalusian stallion, brought from Seville. Notes on learning to ask.',
  body:[
- 'He had come from Seville, a beautiful Andalusian stallion, formally schooled in the Spanish discipline. He knew how to answer a person’s request with an exact movement. Against Teide, his pale body was always startling: this gentle, strong animal in front of a mountain which belonged to another measure of time.',
+ 'His name was Oleaje: the swell, a continuous succession of waves. He belonged to Shanee. He had come from Seville, a beautiful Andalusian stallion, formally schooled in the Spanish discipline. He knew how to answer a person’s request with an exact movement. Against Teide, his pale body was always startling: this gentle, strong animal in front of a mountain which belonged to another measure of time.',
  'The work then became a kind of untraining, followed by learning together again. We wanted his willingness to matter. An invitation had to leave room for an answer we had not already chosen. If he paused, or turned away, something in our plan could change. His future was to become more his own, rather than a sequence of beautifully executed decisions made for him.',
  'Once he threw me. I became tangled in a lead rope and he dragged me around the arena. The animal I knew as gentle was also immensely strong. Afterwards, that contrast remained with me. Affection did not make him small, and gentleness did not make his strength disappear. There was another body here, with its own alarm, movement and intention.',
  'To work with him was to attend to that other life. The lesson did not end when a movement had been performed correctly. It continued in whether he chose to remain with us, whether an encounter left more room for trust, whether we could let an unfinished exercise be enough for the day. We were learning to recognise a decision which was not ours.',

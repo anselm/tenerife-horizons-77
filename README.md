@@ -105,3 +105,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [22 · Lettering and captions](devlog/2026/22-lettering-and-captions.md)
 - [23 · A harder heading](devlog/2026/23-a-harder-heading.md)
 - [24 · Blackwater and thanks](devlog/2026/24-blackwater-and-thanks.md)
+- [25 · Oleaje](devlog/2026/25-oleaje.md)
