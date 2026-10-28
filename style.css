@@ -160,3 +160,19 @@ footer{max-width:1500px;color:#e4d1aa;font-family:var(--sans)}
 .mag-sheet figure>figcaption{display:block;position:static;float:none;clear:both;text-align:left;margin:8px 0 0;max-width:100%;font:8px/1.35 var(--sans);letter-spacing:.7px}
 .workshop-leaf figure>figcaption{font-size:7px;margin-top:7px}
 .mag-sheet .sheet-title h1{letter-spacing:-.65px}header .brand{letter-spacing:-.8px}.mag-sheet.cover .cover-masthead{letter-spacing:-3px}
+
+/* Architectural display: a geometric grotesk in the Avant Garde tradition. */
+@font-face{font-family:H77Gothic;src:url('assets/fonts/URWGothic-Demi.ttf') format('truetype');font-weight:600 900;font-display:swap}
+:root{--display:H77Gothic,H77Sans,Helvetica,sans-serif}
+.mag-sheet .sheet-title h1,.mag-sheet.cover h1,.mag-sheet.cover .cover-masthead{font-family:var(--display);text-transform:uppercase;font-style:normal;letter-spacing:-.7px;line-height:1.06}
+.mag-sheet .sheet-title h1 em,.mag-sheet.cover h1 em,.cover-masthead>span{font-family:inherit;font-style:normal}
+.mag-sheet.cover .cover-masthead{font-size:80px;letter-spacing:-3px}
+.mag-sheet.cover h1{font-size:49px}
+header .brand,header .brand i,footer .brand,footer .brand i{font-family:var(--display);font-style:normal;text-transform:uppercase;letter-spacing:-.7px}
+.mag-sheet .continuation-title h2{font-family:var(--display);font-weight:700;letter-spacing:-.5px}
+.leaf-heading h3,.island-notes h2{font-family:var(--display);font-weight:700}
+.alexander-revelation{font-family:var(--serif)!important}
+@media(max-width:600px){.mag-sheet.cover .cover-masthead{font-size:clamp(38px,10vw,65px);letter-spacing:-2px}.mag-sheet.cover h1{font-size:36px}.mag-sheet .sheet-title h1{font-size:32px}}
+.mag-sheet.cover .sheet-content>h1{font-family:var(--display);font-weight:700;font-size:49px;line-height:1.06;letter-spacing:-.7px}
+.mag-sheet.cover .sheet-content>h1 em{font-family:inherit;font-weight:700;font-style:normal}
+@media(max-width:600px){.mag-sheet.cover .sheet-content>h1{font-size:36px;letter-spacing:-.7px}}

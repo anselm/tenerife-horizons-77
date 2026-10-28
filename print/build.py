@@ -14,7 +14,7 @@ from pypdf import PdfReader,PdfWriter,Transformation
 ROOT=Path(os.environ.get('HORIZONS_ROOT',Path(__file__).resolve().parents[1])); TMP=Path(os.environ.get('HORIZONS_PRINT_TMP',str(Path(tempfile.gettempdir())/'horizons-print')));OUT=ROOT/'output'/'pdf';OUT.mkdir(exist_ok=True,parents=True)
 D=json.loads((TMP/'content.json').read_text())
 F=str(ROOT/'assets'/'fonts')+'/'
-for name,file in [('G','NimbusRoman-Regular.ttf'),('GI','NimbusRoman-Italic.ttf'),('GB','NimbusRoman-Bold.ttf'),('A','NimbusSans-Regular.ttf'),('AB','NimbusSans-Bold.ttf'),('BD','HorizonsDisplay-Soft.ttf'),('BL','URWBookman-Light.ttf'),('BI','HorizonsDisplay-SoftItalic.ttf')]:pdfmetrics.registerFont(TTFont(name,F+file))
+for name,file in [('G','NimbusRoman-Regular.ttf'),('GI','NimbusRoman-Italic.ttf'),('GB','NimbusRoman-Bold.ttf'),('A','NimbusSans-Regular.ttf'),('AB','NimbusSans-Bold.ttf'),('BD','URWGothic-Demi.ttf'),('BL','URWBookman-Light.ttf'),('BI','URWGothic-Demi.ttf')]:pdfmetrics.registerFont(TTFont(name,F+file))
 pdfmetrics.registerFontFamily('G',normal='G',bold='GB',italic='GI',boldItalic='GI')
 pdfmetrics.registerFontFamily('A',normal='A',bold='AB',italic='A',boldItalic='AB')
 W,H=612,792;INK=CMYKColor(0,.25,.42,.78);RUST=CMYKColor(0,.66,.86,.27);TEAL=CMYKColor(.18,.06,.43,.58);GRAY=CMYKColor(0,.13,.25,.42)
@@ -47,7 +47,7 @@ def titleblock(title,deck='',tag='',author='',continued=False):
  if tag:text(tag.upper(),44,y,7.3,'AB');y-=25
  size=31 if not continued else 24
  while True:
-  p=para(title,size,size*1.06,'BL' if continued else 'BD',space=0);w,h=p.wrap(524,180)
+  p=para(title if continued else title.upper(),size,size*1.06,'BD',space=0);w,h=p.wrap(524,180)
   if h<100:break
   size-=1
  p.drawOn(C,44,y-h);y-=h+13
@@ -171,8 +171,15 @@ contents=[('arrival/en','Editorial / English'),('arrival/es','Editorial / Españ
 
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
- if not leaf or bottom-78<145:return
- available=bottom-85;top=bottom-20;height=min(available,230)
+ if not leaf or bottom-70<50:return
+ available=bottom-70;top=bottom-10
+ if available<145:
+  rule(top);text(leaf['label'],44,top-14,6.5,'AB',RUST)
+  heading=para(leaf['title'],12,14,'BD');_,hh=heading.wrap(155,50)
+  note=para(leaf['text'],9.3,12,'G');_,nh=note.wrap(350,100)
+  if max(hh,nh)>available-25:return
+  heading.drawOn(C,44,top-28-hh);note.drawOn(C,218,top-28-nh);return
+ height=min(available,230)
  if leaf['art']=='screening':height=min(available,265)
  if available>300 and leaf['art']!='screening':
   rule(top,44,524);text(leaf['label'],44,top-16,7,'AB',RUST)
@@ -200,12 +207,12 @@ MASTER=OUT/'Horizons-77-print-letter.pdf';C=canvas.Canvas(str(MASTER),pagesize=(
 C.setTitle('Horizons ’77 / the 1977 design edition');C.setAuthor('Anselm / with Codex');C.setSubject('44-page print edition / Letter / reader order / no bleed')
 page('Cover',folio=False)
 text('REVISTA INTERNACIONAL DE FUTUROS POSIBLES',44,750,8,'AB');text('NÚMERO 1 / 1977',453,750,7,'A')
-# Display face is a Bookman revival; the size is fitted to the actual wordmark.
-mark='horizons ’77';fs=72
+# Geometric display capitals; fit the wordmark to the printed measure.
+mark='HORIZONS ’77';fs=72
 while pdfmetrics.stringWidth(mark,'BD',fs)>524:fs-=.5
 text(mark,40,660,fs,'BD');rule(638)
 text('TENERIFE',44,618,10,'AB');text('ENGLISH · ESPAÑOL · FRANÇAIS · ITALIANO · DEUTSCH',168,618,7,'A')
-text('The inhabited',44,550,43,'BD');text('island.',44,493,55,'BI',RUST)
+text('THE INHABITED',44,550,39,'BD');text('ISLAND.',44,493,55,'BD',RUST)
 p=para('Architecture, ocean, energy.<br/>Notes towards life in 2027 and beyond.',16,21,'G');p.wrap(500,80);p.drawOn(C,44,427)
 image(ROOT/'assets/tenerife.png',44,154,524,250)
 text('TENERIFE / 2027',44,137,7,'A');text('ESTUDIO PARA UN PAISAJE HABITADO',315,137,6.5,'A')
@@ -233,7 +240,7 @@ for s in sheets:
    bounds=image(ROOT/'assets/bocacangrejo.png',44,y-178,524,170);caption('BOCACANGREJO / CUADERNO DE LA EXCURSIÓN / 1977',bounds);y-=210
   note='The conquest of Tenerife ended in 1496. It brought enslavement and assimilation, but Indigenous people and customs persisted. The island did not begin with the conquerors’ maps.' if i==2 else None
   bottom=prose(sec['body'],y,note,size=11.3)
-  if i>0:pattern_leaf(bottom,i)
+  if i>0 and i<3:pattern_leaf(bottom,i)
  elif k=='horse':
   a=s['a'];y=titleblock(a['title'],a['subtitle'],'VIDA COMPARTIDA / WORKING TOGETHER','From an island notebook');bounds=image(ROOT/'assets/andalusian-stallion.jpg',44,y-205,524,195);caption('EL CABALLO / TENERIFE',bounds);y-=230;bottom=prose(a['body'],y,size=11.5)
  elif k=='rahman':
@@ -276,7 +283,7 @@ cut=next(i for i,t in enumerate(back) if 'cover landscape' in t)
 for pi,group in enumerate([back[:cut],back[cut:]]):
  page('On this edition / '+str(pi+1),'COLOPHON / EDITION NOTES');top=titleblock('On this edition.' if pi==0 else 'Sources & contributors.',tag='EDITION NOTES / '+str(pi+1));prose(group,top,size=9.8);finish()
 page('Back cover',folio=False)
-text('horizons ’77',44,710,42,'BD');rule(684)
+text('HORIZONS ’77',44,710,42,'BD');rule(684)
 pp=para('There is still<br/>room at the table.',42,47,'BI',RUST);_,hh=pp.wrap(520,180);pp.drawOn(C,44,575-hh)
 image(ROOT/'assets/terrace-workshop.png',44,160,524,260)
 text('EL FUTURO ES UNA ISLA',44,124,10,'AB');text('LE FUTUR EST UNE ÎLE',44,103,10,'A');text('IL FUTURO È UN’ISOLA / DIE ZUKUNFT IST EINE INSEL',44,82,8,'A');text('TENERIFE / EDICIÓN DEL CONGRESO / 1977',44,49,7,'A');finish();C.save()

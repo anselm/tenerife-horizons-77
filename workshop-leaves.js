@@ -1,4 +1,8 @@
 const workshopLeaves = {
+  "below": {"title": "Who holds the shore?", "label": "OCEAN WORKSHOP / QUESTION LEFT OPEN", "art": "sea", "text": "The line reaches the quay. Its passengers still need a landing, a waiting place and a way home. The harbour workers ask for a drawing of that last hundred metres."},
+  "sun": {"title": "Draw the winter day", "label": "ENERGY DESK / SECOND CALCULATION", "art": "cycle", "text": "Repeat the account for a cloudy day, a quiet wind and a collector being repaired. Which demands may wait? Which must continue? A useful installation should be described on the day when it has least to give."},
+  "credit": {"title": "The repair comes first", "label": "COOPERATIVA / NOTE TO THE TREASURER", "art": "ledger", "text": "Before distributing a surplus, set aside the cost of the next repair. The workshop proposes that the reserve be printed in the annual account beside the dividend. A roof should not have to wait for a profitable year."},
+  "alexander-4": {"title": "Keep the judgement open", "label": "PATTERN NOTEBOOK / A TEST FOR THE TEST", "art": "pattern", "text": "Ask the inhabitants to mark where the proposed measure fails them. A house may score well and still have nowhere for a particular life to unfold. Keep those objections with the drawing. If a machine is ever to assist this work, it must leave room for the answer it was not taught to expect."},
   "arrival/en-continued": {
     "title": "Before drawing a line",
     "label": "EDITORIAL WORKING SHEET",
@@ -93,7 +97,7 @@ const workshopLeaves = {
     "title": "After the last reel",
     "label": "CUADERNO DEL CINE / ONE EVENING",
     "art": "screening",
-    "text": "For one evening, Sheldon Renan and Andy Warhol are among those passing through. Renan, who brought The Japanese Film to American television in 1975, helps turn a borrowed room into a cinema. Warhol lingers beside the projector while the audience rearranges the chairs. The discussion of communal buildings acquires a practical question: who chooses what the room will show? A local delegate offers a film of the harbour. The programme changes."
+    "text": "For one evening, Sheldon Renan and Andy Warhol are among those passing through. Renan finds a projector; someone from the harbour brings a film. Warhol watches a fisherman repairing a net, his hands repeatedly disappearing beyond the frame. Afterwards he asks to see that part again. Renan, who has been discussing how to bring films to people, begins asking what films the people might bring. Neither has much to say at breakfast. Both ask whether a copy can be made."
   },
   "afterword-continued": {
     "title": "Leave the table in use",
