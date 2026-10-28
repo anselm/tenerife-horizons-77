@@ -1,287 +1,372 @@
 {
-  "pages": 52,
+  "pages": 44,
   "firstPages": {
-    "arrival/en": 5,
-    "arrival/en-continued": 6,
-    "arrival/es": 7,
-    "arrival/es-continued": 8,
-    "arrival/fr": 9,
-    "arrival/fr-continued": 10,
-    "arrival/it": 11,
-    "arrival/it-continued": 12,
-    "arrival/de": 13,
-    "arrival/de-continued": 14,
-    "below": 15,
-    "below-continued": 16,
-    "cousteau": 17,
-    "cousteau-continued": 18,
-    "coast": 19,
-    "coast-continued": 20,
-    "horse": 21,
-    "goodall": 22,
-    "goodall-continued": 23,
-    "maathai": 24,
-    "maathai-continued": 25,
-    "slope": 26,
-    "slope-continued": 27,
-    "alexander": 28,
-    "alexander-2": 29,
-    "alexander-3": 30,
-    "alexander-4": 31,
-    "rahman": 32,
-    "sun": 33,
-    "sun-continued": 34,
-    "air": 35,
-    "air-continued": 36,
-    "atlas": 37,
-    "atlas-notes": 38,
-    "credit": 39,
-    "credit-continued": 40,
-    "gilliam": 41,
-    "gilliam-continued": 42,
-    "table": 43,
-    "table-continued": 44,
-    "programme": 45,
-    "pass": 46,
-    "certificate": 47,
-    "afterword": 48,
-    "afterword-continued": 49,
-    "colophon": 50
+    "arrival/en": 3,
+    "arrival/es": 4,
+    "arrival/fr": 5,
+    "arrival/it": 6,
+    "arrival/de": 7,
+    "below": 8,
+    "below-continued": 9,
+    "cousteau": 10,
+    "cousteau-continued": 11,
+    "coast": 12,
+    "coast-continued": 13,
+    "horse": 14,
+    "goodall": 15,
+    "goodall-continued": 16,
+    "maathai": 17,
+    "maathai-continued": 18,
+    "slope": 19,
+    "slope-continued": 20,
+    "alexander": 21,
+    "alexander-2": 22,
+    "alexander-3": 23,
+    "alexander-4": 24,
+    "rahman": 25,
+    "sun": 26,
+    "sun-continued": 27,
+    "air": 28,
+    "air-continued": 29,
+    "atlas": 30,
+    "atlas-notes": 31,
+    "credit": 32,
+    "credit-continued": 33,
+    "gilliam": 34,
+    "gilliam-continued": 35,
+    "table": 36,
+    "table-continued": 37,
+    "programme": 38,
+    "pass": 39,
+    "certificate": 39,
+    "afterword": 40,
+    "afterword-continued": 41,
+    "colophon": 42
   },
   "imposition": [
     [
-      52,
+      44,
       1
     ],
     [
       2,
-      51
-    ],
-    [
-      50,
-      3
-    ],
-    [
-      4,
-      49
-    ],
-    [
-      48,
-      5
-    ],
-    [
-      6,
-      47
-    ],
-    [
-      46,
-      7
-    ],
-    [
-      8,
-      45
-    ],
-    [
-      44,
-      9
-    ],
-    [
-      10,
       43
     ],
     [
       42,
-      11
+      3
     ],
     [
-      12,
+      4,
       41
     ],
     [
       40,
-      13
+      5
     ],
     [
-      14,
+      6,
       39
     ],
     [
       38,
-      15
+      7
     ],
     [
-      16,
+      8,
       37
     ],
     [
       36,
-      17
+      9
     ],
     [
-      18,
+      10,
       35
     ],
     [
       34,
-      19
+      11
     ],
     [
-      20,
+      12,
       33
     ],
     [
       32,
-      21
+      13
     ],
     [
-      22,
+      14,
       31
     ],
     [
       30,
-      23
+      15
     ],
     [
-      24,
+      16,
       29
     ],
     [
       28,
+      17
+    ],
+    [
+      18,
+      27
+    ],
+    [
+      26,
+      19
+    ],
+    [
+      20,
+      25
+    ],
+    [
+      24,
+      21
+    ],
+    [
+      22,
+      23
+    ]
+  ],
+  "readerSpreads": [
+    [
+      null,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      24,
       25
     ],
     [
       26,
       27
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      32,
+      33
+    ],
+    [
+      34,
+      35
+    ],
+    [
+      36,
+      37
+    ],
+    [
+      38,
+      39
+    ],
+    [
+      40,
+      41
+    ],
+    [
+      42,
+      43
+    ],
+    [
+      44,
+      null
     ]
   ],
   "bodyFontSizes": [
     [
+      3,
+      11.3
+    ],
+    [
+      4,
+      11.05
+    ],
+    [
       5,
-      11.2
+      11.05
     ],
     [
       6,
-      11.5
+      11.3
     ],
     [
       7,
-      11.2
+      11.05
     ],
     [
       8,
-      11.5
+      11.3
     ],
     [
       9,
-      11.2
+      11.7
     ],
     [
       10,
-      11.5
+      11.3
     ],
     [
       11,
-      11.2
+      11.7
     ],
     [
       12,
-      11.5
+      11.3
     ],
     [
       13,
-      11.2
+      11.7
     ],
     [
       14,
-      11.5
+      11.25
     ],
     [
       15,
-      11.2
+      11.3
     ],
     [
       16,
-      11.5
+      11.7
     ],
     [
       17,
-      11.2
+      11.3
     ],
     [
       18,
-      11.5
+      11.7
     ],
     [
       19,
-      11.2
+      11.3
     ],
     [
       20,
-      11.5
+      11.7
     ],
     [
       21,
-      10.75
+      11.3
     ],
     [
       22,
-      11.2
+      11.3
     ],
     [
       23,
-      11.5
+      11.3
     ],
     [
       24,
-      11.2
+      11.3
     ],
     [
       25,
-      11.5
+      12
     ],
     [
       26,
-      11.2
+      11.3
     ],
     [
       27,
-      11.5
+      11.7
     ],
     [
       28,
-      11.1
+      11.3
     ],
     [
       29,
-      11.1
+      11.7
     ],
     [
       30,
-      11.1
+      14
     ],
     [
       31,
-      11.1
+      12.5
     ],
     [
       32,
-      11.8
+      11.3
     ],
     [
       33,
-      11.2
+      11.7
     ],
     [
       34,
-      11.5
+      11.3
     ],
     [
       35,
-      11.2
+      11.7
     ],
     [
       36,
-      11.5
+      11.3
+    ],
+    [
+      37,
+      11.7
     ],
     [
       38,
@@ -289,55 +374,23 @@
     ],
     [
       39,
-      11.2
+      12
     ],
     [
       40,
-      11.5
+      11.3
     ],
     [
       41,
-      11.2
+      11.7
     ],
     [
       42,
-      11.5
+      9.8
     ],
     [
       43,
-      11.2
-    ],
-    [
-      44,
-      11.5
-    ],
-    [
-      45,
-      12
-    ],
-    [
-      46,
-      11
-    ],
-    [
-      47,
-      12
-    ],
-    [
-      48,
-      11.2
-    ],
-    [
-      49,
-      11.5
-    ],
-    [
-      50,
-      9.4
-    ],
-    [
-      51,
-      9.4
+      9.8
     ]
   ]
 }

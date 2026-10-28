@@ -10,3 +10,6 @@ Viewer controls remain outside the yellowed, folded magazine paper.
 The conference, attendance, conversations and influences are fictional.
 Historical context and detailed provenance appear on page 48.
 No build, dependencies, accounts or external fonts are required.
+
+Design revision: facing web spreads; locally bundled classic type revivals;
+44-page print edition, 11-sheet booklet and reader-spread PDFs in output/pdf/.

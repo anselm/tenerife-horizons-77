@@ -1,9 +1,9 @@
-HORIZONS ’77 — RUSH PRINT EDITION
+HORIZONS ’77 — 1977 DESIGN EDITION
 Prepared 27 October 2026
 
 JOB TO REQUEST
 12 copies, needed today. Finished size 8.5 × 11 inches portrait.
-52 pages including the covers, colour, printed double-sided.
+44 pages including the covers, colour, printed double-sided.
 Fold 11 × 17 inch sheets in half, nest in order, two staples in the spine.
 If folding/stapling would delay pickup, supply 12 collated sets; the customer
 can fold and staple. Please quote before production.
@@ -12,52 +12,53 @@ Ask for one folded proof first. Once approved, print the remaining eleven.
 
 PAPER
 Light white interior paper, approximately 80–100 gsm, matte/uncoated or a
-light silk stock in a weight suitable for 13-sheet saddle stitching.
+light silk stock in a weight suitable for 11-sheet saddle stitching.
 For the fastest job, use the same stock throughout (self-cover).
 A slightly heavier outer sheet is optional only if readily available.
 No artificial yellow paper, weathering or simulated fold is printed.
+The warm panels and drawings are part of the illustration, not simulated aging.
 
 WHICH FILE TO USE — CHOOSE ONE WORKFLOW, NOT BOTH
 
 1. PREFERRED: Horizons-77-print-letter.pdf
-52 portrait Letter pages in normal reading order. The shop's booklet
+44 portrait Letter pages in normal reading order. The shop's booklet
 software should impose these onto 11 × 17 sheets. Finished page size is
 8.5 × 11, NOT 5.5 × 8.5. This is the right file if the shop handles imposition.
 
 2. ALREADY ARRANGED: Horizons-77-booklet-tabloid.pdf
-26 landscape 11 × 17 PDF sides, already imposed as 13 duplex sheets.
+22 landscape 11 × 17 PDF sides, already imposed as 11 duplex sheets.
 Print at ACTUAL SIZE / 100%, duplex SHORT-EDGE binding, collated.
 Do NOT enable Booklet, N-up, reverse page order or another imposition step.
 Adjacent PDF sides are the front and back of one sheet.
 First sheet: outside = back cover (left) / front cover (right).
-Inside = page 2 (left) / page 51 (right).
+Inside = page 2 (left) / page 43 (right).
 Check a physical two-sided folded sheet before the full run; printer driver
 terminology can differ. All content on the folded proof should be upright.
 
 FINISHING
-Fold the stack at the centre, nest all 13 sheets, and saddle stitch twice.
+Fold the stack at the centre, nest all 11 sheets, and saddle stitch twice.
 Self-finishing: a long-arm or saddle stapler is needed to reach the fold.
 The outside sheet is the first pair of PDF sides. Nest subsequent sheets
 inside it in their printed order. Trimming is optional; margins are generous.
 
 FALLBACK IF TABLOID BOOKLET PRINTING IS UNAVAILABLE
 Print the Letter reader-order PDF at 100%, duplex LONG-EDGE, collated.
-This makes 26 Letter sheets per copy, suitable for side stapling or binding.
+This makes 22 Letter sheets per copy, suitable for side stapling or binding.
 Do not fold these single-page Letter sheets into a booklet.
 
 TECHNICAL NOTES
 No bleed, no crop marks, no edge-to-edge printing required.
 All pages have white margins. Reader PDF = 612 × 792 points.
 Imposed PDF = 1224 × 792 points. Fonts are embedded.
-Body type is at least 10.75 pt; final provenance notes are 9.4 pt.
+Body type is at least 11.05 pt; final provenance notes are 9.8 pt.
 Raster illustrations are RGB; text and vector colour use process colours.
 This is a digital-print PDF, not a certified PDF/X offset-press package.
 The print provider should use its normal digital-printer colour management.
 
 PAGINATION
-Print edition: 52 pages. Web edition: 48 sheets. These are separate layouts.
+Print edition: 44 pages. Web edition: 48 sheets. These are separate layouts.
 Contents have been repaginated for this print edition. Fiction/provenance and
-contributor credits remain at the end, on pages 50–51. Back cover is page 52.
+contributor credits remain at the end, on pages 42–43. Back cover is page 44.
 
 LOCAL OPTIONS TO CALL — AVAILABILITY AND PRICE NOT YET CONFIRMED
 Vanprint West End: 778 329 0777, #204–1789 Davie Street.
@@ -73,3 +74,5 @@ https://www.copysmart.ca/
 Lists saddle-stitch booklets; ask whether this job can be done today.
 
 No order has been placed and no file has been sent to a printer.
+
+Horizons-77-reader-spreads.pdf is for screen reading only, not production.
