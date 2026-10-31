@@ -179,7 +179,7 @@ add('pass','The life between sessions','documents');first['certificate']=first['
 addarticle(A['afterword'])
 assert len(sheets)==43,len(sheets)
 first['colophon']=46
-contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Español'),('arrival/fr','Méthode / Français'),('arrival/it','Abitare / Italiano'),('arrival/de','Werkstatt / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
+contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Español'),('arrival/fr','Formes vivantes / Français'),('arrival/it','Abitare / Italiano'),('arrival/de','Werkstatt / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
 
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
@@ -246,7 +246,7 @@ for s in sheets:
  if k in ['article','continued','editorial']:
   a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'],t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
   if opening:
-   kind='study-'+dict(en='section',es='territory',fr='futures',it='privacy',de='repair')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
+   kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='repair')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
    if a['id']!='afterword':y=art(kind,y-2,105 if k=='editorial' else 185 if a['id']=='slope' else 165 if a['art'] in ['coast','observatory'] else 150)
   note=a.get('note') if not opening and s['lang']=='en' else None
   bottom=prose(s['body'],y,note,size=11.3 if opening else 11.7)

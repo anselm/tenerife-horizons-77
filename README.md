@@ -43,7 +43,7 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 | 3–4 | An island is a beginning / English editorial |
 | 5–6 | La isla no está vacía / land, water and staying / Spanish |
 | 7 | Kitchen interview / questions and amendments |
-| 8–9 | Cinquante ans, plusieurs avenirs / possible futures / French |
+| 8–9 | Rêver à plusieurs / human scale, reef and village / French |
 | 10–11 | Una porta da chiudere / communal and private life / Italian |
 | 12–13 | Wer repariert das Jahr 2027? / repair and shared knowledge / German |
 | 14–15 | Ocean habitats |
@@ -116,3 +116,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [25 · Oleaje](devlog/2026/25-oleaje.md)
 - [26 · After Habitat](devlog/2026/26-after-habitat.md)
 - [27 · Five openings, one conversation](devlog/2026/27-five-openings-one-conversation.md)
+- [28 · Dreaming at scale](devlog/2026/28-dreaming-at-scale.md)

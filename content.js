@@ -108,18 +108,19 @@ const openingFeatures = {
     ]
   },
   "fr": {
-    "title": "Cinquante ans, plusieurs avenirs",
-    "subtitle": "Comment regarder 2027 sans transformer une hypothèse en promesse.",
-    "author": "Atelier des hypothèses",
-    "tag": "MÉTHODE",
+    "title": "Rêver à plusieurs",
+    "subtitle": "À hauteur humaine. Le village, le récif et la possibilité de grandir sans centre unique.",
+    "author": "Du carnet des formes vivantes",
+    "tag": "FORMES VIVANTES",
     "body": [
-      "Au tableau, quelqu’un écrit 2027 et trace un cercle autour du nombre. Le cercle donne à la date une assurance qu’elle ne mérite pas encore. Une autre main ajoute trois colonnes : ce que nous savons, ce que nous supposons, ce que nous désirons.",
-      "La première colonne est courte. La montagne restera une contrainte, la mer une distance, les enfants auront grandi. Dans les deux autres colonnes, les logements se multiplient, les machines deviennent silencieuses et les décisions sont presque toujours prises par des gens raisonnables.",
-      "Le groupe décide de dessiner plusieurs lendemains. Dans l’un, le combustible reste cher. Dans un autre, les matériaux arrivent difficilement. Dans un troisième, les habitants refusent le dispositif commun qui devait les rendre heureux. Le même quartier doit pouvoir répondre aux trois.",
-      "<b>QUESTION DANS LA SALLE.</b> Si les habitants ne veulent pas de notre avenir, est-ce un échec de leur part ou du dessin ? La secrétaire laisse la question entière dans le compte rendu. Personne ne demande de vote.",
-      "Les maquettes servent alors à poser des questions plutôt qu’à représenter des certitudes. On retire une pièce, on ferme un passage, on imagine un hiver moins favorable. Une belle solution qui ne supporte aucune contrariété ressemble davantage à un décor qu’à un lieu.",
-      "Une proposition conserve pourtant sa place : construire une petite partie, l’habiter, puis revenir à la table. L’essai doit durer assez longtemps pour rencontrer la fatigue, les réparations et les désaccords. L’inauguration n’est pas encore une expérience.",
-      "Le soir, le cercle autour de 2027 a disparu sous les corrections. La date reste visible. Elle indique moins une destination qu’un temps laissé à ceux qui viendront modifier nos plans. Le groupe trouve cette perspective suffisamment ambitieuse."
+      "Une rue peut être trop rapide pour qu’on y reconnaisse un visage. Une machine trop bruyante pour qu’une conversation commence. Un mur trop long pour qu’on puisse le contourner sans renoncer à la visite. L’échelle humaine se mesure aussi à ces petites possibilités perdues.",
+      "Il ne suffit donc pas de faire petit. Il faut une vitesse à laquelle on puisse se rencontrer, un bruit qui laisse entendre une voix, une matière que la main n’évite pas. Cette beauté a une fonction : elle rend certaines façons de vivre ensemble plus faciles, et d’autres moins nécessaires.",
+      "Au récif corallien, chaque vie touche d’autres vies. Une forme s’appuie sur une autre, abrite un passage, modifie le courant que recevra sa voisine. Aucun organisme ne dessine l’ensemble. Il y a des heurts, des appétits, des places disputées; pourtant le lieu continue de se faire. On pourrait imaginer toutes ces vies comme autant de rêves, rêvant ensemble leur réalité.",
+      "Les récifs tropicaux de cette image appartiennent à d’autres mers. Autour de Tenerife, la roche volcanique porte ses propres communautés; plus bas, les coraux noirs composent d’autres formes de voisinage. L’image voyage jusqu’ici. Elle ne demande pas à l’Atlantique de devenir une mer différente.",
+      "Sur la côte, les maisons semblent parfois croître de la même manière. Une famille ajoute une pièce; le toit devient terrasse; un escalier trouve son passage entre deux murs. Le village n’a pas attendu qu’un seul dessin lui donne la permission d’exister. Il garde la trace de beaucoup de décisions, de besoins et d’entraides.",
+      "<b>QUESTION AU BORD DU PLAN.</b> Sans centre unique, qui s’occupe du passage commun ? Ceux qui le prennent doivent pouvoir s’en parler. L’absence d’un auteur ne dispense ni d’accords ni de soin. Un lieu peut avoir plusieurs commencements sans devenir indifférent à ceux qui y vivent.",
+      "Ce que nous bâtissons nous façonne à son tour. Une marche, un banc, une porte entrouverte mettent nos vies en relation. Le village est fait par ses habitants; leurs gestes sont aussi faits, peu à peu, par le village. L’architecture commence à ressembler à une manière de devenir ensemble.",
+      "Pour 2027, rêver à grande échelle pourrait vouloir dire ceci : laisser beaucoup de rêves trouver leur place sans exiger qu’ils deviennent un seul rêve. Assez proches pour se transformer, assez distincts pour continuer. Le prochain morceau se dessinerait au contact du précédent, comme une maison au bord d’une autre, comme une vie au bord d’une autre vie."
     ]
   },
   "it": {

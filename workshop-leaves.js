@@ -42,10 +42,10 @@ const workshopLeaves = {
     "form": "notice"
   },
   "arrival/fr-continued": {
-    "title": "Rectificatif",
-    "label": "NOTE DE LA RÉDACTION",
+    "title": "Qui tient le crayon ?",
+    "label": "QUESTION AU CARNET",
     "art": null,
-    "text": "Dans le compte rendu du matin, lire « entretien » et non « divertissement ». La différence intéresse les personnes chargées de nettoyer la salle. Les deux mots demandent du temps; un seul figurait au budget.",
+    "text": "Objection : sans plan général, comment réserver un passage ? Réponse : commencer par ceux qui passent déjà. Le trait doit pouvoir revenir sur la table. Le voisinage ne se décrète pas; il se travaille.",
     "form": "correction"
   },
   "arrival/it-continued": {
@@ -161,6 +161,7 @@ const workshopLeaves = {
 };
 
 const plateCaptions={
+ 'study-reef-village':'RÉCIF / VILLAGE : DES FORMES EN VOISINAGE / COMPARAISON, NON RELEVÉ',
  'study-territory':'USOS, CAMINOS Y AGUA / ANTES DEL PROYECTO',
  'study-futures':'SAVOIR, SUPPOSER, DÉSIRER / TROIS COLONNES, PLUSIEURS AVENIRS',
  'study-privacy':'TAVOLO COMUNE, STANZA PRIVATA / UNA SOGLIA FRA DUE POSSIBILITÀ',
