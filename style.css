@@ -176,3 +176,23 @@ header .brand,header .brand i,footer .brand,footer .brand i{font-family:var(--di
 .mag-sheet.cover .sheet-content>h1{font-family:var(--display);font-weight:700;font-size:49px;line-height:1.06;letter-spacing:-.7px}
 .mag-sheet.cover .sheet-content>h1 em{font-family:inherit;font-weight:700;font-style:normal}
 @media(max-width:600px){.mag-sheet.cover .sheet-content>h1{font-size:36px;letter-spacing:-.7px}}
+
+/* Conference newspaper: strong hierarchy, narrow measures, visible editorial pieces. */
+.assembly-page .sheet-title{border-top:6px solid var(--ink);padding-top:13px}
+.mag-sheet.assembly-page .sheet-title h1{font-size:46px;line-height:.98;letter-spacing:-1.2px;margin:13px 0 16px}
+.assembly-page .sheet-deck{font-size:18px;line-height:1.25}
+.assembly-plate{margin:19px 0 22px}.assembly-plate img{width:100%;display:block;mix-blend-mode:multiply}
+.assembly-prose{columns:2;column-gap:22px;column-rule:1px solid #b5a180;font:16px/1.32 var(--serif);text-align:left}
+.assembly-prose p{margin:0 0 13px}.assembly-prose b{font:700 11px/1.2 var(--sans);letter-spacing:.4px}
+.assembly-notice{border:2px solid var(--ink);padding:12px 14px;margin-top:20px;font:13px/1.35 var(--sans);break-inside:avoid;background:#dfcea9}
+.leaf-notice,.leaf-correction,.leaf-cutting{padding:16px 18px;border:1px solid var(--ink);margin:24px 0 5px}
+.leaf-notice{border-top:5px solid var(--ink);background:#e6d5ae}.leaf-correction{border-top:1px solid var(--ink);border-left:5px solid var(--rust);background:#f3e8cf;box-shadow:2px 2px 0 #b9a781}
+.leaf-cutting{border:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding-left:0;padding-right:0}
+.leaf-notice p,.leaf-correction p,.leaf-cutting p{columns:1;font:16px/1.35 var(--serif)}
+.leaf-notice .leaf-heading h3,.leaf-correction .leaf-heading h3,.leaf-cutting .leaf-heading h3{font-size:24px;margin:7px 0 10px}
+.leaf-illustrated .leaf-heading h3{border-bottom:1px solid var(--line);padding-bottom:9px}
+@media(min-width:1600px){.assembly-prose{columns:3;font-size:16px}}
+@media(max-width:1100px){.assembly-prose{font-size:19px;line-height:1.4}.mag-sheet.assembly-page .sheet-title h1{font-size:52px}}
+@media(max-width:760px){.assembly-prose{columns:1;font-size:20px;line-height:1.45}.mag-sheet.assembly-page .sheet-title h1{font-size:38px}.assembly-notice{font-size:16px}}
+
+.pattern-plate{margin:24px 0}.pattern-plate img{width:100%;display:block;mix-blend-mode:multiply}

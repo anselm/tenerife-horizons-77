@@ -2,14 +2,14 @@
 
 [Read the magazine →](https://anselm.github.io/tenerife-horizons-77/)
 
-A 48-page alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German.
+A 52-page alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German.
 
 The complete issue is one continuous numbered sequence, shown as facing pages on wide screens and single pages on smaller screens. Printed “see page…” references work quietly as links. Viewer controls sit outside the magazine paper. All articles, translations, atlas annotations and conference inserts appear in the reading flow.
 
 ## Print today
 
-A separate **44-page Letter print edition**, with clean white pages and fixed
-pagination, is ready for small-run printing. The complete 48-sheet web edition
+A separate **48-page Letter print edition**, with clean white pages and fixed
+pagination, is ready for small-run printing. The complete 52-sheet web edition
 retains its numbered sequence.
 
 - [Reader-order PDF — preferred for a print shop](output/pdf/Horizons-77-print-letter.pdf)
@@ -56,11 +56,12 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 | 37–38 | Cooperative finance |
 | 39–40 | Gilliam after Jabberwocky |
 | 41–42 | Architectural portraits |
-| 43–45 | Programme, delegate credential and cooperative certificate |
-| 46–47 | Closing editorial |
-| 48 | Edition notes and provenance |
+| 43–46 | Kitchen interview, provisional accounts, letters and closing desk |
+| 47–49 | Programme, delegate credential and cooperative certificate |
+| 50–51 | Closing editorial |
+| 52 | Edition notes and provenance |
 
-The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See page 48 and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` and `COAST-NOTEBOOK-ART-V2.txt` for provenance.
+The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See page 52 and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` and `COAST-NOTEBOOK-ART-V2.txt` for provenance.
 
 Conceived in a 2025 conversation; digital edition made in October 2026.
 
@@ -106,3 +107,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [23 · A harder heading](devlog/2026/23-a-harder-heading.md)
 - [24 · Blackwater and thanks](devlog/2026/24-blackwater-and-thanks.md)
 - [25 · Oleaje](devlog/2026/25-oleaje.md)
+- [26 · After Habitat](devlog/2026/26-after-habitat.md)

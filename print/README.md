@@ -1,14 +1,14 @@
 # Print edition
 
-Recorded 2026-10-27. A separately typeset, 44-page Letter edition of the complete
-magazine, with an optional 11 × 17 imposition for 11-sheet saddle stitching.
-The 48-sheet web version retains its numbered sequence and now opens in facing spreads. Finished PDFs and the shop brief are in
+Revised 2026-10-31. A separately typeset, 48-page Letter edition of the complete
+magazine, with an optional 11 × 17 imposition for 12-sheet saddle stitching.
+The 52-sheet web version retains its numbered sequence and now opens in facing spreads. Finished PDFs and the shop brief are in
 [`output/pdf/`](../output/pdf/).
 
 The PDFs use white paper, no simulated seam, no bleed and generous margins.
-Typesetting uses a soft Fraunces-derived display cut, URW Bookman, Nimbus Roman and Nimbus Sans, balanced columns, and protected
+Typesetting uses URW Gothic display capitals, URW Bookman, Nimbus Roman and Nimbus Sans, balanced columns, and protected
 short paragraph endings. Fixed print pagination is generated independently of
-web folios. The cover image appears only once. A new terrace plate, a screening-room
+web folios. Every placed image is used once. Four new editorial pages use three narrow columns, interview exchanges, correspondence, boxed notices and a dedicated editorial cartoon. A new terrace plate, a screening-room
 illustration and original working diagrams provide subject-specific artwork. Source citations print as readable titles and
 domains; complete URLs remain in the web edition.
 
