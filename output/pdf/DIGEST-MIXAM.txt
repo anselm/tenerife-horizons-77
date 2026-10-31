@@ -1,0 +1,49 @@
+HORIZONS ’77 — MIXAM DIGEST / 31 OCTOBER 2026
+
+ORDER CONFIGURATION
+10 Paperback PUR Booklets, Digest 5.5 × 8.5 inches, portrait.
+48 BODY pages, full colour, 50lb Uncoated Text.
+Separate cover: full colour OUTSIDE ONLY, 80lb Uncoated Cover.
+Spine: 0.14 inch, as supplied from the Mixam cart. Spine intentionally blank.
+No inside-cover printing. The two cover faces are not part of the 48 body pages.
+
+UPLOAD THESE TWO PRODUCTION FILES
+
+1. Horizons-77-digest-interior.pdf
+48 single pages, reading order. Trim 5.5 × 8.5 inches.
+PDF media/bleed size 5.75 × 8.75 inches; 0.125-inch bleed on all sides.
+TrimBox identifies the finished page. No crop marks; white bleed matches stock.
+Mirrored margins leave at least 0.5 inch at the glued edge.
+
+2. Horizons-77-digest-cover.pdf
+ONE outside wrap: BACK cover on left, blank SPINE in middle, FRONT on right.
+Overall trim 11.14 × 8.5 inches = 5.5 + 0.14 + 5.5.
+With 0.125-inch outer bleed: 11.39 × 8.75 inches.
+This one-page file supplies the two outside cover faces and spine together.
+Do not upload inside-cover art. Retain “outside only” in the order.
+
+DO NOT UPLOAD THE READING PROOF AS THE BODY
+Horizons-77-digest-proof.pdf is a 52-page, trim-size reading proof:
+front cover, blank inside front, 48 body pages, blank inside back, back cover.
+It is for reviewing the whole object, not production or imposition.
+Print a representative proof page at 100% / Actual Size to judge the small type.
+Do not choose Fit, Shrink, Booklet or N-up when assessing its actual-size type.
+
+TYPE AND PAGINATION
+Reflowed two-column body, including formerly three-column editorial desks.
+Main article text is approximately 7.7–8.8 pt; edition notes approximately 8 pt.
+Smaller captions and labels are approximately 6 pt. Embedded vector text/fonts.
+A half-title is now interior page 1; contents remain page 2.
+Articles retain the Letter edition’s internal page references.
+Full edition notes occupy interior pages 46–48; Shanee’s thanks remain at the end.
+The front and back cover art is separate from those interior pages.
+
+CHECK MIXAM’S UPLOAD PREVIEW
+Confirm the first body page is the title page, the last is edition notes / 3,
+and that the cover preview places the front on the right and back on the left.
+Confirm trim 5.5 × 8.5, 48 body pages, 0.14-inch spine, 50lb/80lb uncoated,
+full colour and blank inside covers. Check the proof before approving production.
+No purchase, upload or print approval has been made by the assistant.
+
+Specification reference:
+https://d1e8vjamx1ssze.cloudfront.net/support/how-to-print-a-book.pdf

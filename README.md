@@ -35,6 +35,22 @@ Then visit `http://127.0.0.1:8777`. No build, dependencies, accounts or external
 
 The magazine is published at [anselm.github.io/tenerife-horizons-77](https://anselm.github.io/tenerife-horizons-77/). GitHub Pages serves the `main` branch from the repository root; pushed changes update the site automatically.
 
+
+## Mixam digest edition
+
+A separate **5.5 × 8.5-inch digest** is prepared for 10 colour PUR-bound copies:
+48 interior pages on 50lb uncoated text, separate outside-only 80lb uncoated cover,
+and the cart’s 0.14-inch spine. It keeps the two-column layout, with reflowed text,
+mirrored binding margins and printer bleed.
+
+- [Interior — upload as body](output/pdf/Horizons-77-digest-interior.pdf)
+- [Outside cover wrap — upload as cover](output/pdf/Horizons-77-digest-cover.pdf)
+- [Whole-book reading proof — do not upload](output/pdf/Horizons-77-digest-proof.pdf)
+- [Mixam setup and upload instructions](output/pdf/DIGEST-MIXAM.txt)
+
+Rebuild with `python3 print/build-digest.py` after the usual content export.
+The Letter editions and website pagination are unchanged.
+
 ## Reading order
 
 | Pages | Material |
@@ -117,3 +133,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [26 · After Habitat](devlog/2026/26-after-habitat.md)
 - [27 · Five openings, one conversation](devlog/2026/27-five-openings-one-conversation.md)
 - [28 · Dreaming at scale](devlog/2026/28-dreaming-at-scale.md)
+- [29 · A digest to carry](devlog/2026/29-a-digest-to-carry.md)
