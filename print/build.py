@@ -148,29 +148,38 @@ def add(key,title,kind,**kw):
  if key not in first:first[key]=len(sheets)+3
  sheets.append(dict(key=key,title=title,kind=kind,**kw))
 def addarticle(a,lang='en'):
- t=D['editorialTranslations'][lang] if a['id']=='arrival' and lang!='en' else a;key='arrival/'+lang if a['id']=='arrival' else a['id']
+ t=D['openingFeatures'][lang] if a['id']=='arrival' and lang!='en' else a;key='arrival/'+lang if a['id']=='arrival' else a['id']
  if a['id']=='arrival':add(key,t['title'],'editorial',a=a,t=t,body=t['body'],lang=lang);return
  half=math.ceil(len(t['body'])/2)
  add(key,t['title'],'article',a=a,t=t,body=t['body'][:half],lang=lang)
  add(key+'-continued',t['title'],'continued',a=a,t=t,body=t['body'][half:],lang=lang)
 A={a['id']:a for a in D['articles']}
 addarticle(A['arrival'])
-for lang in ['es','fr','it','de']:addarticle(A['arrival'],lang)
-for a in [A['below'],D['cousteauArticle'],D['coastArticle']]:addarticle(a)
+for lang in ['es','fr','it','de']:
+ addarticle(A['arrival'],lang)
+ if lang=='es':
+  a=next(a for a in D['assemblyPages'] if a['id']=='kitchen-desk');add(a['id'],a['title'],'assembly',a=a)
+for a in [A['below'],D['cousteauArticle'],D['coastArticle']]:
+ addarticle(a)
+ if a['id']=='below':
+  desk=next(x for x in D['assemblyPages'] if x['id']=='letters-desk');add(desk['id'],desk['title'],'assembly',a=desk)
 add('horse',D['horseArticle']['title'],'horse',a=D['horseArticle'])
 for a in [D['goodallArticle'],D['maathaiArticle'],A['slope']]:addarticle(a)
 for i,sec in enumerate(D['alexanderEssay']['sections']):add('alexander' if i==0 else 'alexander-'+str(i+1),D['alexanderEssay']['title'],'alexander',part=sec,index=i)
 add('rahman',D['rahmanArticle']['title'],'rahman',a=D['rahmanArticle'])
-for a in [A['sun'],A['air']]:addarticle(a)
+for a in [A['sun'],A['air']]:
+ addarticle(a)
+ if a['id']=='sun':
+  desk=next(x for x in D['assemblyPages'] if x['id']=='accounts-desk');add(desk['id'],desk['title'],'assembly',a=desk)
 add('atlas','Seven islands. Many futures.','atlas');add('atlas-notes','Each island has a name.','atlas-notes')
 for a in [A['credit'],D['gilliamArticle'],A['table']]:addarticle(a)
-for a in D['assemblyPages']:add(a['id'],a['title'],'assembly',a=a)
+a=next(a for a in D['assemblyPages'] if a['id']=='closing-desk');add(a['id'],a['title'],'assembly',a=a)
 add('programme',D['docs']['programme']['title'],'programme',a=D['docs']['programme'])
 add('pass','The life between sessions','documents');first['certificate']=first['pass']
 addarticle(A['afterword'])
 assert len(sheets)==43,len(sheets)
 first['colophon']=46
-contents=[('arrival/en','Editorial / English'),('arrival/es','Editorial / Español'),('arrival/fr','Éditorial / Français'),('arrival/it','Editoriale / Italiano'),('arrival/de','Editorial / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
+contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Español'),('arrival/fr','Méthode / Français'),('arrival/it','Abitare / Italiano'),('arrival/de','Werkstatt / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
 
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
@@ -224,6 +233,7 @@ image(ROOT/'assets/tenerife.png',44,154,524,250)
 text('TENERIFE / 2027',44,137,7,'A');text('ESTUDIO PARA UN PAISAJE HABITADO',315,137,6.5,'A')
 rule(118);text('INTERNATIONAL CONFERENCE ON POSSIBLE FUTURES',44,97,8,'AB');text('Reports, drawings & conversations assembled at the close of the meeting.',44,76,11,'G');text('200 PESETAS',489,48,7,'A');finish()
 page('Contents','SUMARIO / CONTENTS');y=titleblock('Sumario.',deck='Papers, drawings and conversations assembled at the close of the conference.',tag='NÚMERO 1 / TENERIFE / 1977')-7
+contents.sort(key=lambda row:first[row[0]])
 for col,rows in enumerate([contents[:14],contents[14:]]):
  yy=y;x=44+col*274
  for key,label in rows:
@@ -234,9 +244,9 @@ text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,67,6.8,'A');finish
 for s in sheets:
  k=s['kind'];page(s['title'],s.get('a',{}).get('tag',s['key'].replace('-',' / ')));bottom=None
  if k in ['article','continued','editorial']:
-  a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'],t.get('subtitle','') if opening else '',a['tag']+' / '+s['lang'].upper(),a['author'] if opening else '',continued=not opening)
+  a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'],t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
   if opening:
-   kind='study-'+dict(en='section',es='wind',fr='calendar',it='court',de='cycle')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
+   kind='study-'+dict(en='section',es='territory',fr='futures',it='privacy',de='repair')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
    if a['id']!='afterword':y=art(kind,y-2,105 if k=='editorial' else 185 if a['id']=='slope' else 165 if a['art'] in ['coast','observatory'] else 150)
   note=a.get('note') if not opening and s['lang']=='en' else None
   bottom=prose(s['body'],y,note,size=11.3 if opening else 11.7)

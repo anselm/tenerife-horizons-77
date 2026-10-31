@@ -43,7 +43,7 @@ const workshopLeaves = {
   },
   "arrival/fr-continued": {
     "title": "Rectificatif",
-    "label": "NOTE DES INTERPRÈTES",
+    "label": "NOTE DE LA RÉDACTION",
     "art": null,
     "text": "Dans le compte rendu du matin, lire « entretien » et non « divertissement ». La différence intéresse les personnes chargées de nettoyer la salle. Les deux mots demandent du temps; un seul figurait au budget.",
     "form": "correction"
@@ -90,21 +90,21 @@ const workshopLeaves = {
     "title": "The part beyond the fence",
     "label": "FROM THE TEACHING TABLE",
     "art": null,
-    "text": "Asha Mehta, a visiting teacher, asks the drawing office to show what children can observe without being told what they ought to see. A patch of undisturbed ground beside the school may begin a lesson which no timetable can finish.",
+    "text": "Asha Mehta asks: Must the children come back with the names of everything they have seen? Reply from the teaching table: Let them come back with something they have noticed. The list of species can wait for the next walk.",
     "form": "notice"
   },
   "maathai-continued": {
     "title": "A nursery keeps a calendar",
     "label": "FATOU DIOP / NOTES FROM THE TABLE",
     "art": null,
-    "text": "Fatou Diop, a visiting teacher from Dakar, asks who will carry water during the school holidays. The question changes the planting schedule. Shared work becomes possible when the calendar includes the days on which its usual volunteers are elsewhere.",
+    "text": "Fatou Diop: Who carries water when the school closes? The first schedule leaves the holidays blank. A second hand writes names across the empty weeks. The nursery now has fewer trees on its first planting day, and a better chance of having them next year.",
     "form": "cutting"
   },
   "slope-continued": {
     "title": "The threshold is a room too",
     "label": "ARCHITECTURE WORKSHOP",
     "art": null,
-    "text": "Draw the chair outside the door. Draw the place to put down a basket. A passage that admits a pause can become a small public room, without requiring another building or another committee.",
+    "text": "OBJECTION: The chair will obstruct the passage. REPLY: So will the neighbour standing there to rest. The next plan makes a recess wide enough for both. The committee has added no room, but the path has acquired one.",
     "form": "correction"
   },
   "rahman": {
@@ -161,6 +161,10 @@ const workshopLeaves = {
 };
 
 const plateCaptions={
+ 'study-territory':'USOS, CAMINOS Y AGUA / ANTES DEL PROYECTO',
+ 'study-futures':'SAVOIR, SUPPOSER, DÉSIRER / TROIS COLONNES, PLUSIEURS AVENIRS',
+ 'study-privacy':'TAVOLO COMUNE, STANZA PRIVATA / UNA SOGLIA FRA DUE POSSIBILITÀ',
+ 'study-repair':'BAUTEIL, WERKZEUG, ERSATZTEILE / DIE ZWEITE ZEICHNUNG',
  'study-section':'CORTE ESQUEMÁTICO / DEL MAR A LAS CUMBRES / NO A ESCALA',
  'study-wind':'VIENTO, SOMBRA Y AGUA / ESTUDIOS DE ORIENTACIÓN',
  'study-calendar':'LA MESA COMÚN / HORARIO DE TRABAJO',
@@ -182,17 +186,17 @@ const assemblyPages = [
     "id": "kitchen-desk",
     "title": "The kitchen has a closing time",
     "tag": "ENTREVISTA / DEL OTRO LADO DE LA MESA",
-    "deck": "Carmen Pérez, from the kitchen, answers the housing table. Isabel Martín interprets. The cups have not yet come back.",
+    "deck": "Carmen Pérez, from the kitchen, answers the housing table. Isabel Martín takes notes. The cups have not yet come back.",
     "art": "kitchen",
     "caption": "CIRCUITO DE SERVICIO / DEVOLVER, LAVAR, VOLVER A USAR",
     "body": [
       "<b>Pregunta. ¿Qué les parece la cocina colectiva?</b><br/>Carmen. Grande. En el dibujo parece que cabe todo. ¿Han dibujado dónde se dejan las cajas vacías?",
-      "<b>What do you think of the communal kitchen?</b><br/>Large. Everything seems to fit in the drawing. Have they drawn a place for the empty crates? The architect turns the sheet around. A rectangle is added behind the store.",
+      "<b>AT THE DRAWING TABLE</b><br/>The architect turns the sheet around. The crates were to arrive through the same door as the diners. A rectangle is added behind the store, and the delivery route is given its own entrance.",
       "<b>Pregunta. ¿Y el trabajo compartido?</b><br/>Carmen. Si se comparte, bien. Pero ustedes terminan la reunión y nosotros seguimos aquí. También tenemos que coger la guagua.",
-      "<b>And the shared work?</b><br/>If it is shared, good. But you finish the meeting and we are still here. We have a bus to catch too. The interpreter leaves a longer pause than usual. The housing table has been discussing freedom from timetables.",
+      "<b>THE EVENING ROTA</b><br/>The housing table has been discussing freedom from timetables. Carmen draws a line under the proposed evening rota. Its hours end before the final plates have been washed. Nobody volunteers to call those plates a technical detail.",
       "<b>Pregunta. ¿Qué cambiaría primero?</b><br/>Carmen. Hablen con quienes van a usarla. No solo con quienes vienen a verla. Y una ventana que se pueda abrir sin subirse a una silla.",
-      "<b>What would you change first?</b><br/>Talk to the people who will use it, not only those who come to look at it. And a window that can be opened without standing on a chair. The elegant high window is lowered on the next drawing.",
-      "The exchange takes place in Spanish. A few visitors recognise words from hotel dining rooms; that is not the same as following an argument. Isabel reads back the English account to Carmen in Spanish before allowing it to go to the composing table.",
+      "<b>AMENDMENT TO THE ELEVATION</b><br/>The elegant high window is lowered on the next drawing. Its handle can now be reached from the floor. The architect asks Carmen to test the store door as well; she does, with a chair standing in for a crate.",
+      "Carmen turns the plan around and marks the window herself. Isabel keeps the annotated sheet for the proceedings. The correction is clearer than the architect’s first explanation.",
       "At the afternoon session the kitchen appears again, with a place for crates, a lower window and a closing rota. The perspective is less empty. There is now something for the inhabitants to do besides admire the view."
     ],
     "notice": "COCINA / KITCHEN. Las horas de cierre también forman parte del proyecto. Closing hours belong in the plan."
@@ -242,12 +246,12 @@ const assemblyPages = [
     "art": "pasteboard",
     "caption": "MESA DE MONTAJE / UNA CORRECCIÓN LLEGA DESPUÉS DEL TITULAR",
     "body": [
-      "At the closing table, Isabel Martín has five versions of the editorial and room for four and a half. The German copy is longer. The French correction has arrived on the back of an envelope. A Spanish heading is cut from its proof and moved above the photograph. Someone must read the page again after the paste has dried.",
+      "At the closing table, Isabel Martín has five opening papers and room for four and a half. The German workshop report is longer than expected. A correction to the French paper has arrived on the back of an envelope. A Spanish heading is cut from its proof and moved above the photograph. Someone must read the page again after the paste has dried.",
       "The people who delivered the papers have begun to leave. The people assembling them are still deciding what a reader will need. A caption comes back from the kitchen with a correction to a name. The correction is made before the large statement about the future of humanity goes to the printer.",
       "<b>FE DE ERRATAS / CORRECTIONS</b><br/>In the circulation drawing, the arrow beside the stair points towards the landing, not into the neighbour’s kitchen. In the energy account, “available” does not mean “available at night”. Please retain both corrections with the relevant sheets.",
       "<b>OBJETOS ENCONTRADOS / FOUND</b><br/>One slide box, one ruler and a cardigan remain at the secretariat. The slide box contains the sea in several states of exposure. The ruler has no name. The cardigan has been claimed twice, in different languages.",
       "<b>ANTES DE LA GUAGUA / BEFORE DEPARTURE</b><br/>Please leave a forwarding address for proofs and return the borrowed interpretation equipment. The driver can carry a rolled drawing; the drawing must not occupy the seat of a person still waiting outside.",
-      "The Spanish notices stay in Spanish, with an English rendering alongside them where space permits. They address people working here, not an imagined international public. The other languages remain in the papers and conversations which brought them to the island.",
+      "A room number is added to the note about the borrowed projector. A forwarding address is written beside the water drawing. Someone has found the missing receipt inside the slide box. The secretary crosses out provisional, considers the remaining envelopes, and writes it again.",
       "<b>NOTA DE LA REDACCIÓN</b><br/>No hemos podido imprimirlo todo. Tampoco queríamos que pareciera que todos estaban de acuerdo. We have not been able to print everything. Nor did we wish to suggest that everyone agreed.",
       "The pages are finally gathered. There are heavier headings where a short report needed to hold its ground, narrow columns where a longer argument refused to become short, and one notice which nobody had time to translate. The mountain has not moved. The last cup has."
     ],

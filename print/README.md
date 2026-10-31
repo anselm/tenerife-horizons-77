@@ -35,3 +35,5 @@ physical folded proof, particularly duplex orientation, before a full run.
 The new reader-spreads PDF places consecutive facing pages together for screen
 reading; it is not a print imposition. The production files remain the ordinary
 reader-order PDF and the separately imposed tabloid PDF.
+
+The five opening papers now cover distinct topics rather than repeating one editorial in translation. The kitchen interview follows the Spanish land paper (print page 5), correspondence follows ocean habitats (page 11), and the provisional accounts follow energy (page 30). Only the production desk remains near the closing material (page 41). Web and print folios differ; both contents pages use their own current page numbers.

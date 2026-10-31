@@ -3,42 +3,42 @@
   "firstPages": {
     "arrival/en": 3,
     "arrival/es": 4,
-    "arrival/fr": 5,
-    "arrival/it": 6,
-    "arrival/de": 7,
-    "below": 8,
-    "below-continued": 9,
-    "cousteau": 10,
-    "cousteau-continued": 11,
-    "coast": 12,
-    "coast-continued": 13,
-    "horse": 14,
-    "goodall": 15,
-    "goodall-continued": 16,
-    "maathai": 17,
-    "maathai-continued": 18,
-    "slope": 19,
-    "slope-continued": 20,
-    "alexander": 21,
-    "alexander-2": 22,
-    "alexander-3": 23,
-    "alexander-4": 24,
-    "rahman": 25,
-    "sun": 26,
-    "sun-continued": 27,
-    "air": 28,
-    "air-continued": 29,
-    "atlas": 30,
-    "atlas-notes": 31,
-    "credit": 32,
-    "credit-continued": 33,
-    "gilliam": 34,
-    "gilliam-continued": 35,
-    "table": 36,
-    "table-continued": 37,
-    "kitchen-desk": 38,
-    "accounts-desk": 39,
-    "letters-desk": 40,
+    "kitchen-desk": 5,
+    "arrival/fr": 6,
+    "arrival/it": 7,
+    "arrival/de": 8,
+    "below": 9,
+    "below-continued": 10,
+    "letters-desk": 11,
+    "cousteau": 12,
+    "cousteau-continued": 13,
+    "coast": 14,
+    "coast-continued": 15,
+    "horse": 16,
+    "goodall": 17,
+    "goodall-continued": 18,
+    "maathai": 19,
+    "maathai-continued": 20,
+    "slope": 21,
+    "slope-continued": 22,
+    "alexander": 23,
+    "alexander-2": 24,
+    "alexander-3": 25,
+    "alexander-4": 26,
+    "rahman": 27,
+    "sun": 28,
+    "sun-continued": 29,
+    "accounts-desk": 30,
+    "air": 31,
+    "air-continued": 32,
+    "atlas": 33,
+    "atlas-notes": 34,
+    "credit": 35,
+    "credit-continued": 36,
+    "gilliam": 37,
+    "gilliam-continued": 38,
+    "table": 39,
+    "table-continued": 40,
     "closing-desk": 41,
     "programme": 42,
     "pass": 43,
@@ -254,11 +254,11 @@
     ],
     [
       4,
-      11.05
+      11.3
     ],
     [
       5,
-      11.05
+      11
     ],
     [
       6,
@@ -266,7 +266,7 @@
     ],
     [
       7,
-      11.05
+      11.3
     ],
     [
       8,
@@ -274,15 +274,15 @@
     ],
     [
       9,
-      11.7
-    ],
-    [
-      10,
       11.3
     ],
     [
-      11,
+      10,
       11.7
+    ],
+    [
+      11,
+      11
     ],
     [
       12,
@@ -294,15 +294,15 @@
     ],
     [
       14,
-      10.75
-    ],
-    [
-      15,
       11.3
     ],
     [
-      16,
+      15,
       11.7
+    ],
+    [
+      16,
+      10.75
     ],
     [
       17,
@@ -326,7 +326,7 @@
     ],
     [
       22,
-      11.3
+      11.7
     ],
     [
       23,
@@ -338,7 +338,7 @@
     ],
     [
       25,
-      12
+      11.3
     ],
     [
       26,
@@ -346,7 +346,7 @@
     ],
     [
       27,
-      11.7
+      12
     ],
     [
       28,
@@ -358,47 +358,47 @@
     ],
     [
       30,
-      14
+      11
     ],
     [
       31,
-      12.5
+      11.3
     ],
     [
       32,
-      11.3
+      11.7
     ],
     [
       33,
-      11.7
+      14
     ],
     [
       34,
-      11.3
+      12.5
     ],
     [
       35,
-      11.7
-    ],
-    [
-      36,
       11.3
     ],
     [
-      37,
+      36,
       11.7
     ],
     [
+      37,
+      11.3
+    ],
+    [
       38,
-      11
+      11.7
     ],
     [
       39,
-      11
+      11.3
     ],
     [
       40,
-      11
+      11.7
     ],
     [
       41,
@@ -426,7 +426,7 @@
     ],
     [
       47,
-      9.05
+      8.8
     ]
   ]
 }

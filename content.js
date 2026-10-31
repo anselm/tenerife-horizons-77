@@ -3,7 +3,7 @@ const articles = [
 'The mountain is there before any of us. On the approach from the sea, Teide appears to belong to a different island: a second, higher country suspended above the first. Below it are the ordinary arrangements of living—roads, fields, washing, a bus taking the bend. We have come to discuss the year 2027. The bus has to get to Santa Cruz this afternoon.',
 'This journal begins with that double view. We want the distance which permits an idea to grow, and the nearness which asks who will carry its materials uphill. An island offers both. Its limits can be seen, but its horizon cannot be reached. It receives the world without becoming the whole of it.',
 'The conference proposed in these pages brings architecture into conversation with energy, transport, household life and money. Its real subject is permission: permission to imagine a settlement whose first drawing is not a road, a household whose first agreement is not a mortgage, a machine whose success is measured partly by the silence it leaves behind.',
-'We work in English, Spanish, French, Italian and German. This is slower than working in one language, and we count the slowness among our resources. A word returns from the interpreter slightly changed. Someone discovers that what seemed inevitable was only customary. By lunch, even the word development has acquired several useful doubts.',
+'By the second morning, the tables have begun to borrow from one another. The energy group wants to know how the kitchen will be used; the housing group has asked for the water account. A question about a window has reached the people drawing a room beneath the sea. Fifty years begins to feel less like a distance than a length of work which several people might share.',
 'The islands are not vacant pages. Tenerife, La Palma, La Gomera, El Hierro, Gran Canaria, Fuerteventura and Lanzarote have names, landscapes, work and inhabitants. Our drawings must answer to them. A project which needs an empty island has already misunderstood the invitation.',
 'In fifty years, many of the machines in this issue may look quaint. We hope the questions will not. How much ground should a person need? What can be held in common without making everyone alike? Can greater freedom of movement permit more places to be left alone?',
 'We offer no finished picture of 2027. We offer a table large enough to unfold several pictures at once. The view from the table is very good. There is still work to do.'
@@ -91,44 +91,67 @@ const articles = [
 ],note:'Correspondence for the next issue: papers, drawings, corrections and accounts of work in progress are welcome in English, Spanish, French, Italian or German. Please include a scale on all plans.'}
 
 ];
-const editorialTranslations={es:{title:'Una isla es un comienzo',subtitle:'Antes de que el futuro nos resultara familiar, era un lugar al que podíamos viajar juntos.',body:[
-'La montaña está allí antes que cualquiera de nosotros. Al acercarnos por el mar, el Teide parece pertenecer a otra isla: un segundo país, más alto, suspendido sobre el primero. Abajo están los arreglos cotidianos de la vida: caminos, campos, ropa tendida, una guagua tomando la curva. Hemos venido a hablar del año 2027. La guagua tiene que llegar a Santa Cruz esta tarde.',
-'Esta revista comienza con esa doble mirada. Queremos la distancia que permite crecer a una idea y la cercanía que pregunta quién subirá los materiales por la ladera. Una isla ofrece ambas cosas. Sus límites se ven, pero su horizonte no se alcanza. Recibe al mundo sin convertirse en el mundo entero.',
-'El congreso propuesto en estas páginas pone la arquitectura en conversación con la energía, el transporte, la vida doméstica y el dinero. Su verdadero tema es el permiso: imaginar un pueblo cuyo primer dibujo no sea una carretera, un hogar cuyo primer acuerdo no sea una hipoteca, una máquina cuyo éxito se mida también por el silencio que deja.',
-'Trabajamos en inglés, español, francés, italiano y alemán. Es más lento que trabajar en una sola lengua, y contamos esa lentitud entre nuestros recursos. Una palabra vuelve del intérprete ligeramente cambiada. Alguien descubre que lo que parecía inevitable era solamente habitual. Antes del almuerzo, incluso la palabra desarrollo ha adquirido varias dudas útiles.',
-'Las islas no son páginas en blanco. Tenerife, La Palma, La Gomera, El Hierro, Gran Canaria, Fuerteventura y Lanzarote tienen nombres, paisajes, trabajo y habitantes. Nuestros dibujos deben responder ante ellos. Un proyecto que necesita una isla vacía ya ha entendido mal la invitación.',
-'Dentro de cincuenta años, muchas máquinas de este número quizá parezcan ingenuas. Esperamos que las preguntas no. ¿Cuánto suelo necesita una persona? ¿Qué podemos compartir sin hacernos todos iguales? ¿Puede una mayor libertad de movimiento permitirnos dejar más lugares en paz?',
-'No ofrecemos una imagen terminada de 2027. Ofrecemos una mesa lo bastante grande como para desplegar varias imágenes a la vez. La vista desde la mesa es muy buena. Todavía queda trabajo.'
-]},fr:{title:'Une île est un commencement',subtitle:'Avant de nous devenir familier, l’avenir était un lieu où nous pouvions voyager ensemble.',body:[
-'La montagne est là avant nous tous. À l’approche par la mer, le Teide semble appartenir à une autre île : un second pays, plus haut, suspendu au-dessus du premier. En bas, la vie suit son cours : routes, champs, linge qui sèche, autobus dans le virage. Nous sommes venus parler de l’an 2027. L’autobus doit arriver à Santa Cruz cet après-midi.',
-'Cette revue commence par ce double regard. Nous voulons la distance qui permet à une idée de grandir et la proximité qui demande qui montera les matériaux sur la pente. Une île offre les deux. On voit ses limites sans atteindre son horizon. Elle accueille le monde sans devenir le monde entier.',
-'Le congrès proposé dans ces pages fait dialoguer l’architecture avec l’énergie, les transports, la vie domestique et l’argent. Son véritable sujet est la permission : imaginer une ville dont le premier dessin ne serait pas une route, un foyer dont le premier accord ne serait pas un emprunt, une machine dont la réussite se mesurerait aussi au silence qu’elle laisse.',
-'Nous travaillons en anglais, en espagnol, en français, en italien et en allemand. C’est plus lent que de travailler dans une seule langue, et nous comptons cette lenteur parmi nos ressources. Un mot revient de l’interprète légèrement changé. Quelqu’un découvre que ce qui semblait inévitable était seulement habituel. Avant le déjeuner, même le mot développement s’est enrichi de plusieurs doutes utiles.',
-'Les îles ne sont pas des pages blanches. Tenerife, La Palma, La Gomera, El Hierro, Gran Canaria, Fuerteventura et Lanzarote ont des noms, des paysages, du travail et des habitants. Nos dessins doivent leur répondre. Un projet qui exige une île vide a déjà mal compris l’invitation.',
-'Dans cinquante ans, bien des machines de ce numéro paraîtront peut-être désuètes. Nous espérons que les questions ne le seront pas. De combien de sol une personne a-t-elle besoin ? Que pouvons-nous partager sans devenir tous pareils ? Une plus grande liberté de mouvement permettra-t-elle de laisser davantage de lieux en paix ?',
-'Nous ne proposons pas une image achevée de 2027. Nous proposons une table assez grande pour déplier plusieurs images à la fois. La vue depuis cette table est très belle. Il reste du travail.'
-]},it:{title:'Un’isola è un inizio',subtitle:'Prima di diventare familiare, il futuro era un luogo verso cui potevamo viaggiare insieme.',body:[
-'La montagna è lì prima di tutti noi. Arrivando dal mare, il Teide sembra appartenere a un’altra isola: un secondo paese, più alto, sospeso sopra il primo. Sotto ci sono le cose quotidiane della vita: strade, campi, bucato, un autobus che affronta la curva. Siamo venuti a discutere dell’anno 2027. L’autobus deve arrivare a Santa Cruz questo pomeriggio.',
-'Questa rivista comincia con quel doppio sguardo. Vogliamo la distanza che permette a un’idea di crescere e la vicinanza che chiede chi porterà i materiali su per il pendio. Un’isola offre entrambe. Se ne vedono i limiti, ma non se ne raggiunge l’orizzonte. Accoglie il mondo senza diventare il mondo intero.',
-'Il convegno proposto in queste pagine mette l’architettura in dialogo con l’energia, i trasporti, la vita domestica e il denaro. Il suo vero tema è il permesso: immaginare un insediamento il cui primo disegno non sia una strada, una casa il cui primo accordo non sia un mutuo, una macchina il cui successo si misuri anche dal silenzio che lascia.',
-'Lavoriamo in inglese, spagnolo, francese, italiano e tedesco. È più lento che lavorare in una sola lingua, e contiamo questa lentezza fra le nostre risorse. Una parola ritorna dall’interprete leggermente cambiata. Qualcuno scopre che ciò che sembrava inevitabile era soltanto abituale. Prima di pranzo, persino la parola sviluppo ha acquistato diversi dubbi utili.',
-'Le isole non sono pagine bianche. Tenerife, La Palma, La Gomera, El Hierro, Gran Canaria, Fuerteventura e Lanzarote hanno nomi, paesaggi, lavoro e abitanti. I nostri disegni devono rispondere a loro. Un progetto che richiede un’isola vuota ha già frainteso l’invito.',
-'Fra cinquanta anni molte macchine di questo numero potranno sembrare ingenue. Speriamo che non lo sembrino le domande. Di quanto suolo ha bisogno una persona? Che cosa possiamo tenere in comune senza diventare tutti uguali? Una maggiore libertà di movimento può permetterci di lasciare più luoghi in pace?',
-'Non offriamo un’immagine compiuta del 2027. Offriamo un tavolo abbastanza grande per aprire più immagini insieme. La vista dal tavolo è molto bella. C’è ancora lavoro da fare.'
-]}};
-
-editorialTranslations.de = {
- title: 'Eine Insel ist ein Anfang',
- subtitle: 'Bevor uns die Zukunft vertraut wurde, war sie ein Ort, zu dem wir gemeinsam reisen konnten.',
- body: [
- 'Der Berg ist vor uns allen da. Vom Meer aus scheint der Teide zu einer anderen Insel zu gehören: einem zweiten, höher gelegenen Land, das über dem ersten schwebt. Darunter liegen die alltäglichen Dinge des Lebens: Straßen, Felder, Wäsche, ein Bus in der Kurve. Wir sind gekommen, um über das Jahr 2027 zu sprechen. Der Bus muss heute Nachmittag in Santa Cruz sein.',
- 'Diese Zeitschrift beginnt mit diesem doppelten Blick. Wir suchen die Entfernung, in der eine Idee wachsen kann, und die Nähe, die danach fragt, wer das Material den Hang hinauftragen wird. Eine Insel bietet beides. Ihre Grenzen sind sichtbar, ihr Horizont bleibt unerreichbar. Sie empfängt die Welt, ohne selbst die ganze Welt zu werden.',
- 'Die Konferenz auf diesen Seiten bringt Architektur mit Energie, Verkehr, dem häuslichen Leben und dem Geld ins Gespräch. Ihr eigentliches Thema ist die Freiheit, sich etwas vorzustellen: eine Siedlung, deren erste Zeichnung keine Straße ist; einen Haushalt, dessen erste Vereinbarung keine Hypothek ist; eine Maschine, deren Erfolg sich auch an der Stille misst, die sie hinterlässt.',
- 'Wir arbeiten auf Englisch, Spanisch, Französisch, Italienisch und Deutsch. Das geht langsamer als in einer einzigen Sprache, und wir rechnen diese Langsamkeit zu unseren Möglichkeiten. Ein Wort kommt vom Dolmetscher ein wenig verändert zurück. Jemand entdeckt, dass etwas, das unvermeidlich schien, lediglich üblich war. Bis zum Mittagessen hat selbst das Wort Entwicklung einige nützliche Zweifel hinzugewonnen.',
- 'Die Inseln sind keine leeren Seiten. Tenerife, La Palma, La Gomera, El Hierro, Gran Canaria, Fuerteventura und Lanzarote haben Namen, Landschaften, Arbeit und Bewohner. Unsere Zeichnungen müssen ihnen gerecht werden. Ein Vorhaben, das eine leere Insel braucht, hat die Einladung bereits missverstanden.',
- 'In fünfzig Jahren werden manche Maschinen in diesem Heft vielleicht sonderbar wirken. Wir hoffen, dass es den Fragen anders ergeht. Wie viel Boden braucht ein Mensch? Was können wir gemeinsam besitzen, ohne alle gleich zu werden? Kann größere Bewegungsfreiheit dazu beitragen, mehr Orte unberührt zu lassen?',
- 'Wir bieten kein fertiges Bild des Jahres 2027. Wir bieten einen Tisch, der groß genug ist, um mehrere Bilder zugleich darauf auszubreiten. Die Aussicht von diesem Tisch ist sehr schön. Es bleibt noch Arbeit.'
- ]
+const openingFeatures = {
+  "es": {
+    "title": "La isla no está vacía",
+    "subtitle": "Agua, suelo y derecho a quedarse. Una conversación antes de dibujar.",
+    "author": "Mesa del territorio",
+    "tag": "TERRITORIO",
+    "body": [
+      "En el primer plano había una extensión blanca entre el pueblo y el mar. Uno de los vecinos puso el dedo allí. Había un camino, una acequia y una parcela que trabajaba su cuñado. El papel no mentía exactamente; todavía no había aprendido a mirar.",
+      "La discusión sobre 2027 comenzó por los nombres. ¿De quién es el terreno? ¿Quién tiene derecho al agua? ¿Por dónde pasan los que no tienen coche? A cada respuesta le correspondía una línea que el dibujo anterior había dejado fuera.",
+      "Una casa nueva puede ser una promesa para quien llega y una amenaza para quien ya vive al lado. El taller propone que el precio del suelo no sea la medida del éxito. Si mejora el barrio y sus habitantes tienen que marcharse, ¿a quién hemos mejorado la vida?",
+      "<b>OBJECIÓN DESDE LA MESA.</b> No basta con reservar una plaza pública. También hace falta tiempo para estar en ella. Una mujer que vuelve tarde del trabajo no vive la misma distancia que un visitante que viene a pasear. El plano deberá admitir ambas jornadas.",
+      "El agua obliga a hablar con más precisión. Una flecha azul desde la montaña no explica una galería, un canal ni los acuerdos de quienes los mantienen. La futura cooperativa tendrá que conocer esos acuerdos antes de inventar otros.",
+      "No se pide que Tenerife permanezca inmóvil. Se pide que pueda cambiar sin quedar a disposición del primero que llegue con una imagen convincente. Un vecino sugiere comenzar por reparar una escalera. La propuesta parece pequeña hasta que se cuentan las personas que la usan.",
+      "Para la próxima sesión se acuerda salir sin planos. Cada visitante llevará una libreta. Los nombres de los caminos se escribirán antes que los nombres de los proyectos. Después habrá cincuenta años para discutir qué líneas conviene añadir."
+    ]
+  },
+  "fr": {
+    "title": "Cinquante ans, plusieurs avenirs",
+    "subtitle": "Comment regarder 2027 sans transformer une hypothèse en promesse.",
+    "author": "Atelier des hypothèses",
+    "tag": "MÉTHODE",
+    "body": [
+      "Au tableau, quelqu’un écrit 2027 et trace un cercle autour du nombre. Le cercle donne à la date une assurance qu’elle ne mérite pas encore. Une autre main ajoute trois colonnes : ce que nous savons, ce que nous supposons, ce que nous désirons.",
+      "La première colonne est courte. La montagne restera une contrainte, la mer une distance, les enfants auront grandi. Dans les deux autres colonnes, les logements se multiplient, les machines deviennent silencieuses et les décisions sont presque toujours prises par des gens raisonnables.",
+      "Le groupe décide de dessiner plusieurs lendemains. Dans l’un, le combustible reste cher. Dans un autre, les matériaux arrivent difficilement. Dans un troisième, les habitants refusent le dispositif commun qui devait les rendre heureux. Le même quartier doit pouvoir répondre aux trois.",
+      "<b>QUESTION DANS LA SALLE.</b> Si les habitants ne veulent pas de notre avenir, est-ce un échec de leur part ou du dessin ? La secrétaire laisse la question entière dans le compte rendu. Personne ne demande de vote.",
+      "Les maquettes servent alors à poser des questions plutôt qu’à représenter des certitudes. On retire une pièce, on ferme un passage, on imagine un hiver moins favorable. Une belle solution qui ne supporte aucune contrariété ressemble davantage à un décor qu’à un lieu.",
+      "Une proposition conserve pourtant sa place : construire une petite partie, l’habiter, puis revenir à la table. L’essai doit durer assez longtemps pour rencontrer la fatigue, les réparations et les désaccords. L’inauguration n’est pas encore une expérience.",
+      "Le soir, le cercle autour de 2027 a disparu sous les corrections. La date reste visible. Elle indique moins une destination qu’un temps laissé à ceux qui viendront modifier nos plans. Le groupe trouve cette perspective suffisamment ambitieuse."
+    ]
+  },
+  "it": {
+    "title": "Una porta da chiudere",
+    "subtitle": "Autocostruzione, vita comune e il diritto di sottrarsi alla riunione.",
+    "author": "Taccuino dell’abitare",
+    "tag": "ABITARE",
+    "body": [
+      "La prima pianta mette tutti intorno a un grande tavolo. È una bella immagine. Poi qualcuno domanda dove andrà la persona che quella sera non vuole parlare. Si aggiunge una stanza piccola. La vita comune perde una simmetria e guadagna un abitante.",
+      "Sulle pendici di Tenerife una casa incontra subito altre cose: il muro di sostegno, il passaggio, una terrazza che per il vicino è anche un tetto. Costruire da sé non significa costruire da soli. Ogni aggiunta modifica una relazione già in corso.",
+      "Il laboratorio propone un catalogo di parti che possano essere comprese e riparate qui. Ma una parete facile da montare non risolve il problema del terreno, dell’acqua o delle ore disponibili. La libertà del costruttore non può dipendere dal lavoro invisibile di qualcun altro.",
+      "<b>DALLA CUCINA.</b> Se ciascuno cucina per tutti una sera, chi decide il menu? La domanda suscita più interventi della sezione strutturale. Si scopre che una comunità ha bisogno anche di un fornello piccolo, per chi torna tardi o mangia diversamente.",
+      "Una delegata difende il corridoio come luogo d’incontro. Un altro difende la porta che lo interrompe. Nessuno dei due desidera un edificio ostile. Cercano una distanza che permetta di scegliere, e non soltanto di essere disponibili.",
+      "Per il 2027 si immagina una casa capace di cambiare senza ricominciare ogni volta da zero. Una camera diventa laboratorio; due famiglie condividono una lavanderia e conservano ingressi distinti. Le parti comuni si allargano quando servono, non quando il prospetto richiede una forma più pura.",
+      "Alla fine della giornata il tavolo è ancora al centro, ma non occupa tutta la pianta. Intorno ci sono soglie, ripari e possibilità di assentarsi. La comunità comincia a somigliare a un accordo che si può rinnovare, invece che a una riunione dalla quale non si esce."
+    ]
+  },
+  "de": {
+    "title": "Wer repariert das Jahr 2027?",
+    "subtitle": "Werkzeuge, Ersatzteile und die lange Lebensdauer einer guten Idee.",
+    "author": "Werkstatt für den nächsten Morgen",
+    "tag": "WERKSTATT",
+    "body": [
+      "Auf dem Tisch liegen eine Zeichnung des Sonnenhauses und ein Schraubenschlüssel. Die Zeichnung zeigt den Mittag. Der Schlüssel erinnert an einen anderen Zeitpunkt: den Morgen, an dem etwas nicht funktioniert. Beide gehören zum Entwurf.",
+      "Die Werkstatt fragt zunächst nach Teilen, die auf Tenerife beschafft oder hergestellt werden können. Ein kleines Bauteil kann eine große Anlage stilllegen. Seine Reise über das Meer gehört deshalb ebenso zur Konstruktion wie seine Form.",
+      "Für jede vorgeschlagene Maschine wird eine zweite Liste angelegt. Darauf stehen Werkzeuge, Ersatzteile, Kenntnisse und die Stunden, die ein Mensch für die Wartung braucht. Die Liste ist weniger eindrucksvoll als die Perspektive. Sie wird häufiger gelesen.",
+      "<b>EINWAND AUS DEM SAAL.</b> Wenn die Anlage nur von ihrem Erfinder verstanden wird, ist sie dann gemeinsames Eigentum? Die Antwort führt zu einer zusätzlichen Zeichnung: offen, beschriftet, ohne die freundliche Verkleidung, hinter der die Anschlüsse verschwinden.",
+      "Im Jahr 2027 könnten Häuser ihre Energie gemeinsam erzeugen. Damit wäre die Arbeit nicht abgeschafft. Jemand müsste einen Speicher prüfen, eine Leitung finden, einen Fehler erklären. Die Werkstatt möchte diesen Menschen einen Platz im Gebäude geben, nicht nur einen Posten im Kostenplan.",
+      "Ein Besucher schlägt vor, ein Modell absichtlich unvollständig zu übergeben. Die nächste Gruppe soll es anhand der Unterlagen zusammensetzen. Was sie nicht versteht, muss neu gezeichnet werden. Der erste Versuch dauert länger als vorgesehen; gerade deshalb wird er wiederholt.",
+      "Am Abend ist das Sonnenhaus um einen unscheinbaren Raum reicher: eine Werkstatt mit Licht, einer Bank und einem Schrank für Teile. Niemand nennt sie das Herz des Entwurfs. Aber am nächsten Morgen wird hier zuerst aufgeschlossen."
+    ]
+  }
 };
 
 const alexanderEssay = {

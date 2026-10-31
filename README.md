@@ -40,23 +40,30 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 | Pages | Material |
 | --- | --- |
 | 1–2 | Cover and contents |
-| 3–12 | Opening editorial in five languages |
-| 13–14 | Ocean habitats |
-| 15–16 | Cousteau and the new odyssey |
-| 17–18 | The afternoon without a shore — Montaña Amarilla and the coastal notebook |
-| 19 | A future of his own — an Andalusian stallion and learning to ask |
-| 20–21 | Goodall and the new institute |
-| 22–23 | Maathai and the new Green Belt Movement |
-| 24–25 | Hillside settlements |
-| 26–29 | Alexander and Bocacangrejo |
-| 30 | Rahman and the right to refuse |
-| 31–32 | Island energy |
-| 33–34 | Personal gliders and skyscraper lift stations |
-| 35–36 | Island atlas and annotations |
-| 37–38 | Cooperative finance |
-| 39–40 | Gilliam after Jabberwocky |
-| 41–42 | Architectural portraits |
-| 43–46 | Kitchen interview, provisional accounts, letters and closing desk |
+| 3–4 | An island is a beginning / English editorial |
+| 5–6 | La isla no está vacía / land, water and staying / Spanish |
+| 7 | Kitchen interview / questions and amendments |
+| 8–9 | Cinquante ans, plusieurs avenirs / possible futures / French |
+| 10–11 | Una porta da chiudere / communal and private life / Italian |
+| 12–13 | Wer repariert das Jahr 2027? / repair and shared knowledge / German |
+| 14–15 | Ocean habitats |
+| 16 | Letters, objections and editorial cartoon |
+| 17–18 | Cousteau and the new odyssey |
+| 19–20 | Montaña Amarilla and the coastal notebook |
+| 21 | Oleaje / a future of his own |
+| 22–23 | Goodall and the new institute |
+| 24–25 | Maathai and the new Green Belt Movement |
+| 26–27 | Hillside settlements |
+| 28–31 | Alexander and Bocacangrejo |
+| 32 | Rahman and the right to refuse |
+| 33–34 | Island energy |
+| 35 | Provisional conference accounts |
+| 36–37 | Personal gliders and lift stations |
+| 38–39 | Island atlas and annotations |
+| 40–41 | Cooperative finance |
+| 42–43 | Gilliam after Jabberwocky |
+| 44–45 | Architectural portraits |
+| 46 | The closing desk |
 | 47–49 | Programme, delegate credential and cooperative certificate |
 | 50–51 | Closing editorial |
 | 52 | Edition notes and provenance |
@@ -108,3 +115,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [24 · Blackwater and thanks](devlog/2026/24-blackwater-and-thanks.md)
 - [25 · Oleaje](devlog/2026/25-oleaje.md)
 - [26 · After Habitat](devlog/2026/26-after-habitat.md)
+- [27 · Five openings, one conversation](devlog/2026/27-five-openings-one-conversation.md)
