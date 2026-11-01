@@ -139,3 +139,5 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [28 · Dreaming at scale](devlog/2026/28-dreaming-at-scale.md)
 - [29 · A digest to carry](devlog/2026/29-a-digest-to-carry.md)
 - [30 · The art of seeing together](devlog/2026/30-the-art-of-seeing-together.md)
+
+- [31 · Natural word spacing](devlog/2026/31-natural-word-spacing.md)

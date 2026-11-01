@@ -36,7 +36,7 @@ def para(t,size=11,leading=None,font='G',color=INK,space=10):
  if '<' not in t:
   m=re.search(r'(\S+)\s+(\S+)$',t)
   if m and len(m.group())<23:t=t[:m.start()]+m.group(1)+'\u00a0'+m.group(2)
- return Paragraph(t,ParagraphStyle('p',fontName=font,fontSize=size,leading=leading or size*1.42,textColor=color,spaceAfter=space,alignment=4 if font=='G' and 10.5<=size<=13.5 else 0,allowWidows=0,allowOrphans=0,splitLongWords=0))
+ return Paragraph(t,ParagraphStyle('p',fontName=font,fontSize=size,leading=leading or size*1.42,textColor=color,spaceAfter=space,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1,uriWasteReduce=0.15))
 def text(t,x,y,size=10,font='A',color=INK):
  C.setFillColor(color);C.setFont(font,size);C.drawString(x,y,clean(t))
 def rule(y,x=44,width=524):C.setStrokeColor(GRAY);C.setLineWidth(.7);C.line(x,y,x+width,y)

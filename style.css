@@ -142,7 +142,7 @@ footer{max-width:1500px;color:#e4d1aa;font-family:var(--sans)}
 @media(max-width:1100px){.mag-sheet .sheet-prose,.mag-sheet .alexander-prose,.mag-sheet.alexander-continuation .alexander-prose{font-size:20px;line-height:1.5}.mag-sheet .sheet-title h1{font-size:43px}}
 @media(max-width:760px){.mag-sheet .sheet-title h1{font-size:36px}.mag-sheet .sheet-prose,.mag-sheet .alexander-prose,.mag-sheet.alexander-continuation .alexander-prose{column-count:1}.mag-sheet .alexander-plate img{height:auto}}
 
-.mag-sheet .sheet-prose{text-align:justify;hyphenate-limit-chars:7 3 3}.mag-sheet .workshop-leaf p{text-align:justify;hyphens:auto}
+.mag-sheet .sheet-prose{text-align:left;hyphenate-limit-chars:7 3 3}.mag-sheet .workshop-leaf p{text-align:left;hyphens:auto}
 
 @media(max-width:760px){.mag-sheet .sheet-prose,.mag-sheet .workshop-leaf p{text-align:left}}
 
@@ -199,3 +199,7 @@ header .brand,header .brand i,footer .brand,footer .brand i{font-family:var(--di
 
 @font-face{font-family:H77Arabic;src:url("assets/fonts/Amiri-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 span[lang="ar"]{font-family:H77Arabic,serif;direction:rtl;unicode-bidi:isolate;font-size:1.12em;white-space:nowrap}
+
+/* Keep natural word spacing at every column width; long references may wrap. */
+.mag-sheet .sheet-prose,.mag-sheet .workshop-leaf p,.mag-sheet .assembly-prose,.mag-sheet .colophon-text,.mag-sheet .horse-prose{ text-align:left;hyphens:auto;overflow-wrap:break-word;word-spacing:normal }
+.mag-sheet .colophon-text a{overflow-wrap:anywhere;hyphens:none}
