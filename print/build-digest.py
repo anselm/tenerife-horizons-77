@@ -4,6 +4,8 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 source=(ROOT/'print/build.py').read_text().split('r=PdfReader(MASTER);writer=PdfWriter();order=[]')[0]
 source=source.replace('W,H=612,792;','W,H=612,979.2;').replace("MASTER=OUT/'Horizons-77-print-letter.pdf'","MASTER=OUT/'Horizons-77-digest-interior.pdf'").replace('pagesize=(W,H)','pagesize=(414,630)').replace(' y=718\n',' y=905.2\n').replace('size=sz,cols=3','size=sz,cols=2').replace('if cols==3:','if leading is not None:')
+# Give the self-contained coastal afternoon a larger plate on the taller digest page.
+source=source.replace("165 if a['art'] in ['coast','observatory'] else 150", "310 if a['art']=='coast' else 165 if a['art']=='observatory' else 150")
 source=source.replace(" t=clean(t);t=re.sub"," size=size*1.12 if font in ['G','GI','GB'] else max(size,9.6)\n if leading is not None:leading=max(leading*1.10,size*1.22)\n space=min(space,8)\n t=clean(t);t=re.sub")
 source=source.replace('C.setFillColor(color);C.setFont(font,size)','C.setFillColor(color);C.setFont(font,max(size,9.6))')
 a=source.index('def page(');b=source.index('def titleblock(',a)

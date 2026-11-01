@@ -247,21 +247,27 @@ const gilliamArticle = {
 };
 
 const coastArticle = {
- id:'coast',tag:'CUADERNO DE COSTA / FROM THE WATER',
- title:'The afternoon without a shore',
- subtitle:'Montaña Amarilla. Notes on becoming, for a while, part of the water.',
- author:'From a visitor’s notebook',language:'EN',art:'coast',
- body:[
- 'At Playa de Montaña Amarilla the light was in pieces on the waves. We swam out over the submerged volcanic ridge, looking down through the glitter. Every so often I folded at the waist and went beneath it. Twenty or thirty feet below, barracuda were lined up near the bottom, holding their places in the water. From above there had been only the flashing surface. Down here there were lives going on.',
- 'I stayed out with my friends for the whole afternoon. We never went back to shore. We floated, swam, dived, came up for breath and went down again. After a while the beach ceased to be the place to which the afternoon belonged. We were basically fishes with flippers and goggles. The strange part was how ordinary this began to feel.',
- 'Another time we slipped beneath the suspended cages of a fish farm, enjoying the small naughtiness of going a little beyond where we were meant to be. Large, lazy turtles moved through the water, and sea rays passed with that slow movement which scarcely seems to require an effort. A dolphin came over to us. It seemed to have arrived for the purpose of meeting us. We had gone there to look down into the water and found ourselves being looked at in return. For a little while there was no better account of the encounter than this: an animal had come to see who was there.',
- 'There were small whales, too, on other swims, and blackwater dives in the dark, among what seemed like zillions of tiny, strange creatures. Some seemed barely more than a translucent edge or a minute arrangement of moving parts. I did not have their names. They had the complete strangeness of something imagined, and yet there they were, quite occupied with being alive.',
- 'The coast above the water could feel just as improbable. Houses stood one above another against the cliffs, finding a ledge, making a stair, borrowing a little shelter from the rock. From the sea, their white walls belonged to the dark face of the island in a way no flat plan could show. A person carrying something down to a boat had to negotiate the actual mountain, step by step.',
- 'Elsewhere the island changed its appearance so completely that it seemed we had travelled much farther than we had. Yellow stone, black rock, bare slopes, green folds of land; a mountain appearing above a layer of cloud. The differences were close enough to hold in a day, but they did not become less vivid through being close. The island kept teaching the eye to begin again.',
- 'Then there were the calima days. Dust came across from Africa and altered the light. The horizon lost its edge; distances which had seemed certain became difficult to read. Fine powder settled where we had expected clean air. The island was not as separate as its outline on the map. A continent we could not see had entered the room.',
- 'When I think of the long afternoon at Montaña Amarilla, I remember the small return to breathing after each dive, and the barracuda still below us when we went back down. They had not come to provide an experience. We had spent a few hours inside the place where they lived. Even after we took off our flippers, the sensation of belonging to the water stayed with us. Walking on land felt, for a little while, like the unusual thing.'
- ],
- note:'CUADERNO DE COSTA. Above and below the same water: the glittering surface, the submerged ridge, the lives which continue when the swimmer comes ashore.'
+  "id": "coast",
+  "tag": "CUADERNO DE COSTA / FROM THE WATER",
+  "title": "The afternoon without a shore",
+  "subtitle": "Montaña Amarilla. Notes on becoming, for a while, part of the water.",
+  "author": "From a visitor’s notebook",
+  "language": "EN",
+  "art": "coast",
+  "pageBreak": 3,
+  "continuationTitle": "Other days, other waters",
+  "body": [
+    "At Playa de Montaña Amarilla the light was in pieces on the waves. We swam out over the submerged volcanic ridge, looking down through the glitter. Every so often I folded at the waist and went beneath it. Twenty or thirty feet below, barracuda were lined up near the bottom, holding their places in the water. From above there had been only the flashing surface. Down here there were lives going on.",
+    "I stayed out with my friends for the whole afternoon. We never went back to shore. We floated, swam, dived, came up for breath and went down again. After a while the beach ceased to be the place to which the afternoon belonged. We were basically fishes with flippers and goggles. The strange part was how ordinary this began to feel.",
+    "When I think of the long afternoon at Montaña Amarilla, I remember the small return to breathing after each dive, and the barracuda still below us when we went back down. They had not come to provide an experience. We had spent a few hours inside the place where they lived. Even after we took off our flippers, the sensation of belonging to the water stayed with us. Walking on land felt, for a little while, like the unusual thing.",
+    "On other days we puttered around the island in a Zodiac. The coast unfolded at the pace of a small boat: a dark cliff, white houses on ledges, a stair almost lost against the rock. We also swam with pilot whales. They have their own neighbourhood in the deep channel between Tenerife and La Gomera; we were passing through a place where other lives were settled.",
+    "Once we slipped beneath the suspended cages of a fish farm, enjoying the small naughtiness of going a little beyond where we were meant to be. Large, lazy turtles moved through the water, and rays passed with that slow movement which scarcely seems to require an effort. A dolphin came over to us. It seemed to have arrived for the purpose of meeting us. I felt I had made a dolphin friend. We had gone there to look and found ourselves being looked at in return.",
+    "At night there were blackwater dives, among what seemed like zillions of tiny, strange creatures. Some seemed barely more than a translucent edge or a minute arrangement of moving parts. I did not have their names. They had the complete strangeness of something imagined, and yet there they were, quite occupied with being alive.",
+    "On land the distances changed again. Yellow stone, black rock, bare slopes, green folds; Teide above a layer of cloud. Houses stood one above another against the cliffs, finding a ledge, making a stair. A person carrying something down to a boat had to negotiate the actual mountain, step by step. The island kept teaching the eye to begin again.",
+    "Then there were the calima days. Dust came across from Africa and altered the light. The horizon lost its edge; distances which had seemed certain became difficult to read. Fine powder settled where we had expected clean air. The island was not as separate as its outline on the map. A continent we could not see had entered the room.",
+    "We met people who had come south for the winter and found a life here: expatriates for whom Spain could mean a warm terrace in January. Around us, Canarian Spanish met English, German, French and the little borrowed phrases by which friends made themselves understood. Our table acquired its own patchwork speech. A word arrived with somebody, stayed after they left, and became part of how we remembered the place."
+  ],
+  "note": "CUADERNO DE COSTA. These are different days, held together by the people with whom we saw them. The afternoon at Montaña Amarilla belongs to the preceding page."
 };
 
 const horseArticle = {

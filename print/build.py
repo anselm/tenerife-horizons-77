@@ -156,9 +156,9 @@ def add(key,title,kind,**kw):
 def addarticle(a,lang='en'):
  t=D['openingFeatures'][lang] if a['id']=='arrival' and lang!='en' else a;key='arrival/'+lang if a['id']=='arrival' else a['id']
  if a['id']=='arrival':add(key,t['title'],'editorial',a=a,t=t,body=t['body'],lang=lang);return
- half=math.ceil(len(t['body'])/2)
+ half=t.get('pageBreak',math.ceil(len(t['body'])/2))
  add(key,t['title'],'article',a=a,t=t,body=t['body'][:half],lang=lang)
- add(key+'-continued',t['title'],'continued',a=a,t=t,body=t['body'][half:],lang=lang)
+ add(key+'-continued',t.get('continuationTitle',t['title']),'continued',a=a,t=t,body=t['body'][half:],lang=lang)
 A={a['id']:a for a in D['articles']}
 addarticle(A['arrival'])
 for lang in ['es','fr','it','de']:
@@ -250,7 +250,7 @@ text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,67,6.8,'A');finish
 for s in sheets:
  k=s['kind'];page(s['title'],s.get('a',{}).get('tag',s['key'].replace('-',' / ')));bottom=None
  if k in ['article','continued','editorial']:
-  a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'],t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
+  a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'] if opening else t.get('continuationTitle',t['title']),t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
   if opening:
    kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='drago')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
    if a['id']!='afterword':y=art(kind,y-2,105 if k=='editorial' else 185 if a['id']=='slope' else 165 if a['art'] in ['coast','observatory'] else 150)
