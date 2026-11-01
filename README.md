@@ -2,6 +2,10 @@
 
 [Read the magazine →](https://anselm.github.io/tenerife-horizons-77/)
 
+**Friendship and the art of seeing together**
+
+Papers, drawings, walks and conversations among friends new and old.
+
 A 52-page alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German.
 
 The complete issue is one continuous numbered sequence, shown as facing pages on wide screens and single pages on smaller screens. Printed “see page…” references work quietly as links. Viewer controls sit outside the magazine paper. All articles, translations, atlas annotations and conference inserts appear in the reading flow.
@@ -17,7 +21,7 @@ retains its numbered sequence.
 - [Facing reader spreads — for screen reading](output/pdf/Horizons-77-reader-spreads.pdf)
 - [Print instructions for twelve copies](output/pdf/PRINTING.txt)
 
-Finished size: 8.5 × 11 inches. Folded booklet: 11 tabloid sheets per copy.
+Finished size: 8.5 × 11 inches. Folded booklet: 12 tabloid sheets per copy.
 Choose **one** PDF workflow; do not apply booklet mode to the imposed file.
 Ask for a folded duplex proof before the run. See [print source notes](print/README.md).
 
@@ -61,7 +65,7 @@ The Letter editions and website pagination are unchanged.
 | 7 | Kitchen interview / questions and amendments |
 | 8–9 | Rêver à plusieurs / human scale, reef and village / French |
 | 10–11 | Una porta da chiudere / communal and private life / Italian |
-| 12–13 | Wer repariert das Jahr 2027? / repair and shared knowledge / German |
+| 12–13 | Unter dem Drachenbaum / El Drago, Humboldt and friendship / German |
 | 14–15 | Ocean habitats |
 | 16 | Letters, objections and editorial cartoon |
 | 17–18 | Cousteau and the new odyssey |
@@ -134,3 +138,4 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [27 · Five openings, one conversation](devlog/2026/27-five-openings-one-conversation.md)
 - [28 · Dreaming at scale](devlog/2026/28-dreaming-at-scale.md)
 - [29 · A digest to carry](devlog/2026/29-a-digest-to-carry.md)
+- [30 · The art of seeing together](devlog/2026/30-the-art-of-seeing-together.md)

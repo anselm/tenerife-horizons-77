@@ -179,7 +179,7 @@ add('pass','The life between sessions','documents');first['certificate']=first['
 addarticle(A['afterword'])
 assert len(sheets)==43,len(sheets)
 first['colophon']=46
-contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Español'),('arrival/fr','Formes vivantes / Français'),('arrival/it','Abitare / Italiano'),('arrival/de','Werkstatt / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
+contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Español'),('arrival/fr','Formes vivantes / Français'),('arrival/it','Abitare / Italiano'),('arrival/de','Natur & Freundschaft / Deutsch'),('below','Ocean habitats'),('cousteau','Cousteau / Television notebook'),('coast','Montaña Amarilla / Coastal notebook'),('horse','An Andalusian stallion'),('goodall','Goodall / Research & conservation'),('maathai','Maathai / Kenya, 1977'),('slope','Hillside settlements'),('alexander','Alexander / Bocacangrejo'),('rahman','Rahman / The public trust'),('sun','Island energy'),('air','Personal gliders & lift stations'),('atlas','Island atlas & annotations'),('credit','Cooperative finance'),('gilliam','Gilliam / Film desk'),('table','Architectural portraits'),*[(a['id'],'Conference desk / '+a['title']) for a in D['assemblyPages']],('programme','Working programme'),('pass','Delegate pass & cooperative certificate'),('afterword','Closing editorial'),('colophon','On this edition')]
 
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
@@ -232,7 +232,7 @@ p=para('Architecture, ocean, energy.<br/>Notes towards life in 2027 and beyond.'
 image(ROOT/'assets/tenerife.png',44,154,524,250)
 text('TENERIFE / 2027',44,137,7,'A');text('ESTUDIO PARA UN PAISAJE HABITADO',315,137,6.5,'A')
 rule(118);text('INTERNATIONAL CONFERENCE ON POSSIBLE FUTURES',44,97,8,'AB');text('Reports, drawings & conversations assembled at the close of the meeting.',44,76,11,'G');text('200 PESETAS',489,48,7,'A');finish()
-page('Contents','SUMARIO / CONTENTS');y=titleblock('Sumario.',deck='Papers, drawings and conversations assembled at the close of the conference.',tag='NÚMERO 1 / TENERIFE / 1977')-7
+page('Contents','SUMARIO / CONTENTS');y=titleblock('Sumario.',deck='Friendship and the art of seeing together.<br/>Papers, drawings, walks and conversations among friends new and old.',tag='NÚMERO 1 / TENERIFE / 1977')-7
 contents.sort(key=lambda row:first[row[0]])
 for col,rows in enumerate([contents[:14],contents[14:]]):
  yy=y;x=44+col*274
@@ -246,7 +246,7 @@ for s in sheets:
  if k in ['article','continued','editorial']:
   a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'],t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
   if opening:
-   kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='repair')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
+   kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='drago')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
    if a['id']!='afterword':y=art(kind,y-2,105 if k=='editorial' else 185 if a['id']=='slope' else 165 if a['art'] in ['coast','observatory'] else 150)
   note=a.get('note') if not opening and s['lang']=='en' else None
   bottom=prose(s['body'],y,note,size=11.3 if opening else 11.7)
@@ -306,7 +306,7 @@ for p in ps:
   href=a.get('href','');a.text=(a.text or '')+' ('+urlparse(href).netloc.removeprefix('www.')+')'
  back.append(plain(LH.tostring(p,encoding='unicode')))
 # Keep the provenance whole, with a clean chapter break between pages.
-cut=next(i for i,t in enumerate(back) if 'cover landscape' in t)
+cut=min(range(1,len(back)),key=lambda i:abs(sum(map(len,back[:i]))-sum(map(len,back[i:]))))
 for pi,group in enumerate([back[:cut],back[cut:]]):
  page('On this edition / '+str(pi+1),'COLOPHON / EDITION NOTES');top=titleblock('On this edition.' if pi==0 else 'Sources & contributors.',tag='EDITION NOTES / '+str(pi+1));prose(group,top,size=9.8);finish()
 page('Back cover',folio=False)

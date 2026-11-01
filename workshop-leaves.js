@@ -140,7 +140,7 @@ const workshopLeaves = {
     "title": "After the last reel",
     "label": "CUADERNO DEL CINE / ONE EVENING",
     "art": "screening",
-    "text": "For one evening, Sheldon Renan and Andy Warhol are among those passing through. Renan finds a projector; someone from the harbour brings a film. Warhol watches a fisherman repairing a net, his hands repeatedly disappearing beyond the frame. Afterwards he asks to see that part again. Renan, who has been discussing how to bring films to people, begins asking what films the people might bring. Neither has much to say at breakfast. Both ask whether a copy can be made.",
+    "text": "For one evening, Sheldon Renan and Andy Warhol are among those passing through. Renan finds a projector; someone from the harbour brings a film. Warhol watches a fisherman repairing a net, his hands repeatedly disappearing beyond the frame. Afterwards he asks Renan to watch that part with him again. The projector waits while the two friends compare what each has noticed. Renan, who has been discussing how to bring films to people, begins asking what films the people might bring. Neither has much to say at breakfast. Both ask whether a copy can be made.",
     "form": "illustrated",
     "caption": "PROYECCIÓN DE LA TARDE / TENERIFE, 1977"
   },
@@ -165,6 +165,7 @@ const plateCaptions={
  'study-territory':'USOS, CAMINOS Y AGUA / ANTES DEL PROYECTO',
  'study-futures':'SAVOIR, SUPPOSER, DÉSIRER / TROIS COLONNES, PLUSIEURS AVENIRS',
  'study-privacy':'TAVOLO COMUNE, STANZA PRIVATA / UNA SOGLIA FRA DUE POSSIBILITÀ',
+ 'study-drago':'DRACAENA DRACO / ICOD / ASTSTUDIE',
  'study-repair':'BAUTEIL, WERKZEUG, ERSATZTEILE / DIE ZWEITE ZEICHNUNG',
  'study-section':'CORTE ESQUEMÁTICO / DEL MAR A LAS CUMBRES / NO A ESCALA',
  'study-wind':'VIENTO, SOMBRA Y AGUA / ESTUDIOS DE ORIENTACIÓN',
@@ -197,7 +198,7 @@ const assemblyPages = [
       "<b>THE EVENING ROTA</b><br/>The housing table has been discussing freedom from timetables. Carmen draws a line under the proposed evening rota. Its hours end before the final plates have been washed. Nobody volunteers to call those plates a technical detail.",
       "<b>Pregunta. ¿Qué cambiaría primero?</b><br/>Carmen. Hablen con quienes van a usarla. No solo con quienes vienen a verla. Y una ventana que se pueda abrir sin subirse a una silla.",
       "<b>AMENDMENT TO THE ELEVATION</b><br/>The elegant high window is lowered on the next drawing. Its handle can now be reached from the floor. The architect asks Carmen to test the store door as well; she does, with a chair standing in for a crate.",
-      "Carmen turns the plan around and marks the window herself. Isabel keeps the annotated sheet for the proceedings. The correction is clearer than the architect’s first explanation.",
+      "Carmen marks the window herself. Isabel keeps the sheet for the proceedings and brings the proof back for her to read. By now Carmen has put a second cup beside her own. They look at the page together.",
       "At the afternoon session the kitchen appears again, with a place for crates, a lower window and a closing rota. The perspective is less empty. There is now something for the inhabitants to do besides admire the view."
     ],
     "notice": "COCINA / KITCHEN. Las horas de cierre también forman parte del proyecto. Closing hours belong in the plan."
@@ -247,7 +248,7 @@ const assemblyPages = [
     "art": "pasteboard",
     "caption": "MESA DE MONTAJE / UNA CORRECCIÓN LLEGA DESPUÉS DEL TITULAR",
     "body": [
-      "At the closing table, Isabel Martín has five opening papers and room for four and a half. The German workshop report is longer than expected. A correction to the French paper has arrived on the back of an envelope. A Spanish heading is cut from its proof and moved above the photograph. Someone must read the page again after the paste has dried.",
+      "At the closing table, Isabel Martín has five opening papers and room for four and a half. The German excursion notebook is longer than expected. A correction to the French paper has arrived on the back of an envelope. A Spanish heading is cut from its proof and moved above the photograph. Someone must read the page again after the paste has dried.",
       "The people who delivered the papers have begun to leave. The people assembling them are still deciding what a reader will need. A caption comes back from the kitchen with a correction to a name. The correction is made before the large statement about the future of humanity goes to the printer.",
       "<b>FE DE ERRATAS / CORRECTIONS</b><br/>In the circulation drawing, the arrow beside the stair points towards the landing, not into the neighbour’s kitchen. In the energy account, “available” does not mean “available at night”. Please retain both corrections with the relevant sheets.",
       "<b>OBJETOS ENCONTRADOS / FOUND</b><br/>One slide box, one ruler and a cardigan remain at the secretariat. The slide box contains the sea in several states of exposure. The ruler has no name. The cardigan has been claimed twice, in different languages.",

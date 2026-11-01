@@ -24,12 +24,13 @@ def finish():C.restoreState();C.showPage()
 a=source.index("page('Cover',folio=False)");b=source.index("page('Contents'",a)
 source=source[:a]+'''page('Title page',folio=False)
 text('HORIZONS ’77',44,840,48,'BD');rule(810)
-p=para('Papers, drawings<br/>and conversations',27,32,'BD');_,h=p.wrap(524,160);p.drawOn(C,44,735-h)
-p=para('Tenerife / 1977<br/>International conference on possible futures<br/>Notes towards life in 2027 and beyond.',15,22,'G');_,h=p.wrap(480,130);p.drawOn(C,44,515-h)
+p=para('Friendship and the art<br/>of seeing together',27,32,'BD');_,h=p.wrap(524,160);p.drawOn(C,44,735-h)
+p=para('Papers, drawings, walks and conversations<br/>among friends new and old.',15,22,'GI');_,h=p.wrap(480,100);p.drawOn(C,44,610-h)
+p=para('Tenerife / 1977<br/>International conference on possible futures<br/>Notes towards life in 2027 and beyond.',15,22,'G');_,h=p.wrap(480,130);p.drawOn(C,44,470-h)
 text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('EDICIÓN DEL CONGRESO / NÚMERO 1',44,175,10,'A');finish()
 '''+source[b:]
 # Use three readable note pages; the final interior page is not a redundant back cover.
-a=source.index("cut=next(i for i,t in enumerate(back)");b=source.index("page('Back cover',folio=False)",a)
+a=source.index("cut=min(range(1,len(back))");b=source.index("page('Back cover',folio=False)",a)
 source=source[:a]+"""totals=[len(t) for t in back]
 cuts=min(((i,j) for i in range(1,len(back)-1) for j in range(i+1,len(back))),key=lambda z:max(sum(totals[:z[0]]),sum(totals[z[0]:z[1]]),sum(totals[z[1]:])))
 for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]]):
