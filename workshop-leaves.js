@@ -161,6 +161,7 @@ const workshopLeaves = {
 };
 
 const plateCaptions={
+ 'study-tensegrity':'SNELSON / FULLER · SEPARATE STRUTS, CONTINUOUS TENSION · PRINCIPLE STUDY',
  'study-reef-village':'RÉCIF / VILLAGE : DES FORMES EN VOISINAGE / COMPARAISON, NON RELEVÉ',
  'study-territory':'USOS, CAMINOS Y AGUA / ANTES DEL PROYECTO',
  'study-futures':'SAVOIR, SUPPOSER, DÉSIRER / TROIS COLONNES, PLUSIEURS AVENIRS',

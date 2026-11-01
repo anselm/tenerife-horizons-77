@@ -60,7 +60,7 @@
   "virtualBodySizes": [
     [
       3,
-      11.05
+      10.3
     ],
     [
       4,
@@ -72,7 +72,7 @@
     ],
     [
       6,
-      11.05
+      10.3
     ],
     [
       7,
@@ -80,7 +80,7 @@
     ],
     [
       8,
-      11.3
+      10.55
     ],
     [
       9,
@@ -96,7 +96,7 @@
     ],
     [
       12,
-      11.3
+      11.05
     ],
     [
       13,
@@ -204,7 +204,7 @@
     ],
     [
       39,
-      11.3
+      11.05
     ],
     [
       40,
@@ -232,16 +232,73 @@
     ],
     [
       46,
-      11.15
+      11.4
     ],
     [
       47,
-      11.15
+      10.9
     ],
     [
       48,
-      11.4
+      10.4
     ]
   ],
-  "scale": 0.625
+  "scale": 0.625,
+  "readingInserts": [
+    {
+      "page": 18,
+      "key": "goodall-continued",
+      "bottom": 123.45
+    },
+    {
+      "page": 20,
+      "key": "maathai-continued",
+      "bottom": 71.85
+    },
+    {
+      "page": 22,
+      "key": "slope-continued",
+      "bottom": 169.01
+    },
+    {
+      "page": 29,
+      "key": "sun-continued",
+      "bottom": 73.77
+    },
+    {
+      "page": 33,
+      "key": "atlas",
+      "bottom": 114.78
+    },
+    {
+      "page": 36,
+      "key": "credit-continued",
+      "bottom": 233.75
+    },
+    {
+      "page": 40,
+      "key": "table-continued",
+      "bottom": 219.53
+    },
+    {
+      "page": 42,
+      "key": "programme",
+      "bottom": 192.86
+    },
+    {
+      "page": 43,
+      "key": "pass",
+      "bottom": 124.77
+    },
+    {
+      "page": 44,
+      "key": "afterword",
+      "bottom": 168.66
+    },
+    {
+      "page": 45,
+      "key": "afterword-continued",
+      "bottom": 250.25
+    }
+  ]
 }

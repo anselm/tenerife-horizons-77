@@ -203,3 +203,16 @@ span[lang="ar"]{font-family:H77Arabic,serif;direction:rtl;unicode-bidi:isolate;f
 /* Keep natural word spacing at every column width; long references may wrap. */
 .mag-sheet .sheet-prose,.mag-sheet .workshop-leaf p,.mag-sheet .assembly-prose,.mag-sheet .colophon-text,.mag-sheet .horse-prose{ text-align:left;hyphens:auto;overflow-wrap:break-word;word-spacing:normal }
 .mag-sheet .colophon-text a{overflow-wrap:anywhere;hyphens:none}
+
+/* Reading slips assembled into the digest, echoed in the web edition. */
+.reading-insert{margin-top:2rem;padding-top:1.2rem;border-top:2px solid var(--ink);break-inside:avoid}
+.reading-insert h3{font-family:var(--display);font-size:1.65rem;line-height:1.15;margin:.7rem 0 1rem}
+.reading-insert .verse{font-size:1.12em;line-height:1.65;white-space:normal;hyphens:none;text-align:left}
+.reading-insert .verse[lang="ar"]{font-family:H77Arabic,serif;font-size:1.65em;line-height:1.9;text-align:right}
+.reading-insert .insert-verse:has(.verse-translation){display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.reading-insert .verse-translation{font-style:italic;line-height:1.65}
+.reading-insert .verse-credit{font-family:var(--sans);font-size:.7rem;line-height:1.45;margin:1rem 0}
+.reading-insert .insert-comments{columns:2;column-gap:1.4rem;line-height:1.5;text-align:left}
+.reading-insert .insert-comments p{margin:0 0 1em;orphans:3;widows:3}
+.reading-insert figure{margin:1rem 0}.reading-insert figure img{width:100%;height:auto}
+@media(max-width:760px){.reading-insert .insert-comments{columns:1}.reading-insert .insert-verse:has(.verse-translation){grid-template-columns:1fr}}

@@ -27,7 +27,7 @@ def clean(t):
 def plain(t):return clean(LH.fromstring('<div>'+t+'</div>').text_content())
 def para(t,size=11,leading=None,font='G',color=INK,space=10):
  # Edition notes need compact, readable leading as the acknowledgements grow.
- if N>=46 and font=='G':leading=leading or size*1.3;space=min(space,7)
+ if N>=46 and font=='G':leading=leading or size*1.22;space=min(space,5)
  # This one Arabic word uses joined visual-order glyphs; keep the source in logical order.
  # Shaped with arabic-reshaper (harakat retained and shifted) and python-bidi.
  t=t.replace('<span lang="ar" dir="rtl">أُنس</span>','<font name="AR">ﺲﻧﺃُ</font>')
@@ -196,14 +196,14 @@ contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Espa�
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
  floor=70;top=bottom-20;available=top-floor
- if not leaf or available<50:return
+ if not leaf or available<50:return bottom
  if not leaf.get('art') or available<145:
   heading=para(leaf['title'],12,14,'BD');_,hh=heading.wrap(155,1000)
   note=para(leaf['text'],9.3,12,'G');_,nh=note.wrap(350,1000)
-  if top-34-max(hh,nh)<floor:return
+  if top-34-max(hh,nh)<floor:return bottom
   rule(top);text(leaf['label'],44,top-14,6.5,'AB',RUST)
   C.setStrokeColor(GRAY);C.setLineWidth(.7);C.rect(40,top-34-max(hh,nh),532,max(hh,nh)+38,fill=0,stroke=1)
-  heading.drawOn(C,44,top-28-hh);note.drawOn(C,218,top-28-nh);return
+  heading.drawOn(C,44,top-28-hh);note.drawOn(C,218,top-28-nh);return top-34-max(hh,nh)
  path=ROOT/'assets/evening-screening.png' if leaf['art']=='screening' else TMP/('study-'+leaf['art']+'.png')
  label=leaf.get('caption',leaf['title'].upper())
  # Measure the complete stack before drawing: title, image, wrapped caption, body.
@@ -217,7 +217,7 @@ def supporting_leaf(key,bottom):
    rule(top);text(leaf['label'],44,top-16,7,'AB',RUST)
    heading.drawOn(C,44,top-32-hh)
    image(path,44,image_y,524,140);caption(label,bounds)
-   note.drawOn(C,44,body_top-nh);return
+   note.drawOn(C,44,body_top-nh);return body_top-nh
  # In the side-by-side arrangement the caption must fit above the same floor.
  height=min(available,265 if leaf['art']=='screening' else 230)
  image_height=height-48
@@ -226,7 +226,7 @@ def supporting_leaf(key,bottom):
   bounds=image_bounds(path,44,image_y,250,image_height)
   if caption(label,bounds,draw=False)>=floor:break
   image_height-=5
- else:return
+ else:return bottom
  heading=para(leaf['title'],18,19,'BD');_,hh=heading.wrap(250,1000)
  body_top=top-34-hh-12
  for size in [10.5,10,9.5]:
@@ -236,6 +236,7 @@ def supporting_leaf(key,bottom):
  rule(top);text(leaf['label'],44,top-15,7,'AB',RUST)
  image(path,44,image_y,250,image_height);caption(label,bounds)
  heading.drawOn(C,318,top-34-hh);note.drawOn(C,318,body_top-nh)
+ return min(caption(label,bounds,draw=False),body_top-nh)
 
 def pattern_leaf(bottom,index):
  if bottom<205:return
@@ -272,7 +273,7 @@ for s in sheets:
  if k in ['article','continued','editorial']:
   a=s['a'];t=s['t'];opening=k!='continued';y=titleblock(t['title'] if opening else t.get('continuationTitle',t['title']),t.get('subtitle','') if opening else '',t.get('tag',a['tag'])+' / '+s['lang'].upper(),t.get('author',a['author']) if opening else '',continued=not opening)
   if opening:
-   kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='drago')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-scales' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
+   kind='study-'+dict(en='section',es='territory',fr='reef-village',it='privacy',de='drago')[s['lang']] if k=='editorial' else 'terrace' if a['id']=='slope' else 'study-tensegrity' if a['id']=='table' else 'study-calendar' if a['id']=='afterword' else a['art']
    if a['id']!='afterword':y=art(kind,y-2,105 if k=='editorial' else 185 if a['id']=='slope' else 165 if a['art'] in ['coast','observatory'] else 150)
   note=a.get('note') if not opening and s['lang']=='en' else None
   bottom=prose(s['body'],y,note,size=11.3 if opening else 11.7)
@@ -328,13 +329,26 @@ for s in sheets:
 assert N==45,N
 root=LH.fromstring(D['notes']);ps=root.find_class('colophon-text')[0].findall('p');back=[]
 for p in ps:
+ cited_hosts=set()
  for a in p.findall('.//a'):
-  href=a.get('href','');a.text=(a.text or '')+' ('+urlparse(href).netloc.removeprefix('www.')+')'
+  host=urlparse(a.get('href','')).netloc.removeprefix('www.')
+  if host and host not in cited_hosts:a.text=(a.text or '')+' ('+host+')'
+  cited_hosts.add(host)
  back.append(plain(LH.tostring(p,encoding='unicode')))
 # Keep the provenance whole, with a clean chapter break between pages.
-cut=min(range(1,len(back)),key=lambda i:abs(sum(map(len,back[:i]))-sum(map(len,back[i:]))))
+# Choose a paragraph boundary by actual typeset fit, not character count.
+# Measure in note-page mode before drawing either page.
+N=46
+note_top=718-25-31*1.06-13
+valid_cuts=[]
+for note_size in [9.8,9.55,9.3,9.05,8.8,8.55,8.3]:
+ valid_cuts=[i for i in range(1,len(back)) if layout(back[:i],note_top,size=note_size,draw=False) and layout(back[i:],note_top,size=note_size,draw=False)]
+ if valid_cuts:break
+N=45
+if not valid_cuts:raise Exception('Edition notes need additional space')
+cut=min(valid_cuts,key=lambda i:abs(sum(map(len,back[:i]))-sum(map(len,back[i:]))))
 for pi,group in enumerate([back[:cut],back[cut:]]):
- page('On this edition / '+str(pi+1),'COLOPHON / EDITION NOTES');top=titleblock('On this edition.' if pi==0 else 'Sources & contributors.',tag='EDITION NOTES / '+str(pi+1));prose(group,top,size=9.8);finish()
+ page('On this edition / '+str(pi+1),'COLOPHON / EDITION NOTES');top=titleblock('On this edition.' if pi==0 else 'Sources & contributors.',tag='EDITION NOTES / '+str(pi+1));prose(group,top,size=note_size);finish()
 page('Back cover',folio=False)
 text('HORIZONS ’77',44,710,42,'BD');rule(684)
 pp=para('There is still<br/>room at the table.',42,47,'BI',RUST);_,hh=pp.wrap(520,180);pp.drawOn(C,44,575-hh)

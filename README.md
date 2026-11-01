@@ -6,24 +6,31 @@
 
 Papers, drawings, walks and conversations among friends new and old.
 
-A 52-page alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German.
+An alternative-history magazine assembled at the close of an imagined Tenerife futures conference in 1977. Architecture, communal life, undersea habitats, cooperative finance, energy, and personal gliders raised by skyscraper lift stations. English, Spanish, French, Italian and German, with a small Arabic contribution.
 
 The complete issue is one continuous numbered sequence, shown as facing pages on wide screens and single pages on smaller screens. Printed “see page…” references work quietly as links. Viewer controls sit outside the magazine paper. All articles, translations, atlas annotations and conference inserts appear in the reading flow.
 
-## Print today
+## Print edition — digest first
 
-A separate **48-page Letter print edition**, with clean white pages and fixed
-pagination, is ready for small-run printing. The complete 52-sheet web edition
-retains its numbered sequence.
+The **48-page, 5.5 × 8.5-inch digest** is the principal edition: two-column reading,
+individually sized illustrations, poetry clippings and multilingual workshop notes.
+It is prepared for 10 colour PUR-bound copies, 50lb uncoated interiors and an
+outside-only 80lb uncoated cover with a **0.14-inch spine**. Inside covers are blank.
 
-- [Reader-order PDF — preferred for a print shop](output/pdf/Horizons-77-print-letter.pdf)
-- [Already-imposed 11 × 17 booklet PDF](output/pdf/Horizons-77-booklet-tabloid.pdf)
-- [Facing reader spreads — for screen reading](output/pdf/Horizons-77-reader-spreads.pdf)
-- [Print instructions for twelve copies](output/pdf/PRINTING.txt)
+- [Digest interior — upload as body](output/pdf/Horizons-77-digest-interior.pdf)
+- [Outside cover wrap — upload as cover](output/pdf/Horizons-77-digest-cover.pdf)
+- [Whole-book reading proof — do not upload](output/pdf/Horizons-77-digest-proof.pdf)
+- [Mixam setup and upload instructions](output/pdf/DIGEST-MIXAM.txt)
 
-Finished size: 8.5 × 11 inches. Folded booklet: 12 tabloid sheets per copy.
-Choose **one** PDF workflow; do not apply booklet mode to the imposed file.
-Ask for a folded duplex proof before the run. See [print source notes](print/README.md).
+The web edition has its own 52-folio reading sequence and shares the new editorial
+inserts. It is not the digest’s print pagination.
+
+A secondary Letter edition remains available for ordinary local printing:
+[reader order](output/pdf/Horizons-77-print-letter.pdf),
+[imposed tabloid booklet](output/pdf/Horizons-77-booklet-tabloid.pdf), and
+[reader spreads](output/pdf/Horizons-77-reader-spreads.pdf).
+The additional digest reading panels are composed for the digest and web;
+the Letter edition retains its established layout. See [print source notes](print/README.md).
 
 ## View locally
 
@@ -40,20 +47,6 @@ Then visit `http://127.0.0.1:8777`. No build, dependencies, accounts or external
 The magazine is published at [anselm.github.io/tenerife-horizons-77](https://anselm.github.io/tenerife-horizons-77/). GitHub Pages serves the `main` branch from the repository root; pushed changes update the site automatically.
 
 
-## Mixam digest edition
-
-A separate **5.5 × 8.5-inch digest** is prepared for 10 colour PUR-bound copies:
-48 interior pages on 50lb uncoated text, separate outside-only 80lb uncoated cover,
-and the cart’s 0.14-inch spine. It keeps the two-column layout, with reflowed text,
-mirrored binding margins and printer bleed.
-
-- [Interior — upload as body](output/pdf/Horizons-77-digest-interior.pdf)
-- [Outside cover wrap — upload as cover](output/pdf/Horizons-77-digest-cover.pdf)
-- [Whole-book reading proof — do not upload](output/pdf/Horizons-77-digest-proof.pdf)
-- [Mixam setup and upload instructions](output/pdf/DIGEST-MIXAM.txt)
-
-Rebuild with `python3 print/build-digest.py` after the usual content export.
-The Letter editions and website pagination are unchanged.
 
 ## Reading order
 
@@ -145,3 +138,5 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [Different days at sea](devlog/2026/32-different-days-at-sea.md)
 
 - [Room for captions](devlog/2026/33-room-for-captions.md)
+
+- [34 · The digest comes first](devlog/2026/34-the-digest-comes-first.md)

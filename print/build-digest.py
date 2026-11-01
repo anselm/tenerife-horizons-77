@@ -6,7 +6,7 @@ source=(ROOT/'print/build.py').read_text().split('r=PdfReader(MASTER);writer=Pdf
 source=source.replace('W,H=612,792;','W,H=612,979.2;').replace("MASTER=OUT/'Horizons-77-print-letter.pdf'","MASTER=OUT/'Horizons-77-digest-interior.pdf'").replace('pagesize=(W,H)','pagesize=(414,630)').replace(' y=718\n',' y=905.2\n').replace('size=sz,cols=3','size=sz,cols=2').replace('if cols==3:','if leading is not None:')
 # Give the self-contained coastal afternoon a larger plate on the taller digest page.
 source=source.replace("165 if a['art'] in ['coast','observatory'] else 150", "310 if a['art']=='coast' else 165 if a['art']=='observatory' else 150")
-source=source.replace(" t=clean(t);t=re.sub"," size=size*1.12 if font in ['G','GI','GB'] else max(size,9.6)\n if leading is not None:leading=max(leading*1.10,size*1.22)\n space=min(space,8)\n t=clean(t);t=re.sub")
+source=source.replace(" t=clean(t);t=re.sub"," size=size*(1.12 if N>=46 or N in [18,20,22,29,33,36,40,42,43,44,45] else 1.20) if font in ['G','GI','GB'] else max(size,9.6)\n if leading is not None:leading=max(leading*1.10,size*1.22)\n space=min(space,8)\n t=clean(t);t=re.sub")
 source=source.replace('C.setFillColor(color);C.setFont(font,size)','C.setFillColor(color);C.setFont(font,max(size,9.6))')
 a=source.index('def page(');b=source.index('def titleblock(',a)
 source=source[:a]+'''def page(title,section='CONFERENCE EDITION',folio=True):
@@ -32,7 +32,7 @@ p=para('Tenerife / 1977<br/>International conference on possible futures<br/>Not
 text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('EDICIÓN DEL CONGRESO / NÚMERO 1',44,175,10,'A');finish()
 '''+source[b:]
 # Use three readable note pages; the final interior page is not a redundant back cover.
-a=source.index("cut=min(range(1,len(back))");b=source.index("page('Back cover',folio=False)",a)
+a=source.index("# Choose a paragraph boundary by actual typeset fit");b=source.index("page('Back cover',folio=False)",a)
 source=source[:a]+"""totals=[len(t) for t in back]
 cuts=min(((i,j) for i in range(1,len(back)-1) for j in range(i+1,len(back))),key=lambda z:max(sum(totals[:z[0]]),sum(totals[z[0]:z[1]]),sum(totals[z[1]:])))
 for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]]):
@@ -40,6 +40,7 @@ for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]])
 C.save()
 assert N==48,N
 """
+source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",(ROOT/'print/digest-layout.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
 ns={'__file__':str(ROOT/'print/build.py')};exec(compile(source,str(ROOT/'print/build-digest.py'),'exec'),ns)
 from pypdf import PdfReader,PdfWriter,Transformation
 from pypdf.generic import RectangleObject
@@ -85,5 +86,5 @@ for p in PdfReader(interior).pages:
 proof.add_blank_page(width=396,height=612);pg=proof.add_blank_page(width=396,height=612);pg.merge_transformed_page(wrap,Transformation().translate(tx=-9,ty=-9))
 proof.add_metadata({'/Title':'Horizons 77 / Digest reading proof','/Subject':'52 reader pages including two blank inside covers; not for production upload'})
 with (OUT/'Horizons-77-digest-proof.pdf').open('wb') as f:proof.write(f)
-(OUT/'digest-pagination.json').write_text(json.dumps({'interiorPages':48,'trimInches':[5.5,8.5],'bleedInches':.125,'spineInches':.14,'outsideCoverWithBleedInches':[11.39,8.75],'firstPages':ns['first'],'virtualBodySizes':ns['fitlog'],'scale':.625},indent=2))
+(OUT/'digest-pagination.json').write_text(json.dumps({'interiorPages':48,'trimInches':[5.5,8.5],'bleedInches':.125,'spineInches':.14,'outsideCoverWithBleedInches':[11.39,8.75],'firstPages':ns['first'],'virtualBodySizes':ns['fitlog'],'scale':.625,'readingInserts':ns['insertlog']},indent=2))
 print('Digest: 48 interior pages, 0.14-inch outside cover wrap, 52-page reading proof.')
