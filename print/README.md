@@ -37,3 +37,5 @@ reading; it is not a print imposition. The production files remain the ordinary
 reader-order PDF and the separately imposed tabloid PDF.
 
 The five opening papers now cover distinct topics rather than repeating one editorial in translation. The kitchen interview follows the Spanish land paper (print page 5), correspondence follows ocean habitats (page 11), and the provisional accounts follow energy (page 30). Only the production desk remains near the closing material (page 41). Web and print folios differ; both contents pages use their own current page numbers.
+
+The word أُنس is kept in logical reading order in the source and web edition, with a locally bundled Amiri font (SIL OFL). The print paragraph uses a verified joined, visual-order form of this single word in embedded Amiri. Adding more Arabic will require a general shaping and bidirectional layout pass; do not reverse arbitrary Arabic text.

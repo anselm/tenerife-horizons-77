@@ -15,6 +15,7 @@ ROOT=Path(os.environ.get('HORIZONS_ROOT',Path(__file__).resolve().parents[1])); 
 D=json.loads((TMP/'content.json').read_text())
 F=str(ROOT/'assets'/'fonts')+'/'
 for name,file in [('G','NimbusRoman-Regular.ttf'),('GI','NimbusRoman-Italic.ttf'),('GB','NimbusRoman-Bold.ttf'),('A','NimbusSans-Regular.ttf'),('AB','NimbusSans-Bold.ttf'),('BD','URWGothic-Demi.ttf'),('BL','URWBookman-Light.ttf'),('BI','URWGothic-Demi.ttf')]:pdfmetrics.registerFont(TTFont(name,F+file))
+pdfmetrics.registerFont(TTFont('AR',F+'Amiri-Regular.ttf'))
 pdfmetrics.registerFontFamily('G',normal='G',bold='GB',italic='GI',boldItalic='GI')
 pdfmetrics.registerFontFamily('A',normal='A',bold='AB',italic='A',boldItalic='AB')
 W,H=612,792;INK=CMYKColor(0,.25,.42,.78);RUST=CMYKColor(0,.66,.86,.27);TEAL=CMYKColor(.18,.06,.43,.58);GRAY=CMYKColor(0,.13,.25,.42)
@@ -25,6 +26,11 @@ def clean(t):
 
 def plain(t):return clean(LH.fromstring('<div>'+t+'</div>').text_content())
 def para(t,size=11,leading=None,font='G',color=INK,space=10):
+ # Edition notes need compact, readable leading as the acknowledgements grow.
+ if N>=46 and font=='G':leading=leading or size*1.3;space=min(space,7)
+ # This one Arabic word uses joined visual-order glyphs; keep the source in logical order.
+ # Shaped with arabic-reshaper (harakat retained and shifted) and python-bidi.
+ t=t.replace('<span lang="ar" dir="rtl">أُنس</span>','<font name="AR">ﺲﻧﺃُ</font>')
  t=clean(t);t=re.sub(r'<a\b[^>]*>(.*?)</a>',r'\1',t,flags=re.S);t=re.sub(r'<span[^>]*>|</span>','',t);t=t.replace('<br>','<br/>')
  # prevent short paragraph-final single words while preserving markup
  if '<' not in t:

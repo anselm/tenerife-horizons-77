@@ -196,3 +196,6 @@ header .brand,header .brand i,footer .brand,footer .brand i{font-family:var(--di
 @media(max-width:760px){.assembly-prose{columns:1;font-size:20px;line-height:1.45}.mag-sheet.assembly-page .sheet-title h1{font-size:38px}.assembly-notice{font-size:16px}}
 
 .pattern-plate{margin:24px 0}.pattern-plate img{width:100%;display:block;mix-blend-mode:multiply}
+
+@font-face{font-family:H77Arabic;src:url("assets/fonts/Amiri-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+span[lang="ar"]{font-family:H77Arabic,serif;direction:rtl;unicode-bidi:isolate;font-size:1.12em;white-space:nowrap}
