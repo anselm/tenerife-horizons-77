@@ -140,3 +140,5 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [Room for captions](devlog/2026/33-room-for-captions.md)
 
 - [34 · The digest comes first](devlog/2026/34-the-digest-comes-first.md)
+
+- [35 · A table that can travel](devlog/2026/35-a-table-that-can-travel.md)
