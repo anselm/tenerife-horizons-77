@@ -41,3 +41,5 @@ The five opening papers now cover distinct topics rather than repeating one edit
 The word أُنس is kept in logical reading order in the source and web edition, with a locally bundled Amiri font (SIL OFL). The print paragraph uses a verified joined, visual-order form of this single word in embedded Amiri. Adding more Arabic will require a general shaping and bidirectional layout pass; do not reverse arbitrary Arabic text.
 
 All reading columns use left alignment with a ragged right edge, preserving natural word spacing in the digest as well as Letter. Long words can wrap and URI-aware breaking allows long references to fit without widening spaces. The web edition uses the same alignment throughout, with language-aware hyphenation and emergency wrapping for links.
+
+Illustrations reserve their measured caption height, including wrapped lines, plus a 12-point working gap before following prose. Supporting notes measure the entire title/image/caption/text arrangement before choosing a stacked or side-by-side layout.

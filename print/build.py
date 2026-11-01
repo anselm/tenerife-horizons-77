@@ -73,9 +73,15 @@ def image(path,x,y,w,h,crop=False):
  C.drawImage(im,x+(w-dw)/2,y+(h-dh)/2,dw,dh,mask='auto')
  if crop:C.restoreState()
  return (x+(w-dw)/2 if not crop else x,y+(h-dh)/2 if not crop else y,dw if not crop else w,dh if not crop else h)
-def caption(label,rect):
+def image_bounds(path,x,y,w,h):
+ with PILImage.open(path) as im:iw,ih=im.size
+ scale=min(w/iw,h/ih);dw,dh=iw*scale,ih*scale
+ return x+(w-dw)/2,y+(h-dh)/2,dw,dh
+
+def caption(label,rect,draw=True):
  x,y,w,h=rect
- p=para(label,6.8,9,'A',GRAY);_,hh=p.wrap(w,35);p.drawOn(C,x,y-7-hh)
+ p=para(label,6.8,9,'A',GRAY);_,hh=p.wrap(w,1000)
+ if draw:p.drawOn(C,x,y-7-hh)
  return y-7-hh
 
 def art(kind,top,h=165):
@@ -111,8 +117,8 @@ def art(kind,top,h=165):
    text('1960 — 1977',62,y+76,35,'G',TEAL);text('The forest continues beyond the drawing.',62,y+29,13,'GI')
   else:
    text('1977',65,y+73,58,'G',RUST);text('2027',340,y+35,58,'GI',TEAL)
- caption(D['plateCaptions'].get(kind,'HORIZONS ’77 / CUADERNO DE TRABAJO'),bounds or (44,y,524,h))
- return y-28
+ caption_bottom=caption(D['plateCaptions'].get(kind,'HORIZONS ’77 / CUADERNO DE TRABAJO'),bounds or (44,y,524,h))
+ return min(y-28,caption_bottom-12)
 
 def layout(paras,top,bottom=67,size=11,note=None,cols=2,width=524,x=44,draw=True,leading=None):
  gap=24;cw=(width-gap*(cols-1))/cols;flow=[para(t,size,leading=leading,space=9 if leading else 11) for t in paras]
@@ -189,33 +195,47 @@ contents=[('arrival/en','Editorial / English'),('arrival/es','Territorio / Espa�
 
 def supporting_leaf(key,bottom):
  leaf=D['workshopLeaves'].get(key)
- if not leaf or bottom-70<50:return
- available=bottom-70;top=bottom-10
+ floor=70;top=bottom-20;available=top-floor
+ if not leaf or available<50:return
  if not leaf.get('art') or available<145:
+  heading=para(leaf['title'],12,14,'BD');_,hh=heading.wrap(155,1000)
+  note=para(leaf['text'],9.3,12,'G');_,nh=note.wrap(350,1000)
+  if top-34-max(hh,nh)<floor:return
   rule(top);text(leaf['label'],44,top-14,6.5,'AB',RUST)
-  heading=para(leaf['title'],12,14,'BD');_,hh=heading.wrap(155,50)
-  note=para(leaf['text'],9.3,12,'G');_,nh=note.wrap(350,100)
-  if max(hh,nh)>available-25:return
   C.setStrokeColor(GRAY);C.setLineWidth(.7);C.rect(40,top-34-max(hh,nh),532,max(hh,nh)+38,fill=0,stroke=1)
   heading.drawOn(C,44,top-28-hh);note.drawOn(C,218,top-28-nh);return
- height=min(available,230)
- if leaf['art']=='screening':height=min(available,265)
- if available>300 and leaf['art']!='screening':
-  rule(top,44,524);text(leaf['label'],44,top-16,7,'AB',RUST)
-  pp=para(leaf['title'],20,23,'BD');_,hh=pp.wrap(524,65);pp.drawOn(C,44,top-32-hh)
-  bounds=image(TMP/('study-'+leaf['art']+'.png'),44,top-205,524,140);caption(leaf.get('caption',leaf['title'].upper()),bounds)
-  pp=para(leaf['text'],11.5,15);_,hh=pp.wrap(524,100);pp.drawOn(C,44,top-223-hh)
-  return
- if height<145:return
- rule(top,44,524);text(leaf['label'],44,top-15,7,'AB',RUST)
  path=ROOT/'assets/evening-screening.png' if leaf['art']=='screening' else TMP/('study-'+leaf['art']+'.png')
- bounds=image(path,44,top-height+23,250,height-48)
- caption(leaf.get('caption',leaf['title'].upper()),bounds)
- pp=para(leaf['title'],18,19,'BD');_,hh=pp.wrap(250,70);pp.drawOn(C,318,top-34-hh);yy=top-44-hh
+ label=leaf.get('caption',leaf['title'].upper())
+ # Measure the complete stack before drawing: title, image, wrapped caption, body.
+ if available>300 and leaf['art']!='screening':
+  heading=para(leaf['title'],20,23,'BD');_,hh=heading.wrap(524,1000)
+  image_top=top-32-hh-12;image_y=image_top-140
+  bounds=image_bounds(path,44,image_y,524,140)
+  body_top=caption(label,bounds,draw=False)-12
+  note=para(leaf['text'],11.5,15);_,nh=note.wrap(524,1000)
+  if body_top-nh>=floor:
+   rule(top);text(leaf['label'],44,top-16,7,'AB',RUST)
+   heading.drawOn(C,44,top-32-hh)
+   image(path,44,image_y,524,140);caption(label,bounds)
+   note.drawOn(C,44,body_top-nh);return
+ # In the side-by-side arrangement the caption must fit above the same floor.
+ height=min(available,265 if leaf['art']=='screening' else 230)
+ image_height=height-48
+ while image_height>=40:
+  image_y=top-34-image_height
+  bounds=image_bounds(path,44,image_y,250,image_height)
+  if caption(label,bounds,draw=False)>=floor:break
+  image_height-=5
+ else:return
+ heading=para(leaf['title'],18,19,'BD');_,hh=heading.wrap(250,1000)
+ body_top=top-34-hh-12
  for size in [10.5,10,9.5]:
-  pp=para(leaf['text'],size,size*1.3);_,hh=pp.wrap(250,height-55)
-  if yy-hh>top-height:pp.drawOn(C,318,yy-hh);return
- raise Exception('Supplement overflow on '+str(N))
+  note=para(leaf['text'],size,size*1.3);_,nh=note.wrap(250,1000)
+  if body_top-nh>=max(floor,top-height):break
+ else:raise Exception('Supplement overflow on '+str(N))
+ rule(top);text(leaf['label'],44,top-15,7,'AB',RUST)
+ image(path,44,image_y,250,image_height);caption(label,bounds)
+ heading.drawOn(C,318,top-34-hh);note.drawOn(C,318,body_top-nh)
 
 def pattern_leaf(bottom,index):
  if bottom<205:return
@@ -259,12 +279,12 @@ for s in sheets:
  elif k=='alexander':
   a=D['alexanderEssay'];i=s['index'];sec=s['part'];y=titleblock(a['title'] if i==0 else sec['heading'],a['subtitle'] if i==0 else '', 'LIFE & FORM / CHRISTOPHER ALEXANDER',a['author'] if i==0 else '',continued=i>0)
   if i==0:
-   bounds=image(ROOT/'assets/bocacangrejo.png',44,y-178,524,170);caption('BOCACANGREJO / CUADERNO DE LA EXCURSIÓN / 1977',bounds);y-=210
+   bounds=image(ROOT/'assets/bocacangrejo.png',44,y-178,524,170);caption_bottom=caption('BOCACANGREJO / CUADERNO DE LA EXCURSIÓN / 1977',bounds);y=min(y-210,caption_bottom-12)
   note='The conquest of Tenerife ended in 1496. It brought enslavement and assimilation, but Indigenous people and customs persisted. The island did not begin with the conquerors’ maps.' if i==2 else None
   bottom=prose(sec['body'],y,note,size=11.3)
   if i in [1,2]:pattern_leaf(bottom,i)
  elif k=='horse':
-  a=s['a'];y=titleblock(a['title'],a['subtitle'],'VIDA COMPARTIDA / WORKING TOGETHER','From an island notebook');bounds=image(ROOT/'assets/andalusian-stallion.jpg',44,y-205,524,195);caption('EL CABALLO / TENERIFE',bounds);y-=230;bottom=prose(a['body'],y,size=11.5)
+  a=s['a'];y=titleblock(a['title'],a['subtitle'],'VIDA COMPARTIDA / WORKING TOGETHER','From an island notebook');bounds=image(ROOT/'assets/andalusian-stallion.jpg',44,y-205,524,195);caption_bottom=caption('EL CABALLO / TENERIFE',bounds);y=min(y-230,caption_bottom-12);bottom=prose(a['body'],y,size=11.5)
  elif k=='rahman':
   a=s['a'];y=titleblock(a['title'],a['subtitle'],'DELHI / THE PUBLIC TRUST','From the public works desk');bottom=prose(a['body'],y,note='Who may object? Who must listen? Who can refuse?',size=12)
  elif k=='atlas':
@@ -276,7 +296,7 @@ for s in sheets:
  elif k=='assembly':
   a=s['a'];y=titleblock(a['title'],a['deck'],a['tag'])
   # A three-column newspaper measure, with a dedicated plate and boxed notice.
-  bounds=image(TMP/('study-'+a['art']+'.png'),44,y-95,524,85);caption(a['caption'],bounds);y-=125
+  bounds=image(TMP/('study-'+a['art']+'.png'),44,y-95,524,85);caption_bottom=caption(a['caption'],bounds);y=min(y-125,caption_bottom-12)
   note=para(a['notice'],9.3,12,'A');_,nh=note.wrap(500,80)
   C.setStrokeColor(INK);C.setLineWidth(1.3);C.rect(44,62,524,nh+20,fill=0,stroke=1);note.drawOn(C,56,72)
   floor=nh+99

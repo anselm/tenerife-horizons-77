@@ -143,3 +143,5 @@ Small steps through the project, grouped by year and numbered in reading order. 
 - [31 · Natural word spacing](devlog/2026/31-natural-word-spacing.md)
 
 - [Different days at sea](devlog/2026/32-different-days-at-sea.md)
+
+- [Room for captions](devlog/2026/33-room-for-captions.md)
