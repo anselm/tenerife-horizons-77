@@ -1,13 +1,13 @@
 # Print edition
 
-Revised 20 November 2026. The primary digest is **64 pages at 5.5 × 8.5 inches**,
+Revised 20 November 2026. The primary digest is **68 pages at 5.5 × 8.5 inches**,
 with mirrored glue margins and 0.125-inch bleed. A new printer-calculated spine
 is required; the 0.14-inch wrap is retained only as `Horizons-77-digest-cover-48pp.pdf`
 for the previous 48-page order. Do not pair that wrap with the revised interior.
 
 Read the [current design compass](../devlog/20261120-editorial-and-design-compass.md)
-and [current proof evidence](../devlog/20261120-contributed-pages/README.md).
-The web now has 63 folios. The Letter edition and its imposition are preserved
+and [current proof evidence](../devlog/20261120-spreads-as-worlds/README.md).
+The web now has 67 folios. The Letter edition and its imposition are preserved
 as the earlier layout, not equivalent exports of the redesigned digest.
 
 The three features use explicit physical-point compositions in `digest-features.py`:
@@ -16,8 +16,9 @@ large plates and different arrangements of text, notes and illustration. Body ty
 is fixed at 9.4/12.2 pt in these features; column splitting is measured rather than
 solved by shrinking. The contributor compositor in `digest-contributors.py` replaces the old article
 and office templates, uses fixed 9–10.4 pt reading type, and draws panoramic art
-in trim coordinates. The remaining Alexander, atlas and document leaves retain
-their earlier body settings via logical legacy page mapping, with serif headings. The whole-book proof has 68 pages including front/back and two blank
+in trim coordinates. The inhabited ocean, six-page Alexander essay and four-page architectural exchange
+use `digest-worlds.py`, including measured columns that change width beside the art.
+Atlas and document leaves retain their earlier body settings via logical legacy mapping. The whole-book proof has 72 pages including front/back and two blank
 inside covers. The facing-spread PDF is for review, not printer imposition.
 
 ## Rebuild
@@ -60,4 +61,4 @@ extract with commentary, original Arabic verse, correspondence and workshop noti
 Existing marginal notes are folded into these panels rather than printed twice.
 `digest-pagination.json` records panel bottoms and body fits; overflow stops the build.
 The Fuller/Snelson text and its sources remain complete; the web keeps the
-tensegrity study, while the denser digest round table now gives the writing priority.
+tensegrity study, and the digest gives the model and exchange a dedicated page.

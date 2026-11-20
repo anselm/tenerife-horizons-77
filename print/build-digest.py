@@ -33,7 +33,7 @@ text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('
 '''+source[b:]
 # Use three readable note pages; the final interior page is not a redundant back cover.
 a=source.index("# Choose a paragraph boundary by actual typeset fit");b=source.index("page('Back cover',folio=False)",a)
-source=source[:a]+"""back=[t for t in back if not t.startswith(('The three November 2026 feature plates','The six November 2026 feature plates'))]
+source=source[:a]+"""back=[t for t in back if not t.startswith(('The three November 2026 feature plates','The six November 2026 feature plates','The nine November 2026 feature plates','The November 2026 feature plates','The inhabited ocean, village stair'))]
 totals=[len(t) for t in back]
 cuts=min(((i,j) for i in range(1,len(back)-1) for j in range(i+1,len(back))),key=lambda z:max(sum(totals[:z[0]]),sum(totals[z[0]:z[1]]),sum(totals[z[1]:])))
 for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]]):
@@ -45,7 +45,7 @@ source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",(ROOT/'p
 source=source.replace("if N>=46 and font=='G'", "if LEGACY_N>=46 and font=='G'")
 source=source.replace('assert N==45,N','assert N==len(sheets)+2,N')
 source=source.replace('pageCompression=1)',"pageCompression=1,initialFontName='A')")
-source=source.replace(" if k in ['article','continued','editorial']:"," if k=='letters-leaf':draw_letters_leaf()\n elif k=='drago-photo':draw_drago_photo()\n elif k=='panorama':draw_panorama(s)\n elif k=='designed':draw_feature(s)\n elif k=='clarke':draw_clarke()\n elif k in ['article','continued','editorial','assembly']:bottom=draw_contribution(s)\n elif k in ['article','continued','editorial']:")
+source=source.replace(" if k in ['article','continued','editorial']:"," if k=='village-world':draw_village_world(s)\n elif k=='table-world':draw_table_world(s)\n elif k=='letters-leaf':draw_letters_leaf()\n elif k=='drago-photo':draw_drago_photo()\n elif k=='panorama':draw_panorama(s)\n elif k=='designed':draw_feature(s)\n elif k=='clarke':draw_clarke()\n elif k in ['article','continued','editorial','assembly']:bottom=draw_contribution(s)\n elif k in ['article','continued','editorial']:")
 source=source.replace("C.save()\nassert N==48,N", "page('A note on the drawings','EDITION NOTES / PRODUCTION');draw_production_note();finish()\npage('Endpaper',folio=False);finish()\nC.save()\nassert N==len(sheets)+7,N")
 recompose = """
 # The three features are each two facing spreads. Other articles retain their copy.
@@ -72,6 +72,16 @@ for old_index,s in enumerate(old_sheets,3):
  if key=='gilliam':
   for side in range(2):
    sheets.append(dict(key=key+'-plate-'+str(side),title=s['title'],kind='panorama',family='film',side=side));digest_legacy[len(sheets)+2]=old_index
+ if s['kind']=='alexander':
+  if s['index']==0:
+   for part in range(6):
+    sheets.append(dict(key='alexander' if part==0 else 'alexander-world-'+str(part),title=s['title'],kind='village-world',part=part,a=dict(tag='LIFE & FORM / EXCURSION NOTE')));digest_legacy[len(sheets)+2]=old_index
+  continue
+ if key=='table-continued':continue
+ if key=='table':
+  for part in range(4):
+   sheets.append(dict(key='table' if part==0 else 'table-continued' if part==3 else 'table-world-'+str(part),title=s['title'],kind='table-world',part=part,a=dict(tag='ARCHITECTURE / WORKING PORTRAITS')));digest_legacy[len(sheets)+2]=old_index
+  continue
  if key in ['below-continued','slope-continued','air-continued']:continue
  if key in ['below','slope','air']:
   for part in range(4):
@@ -86,7 +96,7 @@ first['certificate']=first['pass'];first['colophon']=len(sheets)+3
 for i in range(3):digest_legacy[first['colophon']+i]=46+i
 contents.append(('clarke','Arthur C. Clarke / Between sessions'))
 """
-source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+'\n'+(ROOT/'print/digest-contributors.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
+source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+'\n'+(ROOT/'print/digest-contributors.py').read_text()+'\n'+(ROOT/'print/digest-worlds.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
 source=source.replace("title if continued else title.upper(),size,size*1.06,'BD'","title,size,size*1.06,'GB'")
 source=source.replace("if i in [1,2]:pattern_leaf(bottom,i)","# Repeated generic path studies retired.")
 ns={'__file__':str(ROOT/'print/build.py')};exec(compile(source,str(ROOT/'print/build-digest.py'),'exec'),ns)

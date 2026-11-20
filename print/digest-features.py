@@ -79,6 +79,8 @@ def fhead(a,d,font,size):
 
 def draw_feature(s):
  a=s['a'];key=a['id'];i=s['part'];d=D['featureDesigns'][key]
+ if key=='below' and i<2:
+  draw_ocean_world(i);return
  C.saveState();C.translate(44,76);C.scale(1.6,1.6)
  if key=='below':
   if i==0:
@@ -89,7 +91,7 @@ def draw_feature(s):
    fimage(ROOT/'assets'/d['image'],530,491,d['caption'])
   elif i==2:
    y=fp('The coast<br/>continues.',0,530,327.5,34,32,'GB',FEATURE_BLUE,gap=18)
-   y=fcols(a['body'][3:],y)
+   y=fcols(a['body'][2:],y)
    y=fnotice(D['workshopLeaves']['below'],y-8)
    # The full-page proposition supersedes the old habitat sketch; the service section follows.
   else:
@@ -166,7 +168,7 @@ def draw_production_note():
  C.saveState();C.translate(44,76);C.scale(1.6,1.6)
  y=fp('A NOTE ON THE DRAWINGS',0,530,327.5,28,29,'COND',gap=23)
  notes=[
- 'This edition continues the imagined conference. The six new plates — the underwater room, inhabited hillside section, glider lift station, coastal photomontage, film-desk castle and Drago excursion image — are newly generated artwork made with OpenAI’s image-generation tool in November 2026. They are not recovered drawings, photographs or designs by the historical contributors.',
+ 'This edition continues the imagined conference. The new plates — including the inhabited ocean, village stair and architectural gathering — are generated artwork made with OpenAI’s image-generation tool in November 2026. They are not recovered drawings, photographs or designs by the historical contributors. The working-table picture is an imagined gathering; its thread model illustrates a conversation, not a verified engineering structure.',
  'The new Arthur C. Clarke conversation is original fiction. His residence in Sri Lanka, his interest in diving and the 1977 publication of The View from Serendip supply the historical setting; his Tenerife visit, the coffee spill and all exchanges here are invented. No passage is quoted from that book. Reference: the Smithsonian National Air and Space Museum’s Arthur C. Clarke Collection of Sri Lanka, “The View from Serendip” manuscript catalogue (si.edu).',
  'The design takes lessons from the coexistence of enormous headlines, narrow reporting columns, notices and images in Jericho, the Habitat newspaper, 1 June 1976 (Habitat Archive, University of British Columbia). Its historical pages are references, not material reproduced in this magazine.',
  'The body text, personal recollections and friendships remain. This pass lets the contributions arrive in different visual hands. Their systems are incomplete; the lives around them will always exceed the drawing.',

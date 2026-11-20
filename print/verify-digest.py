@@ -5,7 +5,7 @@ from pypdf import PdfReader
 import pdfplumber
 from PIL import Image,ImageOps,ImageDraw
 r=Path(__file__).resolve().parents[1];d=json.loads((Path(tempfile.gettempdir())/'horizons-print/content.json').read_text());pdf=PdfReader(r/'output/pdf/Horizons-77-digest-interior.pdf')
-assert len(pdf.pages)==64
+assert len(pdf.pages)==68
 norm=lambda s:re.sub('[^a-z0-9]','',unicodedata.normalize('NFKD',html.fromstring('<div>'+s+'</div>').text_content()).lower())
 full=norm(' '.join(p.extract_text() for p in pdf.pages))
 items=[]
@@ -18,9 +18,9 @@ missing=[p[:90] for p in items if norm(p) not in full]
 print('Paragraphs:',len(items),'Missing:',missing)
 assert not missing
 for p in pdf.pages:assert list(p.trimbox)==[9,9,405,621] and list(p.mediabox)==[0,0,414,630]
-proof=PdfReader(r/'output/pdf/Horizons-77-digest-proof.pdf');assert len(proof.pages)==68
+proof=PdfReader(r/'output/pdf/Horizons-77-digest-proof.pdf');assert len(proof.pages)==72
 assert not proof.pages[1].extract_text().strip() and not proof.pages[-2].extract_text().strip()
-m=json.loads((r/'output/pdf/digest-pagination.json').read_text());assert [m['firstPages'][k] for k in ['below','slope','air']]==[14,28,40]
+m=json.loads((r/'output/pdf/digest-pagination.json').read_text());assert [m['firstPages'][k] for k in ['below','slope','air']]==[14,28,42]
 collisions=[]
 checks=m['designedFeatures']
 for i,a in enumerate(checks):
@@ -38,7 +38,7 @@ with pdfplumber.open(r/'output/pdf/Horizons-77-digest-interior.pdf') as book:
    if c['x0']<20 or c['x1']>394 or c['top']<14 or c['bottom']>614:bad.append((n,c['text'],c['x0'],c['top']))
  print('Outside safe page:',bad[:20]);assert not bad
  # Record source images and actual effective resolution of new feature plates.
- for n in [7,12,15,29,40,49]:
+ for n in [7,12,15,29,33,42,51,55]:
   p=book.pages[n-1]
   print('Plate',n,[(im.get('srcsize'),round(im['width'],1),round(im['height'],1)) for im in p.images])
 
@@ -49,6 +49,8 @@ for key,a in d['editionInserts'].items():
   if t.strip() and norm(t) not in full:insert_missing.append((key,t[:60]))
 assert not insert_missing,insert_missing
 assert not pdf.pages[-1].extract_text().strip()
-assert m['firstPages']['arrival/fr']==6 and m['firstPages']['gilliam']==48
+assert m['firstPages']['arrival/fr']==6 and m['firstPages']['gilliam']==50
 assert m['firstPages']['arrival/de']==12
 print('All 11 carried reading panels retained; panorama parity correct; blank endpaper verified.')
+
+assert m['firstPages']['alexander']==32 and m['firstPages']['table']==54

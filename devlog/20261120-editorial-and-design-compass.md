@@ -2,7 +2,7 @@
 
 Written and revised 20 November 2026 after the ten-copy digest proof and the subsequent three-feature pass exposed a loss of visual character. This is the current guide for further design work. It supersedes the assumption in the October digest notes that 48 pages and a common article template are constraints. The later contributor pass also supersedes the premise of a strong single art editor. It does not supersede the writing, the lived origins, or the friendships that developed through the work.
 
-Current implementation and visual evidence: [contributed pages](20261120-contributed-pages/README.md). The earlier three-feature snapshot preserves an intermediate stage.
+Current implementation and visual evidence: [spreads as worlds](20261120-spreads-as-worlds/README.md). The contributed-page and three-feature snapshots preserve intermediate stages.
 
 ## What the object is
 
@@ -34,9 +34,11 @@ The contributions should look as though different groups brought their own sheet
 - The excursion notebook brings a dark halftone photographic plate facing a quiet German essay (12–13).
 - The secretariat brings narrow reports, heavy condensed mastheads, boxed notices and ordinary accounts. It can disagree typographically with the excursion notebook.
 - Energy arrives as a yellow proposition; finance as a subscription prospectus with a restrained red frame. Their words remain the original essays, not advertising filler.
-- The film desk brings an overflowing ink castle across 48–49, followed by the richer Gilliam writing. The people and plants exceed the apparatus. The drawing belongs to the fictional film desk, not to Gilliam's authenticated oeuvre.
-- Ocean (14–17), hillside (28–31) and flight (40–43) retain the earlier individually drawn feature compositions. They are now surrounded by different sorts of contributions.
-- The final unsent letters have their own leaf (59). Poetry and Arabic are writing, not decorative filler.
+- The film desk brings an overflowing ink castle across 50–51, followed by the richer Gilliam writing. The people and plants exceed the apparatus. The drawing belongs to the fictional film desk, not to Gilliam's authenticated oeuvre.
+- Ocean (14–17) now opens as a continuous inhabited scene with shaped text. Hillside (28–31) and flight (42–45) retain their individually drawn feature compositions.
+- Alexander begins with a village stair across 32–33, then unfolds across four reading pages (34–37). A drawing can provide the shape of a reading path.
+- The architectural gathering crosses 54–55; Fuller/Snelson and the translation table follow on 56–57. A group picture is a fictional illustrative reconstruction, not documentary evidence.
+- The final unsent letters have their own leaf (63). Poetry and Arabic are writing, not decorative filler.
 
 ## Type is a voice, not a decade filter
 
@@ -74,9 +76,9 @@ Keep the attention distributed. Adding a famous guest should not push the local 
 
 ## Production and future revisions
 
-The 64-page digest, including its blank final endpaper, supersedes the 56- and 48-page interiors. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
+The 68-page digest, including its blank final endpaper, supersedes the 64-, 56- and 48-page interiors. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
 
-The older Letter edition is a preserved earlier layout, not an automatically updated equivalent. The new feature compositions are shared editorially with the website but drawn explicitly in the digest. The three-feature compositor is `print/digest-features.py`; the broader article/office pass is `print/digest-contributors.py`. Web compositions are in `magazine-features.js` and `contributor-pages.js`. Alexander, atlas, documents and notes still adapt the older renderer with revised headings. The cover is still the earlier design. This is a broader interior revision, not a claim that every page has been newly art-directed.
+The older Letter edition is a preserved earlier layout, not an automatically updated equivalent. The new feature compositions are shared editorially with the website but drawn explicitly in the digest. The three-feature compositor is `print/digest-features.py`; the broader article/office pass is `print/digest-contributors.py`. Web compositions are in `magazine-features.js` and `contributor-pages.js`. The new inhabited spreads and Alexander sequence use `print/digest-worlds.py`; web counterparts use `world-pages.js` and `worlds.css`. Atlas, documents and notes still adapt the older renderer with revised headings. The cover is still the earlier design. This is a broader interior revision, not a claim that every page has been newly art-directed.
 
 Review every changed facing spread at reading size, all pages as contact sheets, paragraph preservation, references, image resolution, font embedding, glyphs and safe margins. There must be no clipped captions or text overlaps. A content-complete PDF is not a successful design by itself. Inspect a physical copy at 100% before another run.
 

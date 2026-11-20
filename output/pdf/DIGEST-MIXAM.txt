@@ -1,24 +1,24 @@
 HORIZONS ’77 — REVISED DIGEST / 20 NOVEMBER 2026
 
 BODY: Horizons-77-digest-interior.pdf
-64 interior pages (the final endpaper is blank), single pages in reading order.
+68 interior pages (the final endpaper is blank), single pages in reading order.
 Trim 5.5 × 8.5 inches portrait; 0.125-inch bleed on all sides.
 PDF media size 5.75 × 8.75 inches; TrimBox defines the finished page.
 Full colour; 50lb uncoated text; PUR binding; target run 10 copies.
 
 COVER: NEW PRINTER TEMPLATE REQUIRED
-Select 64 body pages in the printer's quote and obtain the calculated spine.
+Select 68 body pages in the printer's quote and obtain the calculated spine.
 The file Horizons-77-digest-cover-48pp.pdf belongs to the prior 48-page order
 with a 0.14-inch spine. DO NOT upload it with the revised body.
 Intended cover remains 80lb uncoated, colour outside only, inside covers blank.
 
 READING PROOFS — NOT PRODUCTION COVERS OR IMPOSITIONS
-Horizons-77-digest-proof.pdf: 68 reader pages including cover faces and blank insides.
+Horizons-77-digest-proof.pdf: 72 reader pages including cover faces and blank insides.
 Horizons-77-digest-spreads.pdf: facing interior spreads for checking composition.
 Their use of the prior front/back design does not certify a new spine width.
 
 Proof at 100% before another run: body pp. 6–7 (collage), 12–13 (Drago),
-14–15 (ocean), 28–29 (hillside), 40–41 (flight), and 48–49 (film desk).
-The panoramic generated plates are approximately 127 pixels/inch at spread size;
+14–15 (ocean), 28–29 (hillside), 32–33 (village), 42–43 (flight), 50–51 (film desk), and 54–57 (table).
+The panoramic generated plates are approximately 122–127 pixels/inch at spread size;
 their coarse printed texture is intentional. Inspect the fine ink detail on your
 chosen stock. Text is separately typeset and fonts are embedded.

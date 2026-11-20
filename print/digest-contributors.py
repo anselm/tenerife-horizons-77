@@ -16,6 +16,7 @@ def panorama(path,side):
  C.setFillColor(CREAM);C.rect(-9,-9,414,630,fill=1,stroke=0)
  image(ROOT/'assets'/path,-9-side*396,3 if path.startswith('dreaming') else -9,810,630,crop=True)
  C.setFillColor(CREAM);C.rect(345,12,27,14,fill=1,stroke=0)
+ if side==0:C.rect(29,12,91,14,fill=1,stroke=0)
  C.setFillColor(FEATURE_BLACK);C.setFont('A',6)
  if side==0:C.drawString(32,18,'HORIZONS / 1977')
  C.drawRightString(364,18,str(N))

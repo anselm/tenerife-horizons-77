@@ -43,7 +43,7 @@ function addDesignedFeature(a){
  const bodies=id==='below'?[
   head+featureBody(a.body.slice(0,3)),
   plate+`<p class="plate-thought">Una stanza, non un impero.</p>`,
-  `<h2 class="feature-subhead">The coast continues.</h2>`+featureBody(a.body.slice(3))+featureNotice(workshopLeaves.below),
+  `<h2 class="feature-subhead">The coast continues.</h2>`+featureBody(a.body.slice(2))+featureNotice(workshopLeaves.below),
   `<h2 class="feature-subhead">The beautiful drawing<br>has a reverse side.</h2>`+featureFigure('study-ocean-services.svg',workshopLeaves['below-continued'].caption,'Service section of a small underwater room')+featureNotice(workshopLeaves['below-continued'])+featureSlips(id)+`<p class="feature-technical">${a.note}</p>`
  ]:id==='slope'?[
   head+featureBody(a.body.slice(0,3))+featureSlips(id),
@@ -56,6 +56,7 @@ function addDesignedFeature(a){
   `<h2 class="feature-subhead">A chain of descents</h2><figure class="feature-figure">${airlift}<figcaption>POWERED ASCENT / UNPOWERED GLIDE / PRINCIPLE ONLY</figcaption></figure>`+featureBody(a.body.slice(5))+`<p class="feature-technical">${a.note}</p>`,
   `<h2 class="feature-subhead">The last hundred metres</h2>`+featureSlips(id)+featureFigure('study-landing.svg',workshopLeaves['air-continued'].caption,'Landing court and onward footpath')+featureNotice(workshopLeaves['air-continued'])
  ];
- bodies.forEach((body,i)=>{addSheet(i===0?id:i===3?id+'-continued':id+'-'+i,d.title,'designed-feature feature-'+id+' feature-part-'+i,body);sheets[sheets.length-1].designed=true;});
+ if(id==='below'){const worlds=oceanWorldBodies(a);bodies[0]=worlds[0];bodies[1]=worlds[1];}
+ bodies.forEach((body,i)=>{addSheet(i===0?id:i===3?id+'-continued':id+'-'+i,d.title,(id==='below'&&i<2?'world-page world-page-ocean':'designed-feature feature-'+id+' feature-part-'+i),body);sheets[sheets.length-1].designed=true;});
 }
 function addClarkeLeaf(){addSheet('clarke',clarkeLeaf.title,'clarke-leaf',`<span class="eyebrow">${clarkeLeaf.label}</span><h1>Another island,<br><i>another horizon.</i></h1><p class="feature-deck">${clarkeLeaf.deck}</p>${featureBody(clarkeLeaf.body)}<p class="feature-callout" lang="es">${clarkeLeaf.note}</p>`);}
