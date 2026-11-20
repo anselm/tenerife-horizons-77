@@ -74,3 +74,7 @@ visually reviewed, along with a contact sheet of the whole issue.
 The next useful judgment is artistic: which of these spatial compositions feels
 most like an object worth inhabiting? Further changes should follow that reading,
 not merely add more illustrations or make every remaining page imitate these.
+
+Small editorial follow-up: the edition notes now credit Amber Case’s influence
+through calm technology directly, without the sentence about having built many
+projects together. The web and digest proofs carry the quieter acknowledgment.
