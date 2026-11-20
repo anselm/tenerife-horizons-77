@@ -9,24 +9,28 @@ FEATURE_BLUE=CMYKColor(.91,.58,.33,.25)
 FEATURE_RED=CMYKColor(.02,.88,.89,.10)
 FEATURE_BLACK=CMYKColor(0,0,0,.94)
 feature_checks=[]
+def feature_clean(t):
+ t=clean(t).replace('<span lang="ar" dir="rtl">أُنس</span>','<font name="AR">ﺲﻧﺃُ</font>')
+ return re.sub(r'<span[^>]*>|</span>','',t)
+
 def fp(t,x,top,w,size=9.4,leading=None,font='G',color=FEATURE_BLACK,gap=8):
- p=Paragraph(clean(t).replace('<br>','<br/>'),ParagraphStyle('feature',fontName=font,fontSize=size,leading=leading or size*1.30,textColor=color,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1))
+ p=Paragraph(feature_clean(t).replace('<br>','<br/>'),ParagraphStyle('feature',fontName=font,fontSize=size,leading=leading or size*1.30,textColor=color,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1))
  _,h=p.wrap(w,2000)
  if top-h<0 or top>535:raise Exception(f'Feature text outside page {N}: {t[:60]} / {top-h}')
  p.drawOn(C,x,top-h);feature_checks.append({'page':N,'type':'text','x':x,'top':top,'bottom':top-h,'width':w,'size':size})
  return top-h-gap
 
-def fcols(ps,top,size=9.4,leading=12.2):
+def fcols(ps,top,size=9.4,leading=12.2,paragraph_gap=9):
  # Let a paragraph cross columns; balance measured lines at a fixed readable size.
- style=ParagraphStyle('feature-column',fontName='G',fontSize=size,leading=leading,textColor=FEATURE_BLACK,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1,spaceAfter=9)
+ style=ParagraphStyle('feature-column',fontName='G',fontSize=size,leading=leading,textColor=FEATURE_BLACK,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1,spaceAfter=paragraph_gap)
  def compose(height):
-  queue=[Paragraph(clean(t),style) for t in ps];positions=[]
+  queue=[Paragraph(feature_clean(t),style) for t in ps];positions=[]
   for x in [0,171.75]:
    yy=top;floor=top-height
    while queue:
     p=queue[0];_,h=p.wrap(155.75,max(0,yy-floor))
     if h<=yy-floor:
-     positions.append((p,x,yy-h));yy-=h+9;queue.pop(0)
+     positions.append((p,x,yy-h));yy-=h+paragraph_gap;queue.pop(0)
     else:
      parts=p.split(155.75,max(0,yy-floor))
      if len(parts)>1:
@@ -34,7 +38,7 @@ def fcols(ps,top,size=9.4,leading=12.2):
      break
   return None if queue else positions
  lo,hi=leading,top-3
- if compose(hi) is None:raise Exception(f'Feature columns overflow on {N}')
+ if compose(hi) is None:raise Exception(f'Feature columns overflow on {N}; top {top}; total heights {[Paragraph(feature_clean(t),style).wrap(155.75,2000)[1] for t in ps]}')
  for _ in range(20):
   mid=(lo+hi)/2
   if compose(mid) is None:lo=mid
@@ -162,10 +166,10 @@ def draw_production_note():
  C.saveState();C.translate(44,76);C.scale(1.6,1.6)
  y=fp('A NOTE ON THE DRAWINGS',0,530,327.5,28,29,'COND',gap=23)
  notes=[
- 'This edition continues the imagined conference. The three new plates — the underwater room, the inhabited hillside section and the glider lift station — are newly generated artwork made with OpenAI’s image-generation tool in November 2026. They are not recovered drawings, photographs or designs by the historical contributors.',
+ 'This edition continues the imagined conference. The six new plates — the underwater room, inhabited hillside section, glider lift station, coastal photomontage, film-desk castle and Drago excursion image — are newly generated artwork made with OpenAI’s image-generation tool in November 2026. They are not recovered drawings, photographs or designs by the historical contributors.',
  'The new Arthur C. Clarke conversation is original fiction. His residence in Sri Lanka, his interest in diving and the 1977 publication of The View from Serendip supply the historical setting; his Tenerife visit, the coffee spill and all exchanges here are invented. No passage is quoted from that book. Reference: the Smithsonian National Air and Space Museum’s Arthur C. Clarke Collection of Sri Lanka, “The View from Serendip” manuscript catalogue (si.edu).',
  'The design takes lessons from the coexistence of enormous headlines, narrow reporting columns, notices and images in Jericho, the Habitat newspaper, 1 June 1976 (Habitat Archive, University of British Columbia). Its historical pages are references, not material reproduced in this magazine.',
- 'The body text, personal recollections and friendships remain. This pass gives three proposals room to become pictures again. Their systems are incomplete; the lives around them will always exceed the drawing.',
+ 'The body text, personal recollections and friendships remain. This pass lets the contributions arrive in different visual hands. Their systems are incomplete; the lives around them will always exceed the drawing.',
  'Conceived and edited by Anselm. Writing, layout and production in collaboration with Codex. Digital font revivals are listed in the repository; all font files used here are embedded. The imaginary date inside the magazine remains 1977.'
  ]
  for p in notes:y=fp(p,0,y,327.5,10,13.2,gap=14)

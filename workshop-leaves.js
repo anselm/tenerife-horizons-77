@@ -82,7 +82,7 @@ const workshopLeaves = {
     "title": "Forms in the dark",
     "label": "CUADERNO / BLACKWATER",
     "art": "blackwater",
-    "text": "Tiny edges and threads of movement appear in the dark. These marks record the surprise of looking, not a catalogue of species. The swimmer comes up for breath; the lives below continue.",
+    "text": "Tiny edges and threads of movement appear in the dark. The notebook records the surprise of looking, not a catalogue of species. The swimmer comes up for breath; the lives below continue.",
     "form": "illustrated",
     "caption": "CUADERNO DE BLACKWATER / FORMAS RECORDADAS, NO IDENTIFICACIONES"
   },
@@ -236,7 +236,7 @@ const assemblyPages = [
       "<b>REPLY FROM THE TRANSPORT TABLE</b><br/>The path will be walked before the line is redrawn. There is still a question of carrying a person who cannot climb it. The editors print both points. A beloved difficulty is not necessarily a difficulty everyone can bear.",
       "<b>LIBERTÀ / WHO MAY BE ALONE?</b><br/>An Italian delegate objects to the phrase “a new communal life” if it requires every meal to become a meeting. Una porta che si chiude non è sempre un rifiuto. A door that closes is not always a refusal. The housing table restores a small room to the plan.",
       "<b>AU SUJET DU SILENCE</b><br/>A French note asks whether the underwater room needs a lecture at all hours. Si le poisson ne vient pas, pouvons-nous attendre? If the fish does not come, may we wait? The television workshop replies that the waiting may be the scene.",
-      "The cartoon above arrives without an explanation. The transport secretary recognises the second tower immediately and asks whether its office could be combined with the receiving station. By the end of lunch, somebody has pencilled in a third building for the committee considering the combination.",
+      "A sketch of the two towers arrives with the letters, without an explanation. The transport secretary recognises the second tower immediately and asks whether its office could be combined with the receiving station. By the end of lunch, somebody has pencilled in a third building for the committee considering the combination.",
       "<b>EDITORIAL PRACTICE</b><br/>The letters are not a plebiscite. Their writers have seen different parts of the island and will bear different parts of the proposals. We print them together because a disagreement can be more useful than a smooth paragraph agreed upon by people who are leaving tomorrow."
     ],
     "notice": "CARTAS / LETTERS. Se admiten objeciones. Indiquen qué cambiarían en el dibujo. Objections welcome; please say what you would change."

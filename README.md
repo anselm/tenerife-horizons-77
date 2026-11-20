@@ -12,23 +12,24 @@ The complete issue is one continuous numbered sequence, shown as facing pages on
 
 ## Print edition — digest first
 
-The principal edition is now a **56-page, 5.5 × 8.5-inch digest**. Three features
-have individually composed layouts: ocean habitats (pp. 10–13), hillside living
-(pp. 24–27), and glider lift stations (pp. 36–39). The richer essays, personal
-recollections and friendships remain. Arthur C. Clarke appears in a short
-imagined conversation, with the historical anchor and fiction explained at the end.
+The principal edition is a **64-page, 5.5 × 8.5-inch digest**, including a blank
+endpaper. Contributions now arrive in different visual hands: a French coastal
+photomontage across pp. 6–7, a Drago excursion photograph facing its essay on
+pp. 12–13, newspaper-like office reports, typographic energy and finance proposals,
+and a sprawling film-desk ink drawing across pp. 48–49. Ocean, hillside and flight
+features occupy pp. 14–17, 28–31 and 40–43. The richer writing and friendships remain.
 
 - [Facing-spread design proof](output/pdf/Horizons-77-digest-spreads.pdf) — best for reviewing the new compositions.
 - [Whole-book reading proof](output/pdf/Horizons-77-digest-proof.pdf) — front/back and blank inside covers included.
-- [Digest interior](output/pdf/Horizons-77-digest-interior.pdf) — 56 single pages with trim and bleed boxes.
+- [Digest interior](output/pdf/Horizons-77-digest-interior.pdf) — 64 single pages with trim and bleed boxes.
 - [Print setup and cover status](output/pdf/DIGEST-MIXAM.txt).
 
-**A new cover spine measurement is needed for 56 pages.** The previous
+**A new cover spine measurement is needed for 64 pages.** The previous
 [48-page cover wrap](output/pdf/Horizons-77-digest-cover-48pp.pdf) is preserved
 for the earlier order and must not be paired with this revised interior.
 The target stock remains 50lb uncoated text and 80lb uncoated outside-only cover.
 
-The web edition has 59 folios and its own page references. The earlier
+The web edition has 63 folios and its own page references. The earlier
 [Letter edition](output/pdf/Horizons-77-print-letter.pdf),
 [tabloid imposition](output/pdf/Horizons-77-booklet-tabloid.pdf), and
 [Letter spreads](output/pdf/Horizons-77-reader-spreads.pdf) remain available
@@ -42,8 +43,9 @@ before changing type, layouts or tone. It replaces the fixed-page-count and
 uniform-template assumptions in earlier print notes. [Anselm's note on the
 dreamers](devlog/20261120-the-dreamers.md) preserves the emotional intent:
 friendships, quixotic hopes, mortality, and sympathy for those who keep imagining.
-[Restored spreads, prompts and proof evidence](devlog/20261120-restored-spreads/README.md)
-record what this pass changed and what remains to do.
+[Contributed pages: prompts, decisions and proof evidence](devlog/20261120-contributed-pages/README.md)
+records the broader revision. The [earlier three-feature pass](devlog/20261120-restored-spreads/README.md)
+is retained as an earlier stage, not the current page map.
 
 ## View locally
 
@@ -64,8 +66,9 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 ## Reading order
 
 The in-magazine contents and numbered links are generated from the current
-web sequence. The restored features begin on web folios **14, 28 and 40**;
-Clarke appears on 44; edition notes begin on 59. These numbers differ from
+web sequence. The restored features begin on web folios **16, 30 and 42**;
+Clarke appears on 46; edition notes begin on 63. The new panoramic spreads are
+web folios 8–9 and 52–53. These numbers differ from
 the digest's printed folios. `output/pdf/digest-pagination.json` records the
 print mapping; use the contents in the edition you are reading.
 

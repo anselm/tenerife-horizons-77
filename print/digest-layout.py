@@ -9,14 +9,14 @@ insertlog=[]
 def reading_insert(key,bottom):
  insert=D.get('editionInserts',{}).get(key)
  if not insert:return bottom
- top=bottom-20;placements=[]
+ top=bottom-17;placements=[]
  def put(t,x,y,w,size=11.8,font='G',leading=None,color=INK,gap=9):
   p=para(t,size,leading,font,color,space=0);_,height=p.wrap(w,1000)
   placements.append((p,x,y-height));return y-height-gap
  y=put(insert['label'],44,top-10,524,8,'AB',11,RUST,12)
  y=put(insert['title'],44,y,524,22,'BD',25,INK,18)
  art_bounds=None
- if insert.get('art'):
+ if insert.get('art') and key!='sun-continued':
   path=TMP/('study-'+insert['art']+'.png')
   image_y=y-130;art_bounds=image_bounds(path,44,image_y,524,130)
   y=caption(insert['caption'],art_bounds,draw=False)-16

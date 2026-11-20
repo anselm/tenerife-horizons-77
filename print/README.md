@@ -1,21 +1,23 @@
 # Print edition
 
-Revised 20 November 2026. The primary digest is **56 pages at 5.5 × 8.5 inches**,
+Revised 20 November 2026. The primary digest is **64 pages at 5.5 × 8.5 inches**,
 with mirrored glue margins and 0.125-inch bleed. A new printer-calculated spine
 is required; the 0.14-inch wrap is retained only as `Horizons-77-digest-cover-48pp.pdf`
 for the previous 48-page order. Do not pair that wrap with the revised interior.
 
 Read the [current design compass](../devlog/20261120-editorial-and-design-compass.md)
-and [restoration evidence](../devlog/20261120-restored-spreads/README.md).
-The web now has 59 folios. The Letter edition and its imposition are preserved
+and [current proof evidence](../devlog/20261120-contributed-pages/README.md).
+The web now has 63 folios. The Letter edition and its imposition are preserved
 as the earlier layout, not equivalent exports of the redesigned digest.
 
 The three features use explicit physical-point compositions in `digest-features.py`:
 sharp serif ocean headlines, condensed industrial headings for hillside and flight,
 large plates and different arrangements of text, notes and illustration. Body type
 is fixed at 9.4/12.2 pt in these features; column splitting is measured rather than
-solved by shrinking. Other pages retain their existing settings via logical legacy
-page mapping. The whole-book proof has 60 pages including front/back and two blank
+solved by shrinking. The contributor compositor in `digest-contributors.py` replaces the old article
+and office templates, uses fixed 9–10.4 pt reading type, and draws panoramic art
+in trim coordinates. The remaining Alexander, atlas and document leaves retain
+their earlier body settings via logical legacy page mapping, with serif headings. The whole-book proof has 68 pages including front/back and two blank
 inside covers. The facing-spread PDF is for review, not printer imposition.
 
 ## Rebuild
@@ -26,6 +28,7 @@ The print fonts are bundled in `assets/fonts/`, with the publisher’s license.
 ```sh
 node print/export.cjs
 python3 print/build-digest.py
+python3 print/verify-digest.py
 # Optional: rebuild the earlier Letter layout separately
 python3 print/build.py
 ```
@@ -41,8 +44,8 @@ usually use the reader-order PDF and its own imposition software. Check a
 physical folded proof, particularly duplex orientation, before a full run.
 
 The digest-spreads PDF places consecutive facing pages together for screen
-reading; it is not a print imposition. The production files remain the ordinary
-reader-order PDF and the separately imposed tabloid PDF.
+reading; it is not a print imposition. The current production body is the digest interior in reader order. The tabloid
+imposition belongs to the earlier Letter edition; it is not a digest production file.
 
 The word أُنس is kept in logical reading order in the source and web edition, with a locally bundled Amiri font (SIL OFL). The print paragraph uses a verified joined, visual-order form of this single word in embedded Amiri. The four-line Arabic poem in `edition-inserts.js` likewise retains logical text for the web and a checked, shaped visual-order cache (`printLines`) for the fixed PDF lines. That cache was prepared with arabic-reshaper and python-bidi and visually proofed in Amiri; the regular build does not need those authoring dependencies. Any change to those Arabic lines requires re-shaping and visual proofing. Do not reverse arbitrary Arabic text.
 
@@ -56,5 +59,5 @@ Machado, the 1923 wording of Hughes’s “Dreams,” a Rilke stanza, an eight-w
 extract with commentary, original Arabic verse, correspondence and workshop notices.
 Existing marginal notes are folded into these panels rather than printed twice.
 `digest-pagination.json` records panel bottoms and body fits; overflow stops the build.
-Fuller’s opening uses a unique tensegrity principle drawing, crediting Snelson’s
-sculptural discovery and Fuller’s interpretation, with sources in the edition notes.
+The Fuller/Snelson text and its sources remain complete; the web keeps the
+tensegrity study, while the denser digest round table now gives the writing priority.

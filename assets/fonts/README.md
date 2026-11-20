@@ -25,3 +25,8 @@ It supplies condensed industrial display type; Nimbus Roman Bold supplies
 sharp serif headlines in the ocean feature. Both are used in print and web.
 The existing URW license and embedding exception apply. See the current
 [design compass](../../devlog/20261120-editorial-and-design-compass.md).
+
+The later 20 November contributor pass removes Gothic as the universal interior
+heading. Mixed-case Roman, Roman italic, condensed news/industrial lettering and
+Bookman for the film desk now perform distinct jobs. Gothic survives in the cover
+and viewer. See the current design compass for the superseding editorial rule.

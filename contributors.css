@@ -1,0 +1,58 @@
+/* A collection of contributed sheets, not a uniform publication template. */
+.mag-sheet .sheet-title h1,.mag-sheet .continuation-title h2,.mag-sheet .reading-insert h3,.mag-sheet .workshop-leaf h3{font-family:H77Roman,Georgia,serif;text-transform:none;letter-spacing:-.025em}
+.mag-sheet.contributed{color:#26231e}
+.contributed .contribution-heading h1{font-family:H77Roman,Georgia,serif;font-size:clamp(2.7rem,4.3vw,4.8rem);font-weight:700;line-height:.96;letter-spacing:-.04em;text-transform:none;margin:14px 0 30px;text-wrap:balance}
+.contribution-heading small{font-family:H77Mono,monospace;font-size:.67rem;letter-spacing:.025em}
+.contributed .sheet-prose{columns:2;column-gap:1.4rem;font-family:H77Roman,Georgia,serif;font-size:1.05rem;line-height:1.38;text-align:left}
+.contributed .sheet-prose p{margin:0 0 .8em;hyphens:auto;overflow-wrap:break-word}
+.contributed .sheet-prose p.first:first-letter{float:none;font-size:inherit}
+.contribution-deck{font-family:H77Roman,Georgia,serif;font-style:italic;font-size:1.13rem;line-height:1.3;margin:1.6rem 0 .5rem;border-top:1px solid;padding-top:14px}
+.contribution-year{font-family:H77Condensed,Impact,sans-serif;font-size:6rem;line-height:.85;color:#a32f20;margin:1rem 0 2rem}
+.contribution-word{font-family:H77Roman,Georgia,serif;font-style:italic;font-size:6.5rem;line-height:1;color:#9a3d26;margin:1rem 0}
+.contribution-stamp{font: .8rem/1.4 H77Mono,monospace;border:3px double;padding:1rem;color:#91432c;margin:1rem 0}
+.contributed.voice-es .contribution-heading{border-top:6px solid;border-bottom:2px solid;padding:12px 0 0}
+.contributed.voice-es .contribution-heading h1{font-family:H77Condensed,Impact,sans-serif;font-size:4.8rem;line-height:.95;letter-spacing:0}
+.contributed.voice-it .contribution-heading h1{font-size:2.5rem;font-style:italic}
+.contributed.voice-de .feature-figure{float:right;width:48%;margin:0 0 1.2rem 1.2rem}
+.contributed.voice-de .sheet-prose{columns:1}
+.contributed.voice-goodall .contribution-heading h1,.contributed.voice-cousteau .contribution-heading h1{font-weight:400;font-style:italic}
+.contributed.voice-goodall .contribution-heading{border-bottom:4px double #526248;margin-bottom:22px}
+.contributed.voice-maathai .contribution-year{color:#526248}
+.contributed.voice-sun .contribution-heading{background:#e9b52c;padding:18px 14px 1px;margin-bottom:24px}
+.contributed.voice-sun .contribution-heading h1{font-family:H77Condensed,Impact,sans-serif;font-size:3.8rem;letter-spacing:0}
+.contributed.voice-credit .contribution-heading{border:2px solid #91432c;padding:12px;margin-bottom:24px}
+.contributed.voice-credit .contribution-heading h1{color:#91432c;font-size:3.4rem}
+.contributed.voice-gilliam .contribution-heading h1{font-family:H77Bookman,Georgia,serif;font-size:3.1rem;letter-spacing:-.045em}
+.contribution-continuation{font:italic 2rem/1.07 H77Roman,Georgia,serif;margin:0 0 24px;letter-spacing:-.025em;text-transform:none}
+.contributed.voice-fr{color:#203c79}
+.contributed .feature-figure{margin:1.4rem 0}
+.contributed .feature-figure img{max-height:none;width:100%;height:auto}
+.contributed.voice-coast .feature-figure{margin-top:2rem}
+.assembly-page .assembly-plate,.alexander-page .pattern-plate,.reading-insert figure{display:none}
+.assembly-page .sheet-title h1{font-family:H77Condensed,Impact,sans-serif;font-size:3.4rem;text-transform:uppercase;letter-spacing:0;border-top:5px solid;border-bottom:1px solid;padding:12px 0}
+.assembly-page .assembly-prose{column-rule:1px solid #75684f;column-gap:1.5rem}
+.assembly-notice{font-family:H77Mono,monospace;transform:rotate(-.5deg)}
+.mag-sheet.panorama-page{padding:0;min-height:0;overflow:hidden}
+.panorama-page .sheet-running,.panorama-page .sheet-folio{position:absolute;z-index:2;left:24px;right:24px;font-size:.6rem}
+.panorama-page .sheet-running{top:14px;border:0}
+.panorama-page .sheet-running span:nth-child(2){display:none}
+.panorama-page .sheet-folio{bottom:12px;border:0}
+.panorama-page .sheet-content{padding:0;margin:0}
+.panorama-window{position:relative;aspect-ratio:11/17;overflow:hidden}
+.panorama-window>img{position:absolute;max-width:none!important;width:200%!important;height:100%!important;object-fit:fill;left:0;top:0}
+.panorama-1>img{left:-100%}
+.contributed .panorama-window h1{position:absolute;top:7%;left:8%;right:8%;font:700 clamp(2.7rem,4.6vw,5.2rem)/.9 H77Roman,Georgia,serif;letter-spacing:-.04em;color:#203c79;margin:0;text-transform:none}
+.panorama-copy{position:absolute;bottom:5%;left:8%;right:8%;font:1rem/1.22 H77Roman,Georgia,serif;color:#26231e;margin:0}
+.panorama-film h1{font-weight:400!important;color:#26231e!important;font-size:clamp(2.2rem,3.6vw,4rem)!important;right:22%!important}
+.panorama-film .panorama-copy{bottom:12%;right:38%;font-style:italic;font-size:1.5rem}
+@media(min-width:1100px){.mag-spread:has(.panorama-page){gap:0}.mag-spread:has(.panorama-page) .panorama-page{align-self:stretch}}
+@media(max-width:760px){.contributed .sheet-prose{columns:1}.contributed .contribution-heading h1{font-size:2.6rem}.contribution-word{font-size:4.5rem}.contributed.voice-de .feature-figure{float:none;width:100%;margin:1rem 0}.contributed .panorama-window h1{font-size:2.5rem}.panorama-copy{font-size:.84rem}.panorama-film .panorama-copy{font-size:1.1rem}}
+
+@media(max-width:760px){
+ .panorama-window{aspect-ratio:auto;padding-bottom:48px;background:#f2e5cc}
+ .panorama-window>img{position:relative;left:0!important;top:auto;height:auto!important;display:block}
+ .panorama-1>img{transform:translateX(-50%)}
+ .panorama-copy,.panorama-film .panorama-copy{position:relative;left:auto;right:auto;bottom:auto;margin:0 8%;font-size:1rem;line-height:1.35}
+ .panorama-window h1{top:38px!important}
+}
+.panorama-page .sheet-running span,.panorama-page .sheet-folio span{background:#f2e5cc;padding:2px 4px}

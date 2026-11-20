@@ -25,15 +25,15 @@ def finish():C.restoreState();C.showPage()
 '''+source[b:]
 a=source.index("page('Cover',folio=False)");b=source.index("page('Contents'",a)
 source=source[:a]+'''page('Title page',folio=False)
-text('HORIZONS ’77',44,840,48,'BD');rule(810)
-p=para('Friendship and the art<br/>of seeing together',27,32,'BD');_,h=p.wrap(524,160);p.drawOn(C,44,735-h)
+text('HORIZONS ’77',44,840,48,'COND');rule(810)
+p=para('Friendship and the art<br/>of seeing together',27,32,'GB');_,h=p.wrap(524,160);p.drawOn(C,44,735-h)
 p=para('Papers, drawings, walks and conversations<br/>among friends new and old.',15,22,'GI');_,h=p.wrap(480,100);p.drawOn(C,44,610-h)
 p=para('Tenerife / 1977<br/>International conference on possible futures<br/>Notes towards life in 2027 and beyond.',15,22,'G');_,h=p.wrap(480,130);p.drawOn(C,44,470-h)
 text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('EDICIÓN DEL CONGRESO / NÚMERO 1',44,175,10,'A');finish()
 '''+source[b:]
 # Use three readable note pages; the final interior page is not a redundant back cover.
 a=source.index("# Choose a paragraph boundary by actual typeset fit");b=source.index("page('Back cover',folio=False)",a)
-source=source[:a]+"""back=[t for t in back if not t.startswith('The three November 2026 feature plates')]
+source=source[:a]+"""back=[t for t in back if not t.startswith(('The three November 2026 feature plates','The six November 2026 feature plates'))]
 totals=[len(t) for t in back]
 cuts=min(((i,j) for i in range(1,len(back)-1) for j in range(i+1,len(back))),key=lambda z:max(sum(totals[:z[0]]),sum(totals[z[0]:z[1]]),sum(totals[z[1]:])))
 for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]]):
@@ -45,28 +45,50 @@ source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",(ROOT/'p
 source=source.replace("if N>=46 and font=='G'", "if LEGACY_N>=46 and font=='G'")
 source=source.replace('assert N==45,N','assert N==len(sheets)+2,N')
 source=source.replace('pageCompression=1)',"pageCompression=1,initialFontName='A')")
-source=source.replace(" if k in ['article','continued','editorial']:"," if k=='designed':draw_feature(s)\n elif k=='clarke':draw_clarke()\n elif k in ['article','continued','editorial']:")
-source=source.replace("C.save()\nassert N==48,N", "page('A note on the drawings','EDITION NOTES / PRODUCTION');draw_production_note();finish()\nC.save()\nassert N==56,N")
+source=source.replace(" if k in ['article','continued','editorial']:"," if k=='letters-leaf':draw_letters_leaf()\n elif k=='drago-photo':draw_drago_photo()\n elif k=='panorama':draw_panorama(s)\n elif k=='designed':draw_feature(s)\n elif k=='clarke':draw_clarke()\n elif k in ['article','continued','editorial','assembly']:bottom=draw_contribution(s)\n elif k in ['article','continued','editorial']:")
+source=source.replace("C.save()\nassert N==48,N", "page('A note on the drawings','EDITION NOTES / PRODUCTION');draw_production_note();finish()\npage('Endpaper',folio=False);finish()\nC.save()\nassert N==len(sheets)+7,N")
 recompose = """
 # The three features are each two facing spreads. Other articles retain their copy.
 old_sheets=sheets;sheets=[];digest_legacy={};LEGACY_N=0
 for old_index,s in enumerate(old_sheets,3):
  key=s['key']
- if key in ['below-continued','slope-continued','air-continued']:continue
- if key=='below':
+ if key in ['goodall','maathai','sun']:s=dict(s,body=s['a']['body'][:5])
+ if key in ['goodall-continued','maathai-continued','sun-continued']:s=dict(s,body=s['a']['body'][5:])
+ if key=='kitchen-desk':
+  kitchen=(s,old_index);continue
+ if key=='arrival/en':
+  sheets.append(dict(s,body=s['body'][:4]));digest_legacy[len(sheets)+2]=old_index
+  sheets.append(dict(s,key=key+'-continued',body=s['body'][4:],openingpart=1));digest_legacy[len(sheets)+2]=old_index
+  continue
+ if key=='arrival/it':
+  sheets.append(kitchen[0]);digest_legacy[len(sheets)+2]=kitchen[1]
+ if key=='arrival/de':
   sheets.append(dict(key='clarke',title=D['clarkeLeaf']['title'],kind='clarke'));digest_legacy[len(sheets)+2]=9
+  sheets.append(dict(s,key=key+'-photo',kind='drago-photo'));digest_legacy[len(sheets)+2]=old_index
+ if key=='arrival/fr':
+  for side in range(2):
+   sheets.append(dict(key=key if side==0 else key+'-plate',title=s['title'],kind='panorama',family='fr',side=side));digest_legacy[len(sheets)+2]=old_index
+  s=dict(s,key=key+'-text',body=s['body'][2:])
+ if key=='gilliam':
+  for side in range(2):
+   sheets.append(dict(key=key+'-plate-'+str(side),title=s['title'],kind='panorama',family='film',side=side));digest_legacy[len(sheets)+2]=old_index
+ if key in ['below-continued','slope-continued','air-continued']:continue
  if key in ['below','slope','air']:
   for part in range(4):
    k=key if part==0 else key+'-continued' if part==3 else key+'-'+str(part)
    sheets.append(dict(key=k,title=s['title'],kind='designed',a=s['a'],part=part));digest_legacy[len(sheets)+2]=old_index
  else:
   sheets.append(s);digest_legacy[len(sheets)+2]=old_index
+sheets.append(dict(key='afterword-letters',title='Write before it is finished',kind='letters-leaf'));digest_legacy[len(sheets)+2]=45
 first={s['key']:i for i,s in enumerate(sheets,3)}
+first['gilliam']=first['gilliam-plate-0'];first['arrival/de']=first['arrival/de-photo']
 first['certificate']=first['pass'];first['colophon']=len(sheets)+3
 for i in range(3):digest_legacy[first['colophon']+i]=46+i
 contents.append(('clarke','Arthur C. Clarke / Between sessions'))
 """
-source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
+source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+'\n'+(ROOT/'print/digest-contributors.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
+source=source.replace("title if continued else title.upper(),size,size*1.06,'BD'","title,size,size*1.06,'GB'")
+source=source.replace("if i in [1,2]:pattern_leaf(bottom,i)","# Repeated generic path studies retired.")
 ns={'__file__':str(ROOT/'print/build.py')};exec(compile(source,str(ROOT/'print/build-digest.py'),'exec'),ns)
 from pypdf import PdfReader,PdfWriter,Transformation
 from pypdf.generic import RectangleObject

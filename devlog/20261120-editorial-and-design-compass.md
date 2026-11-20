@@ -1,6 +1,8 @@
 # Horizons ’77: editorial and design compass
 
-Written 20 November 2026 after the ten-copy digest proof exposed a loss of visual character. This is the current guide for further design work. It supersedes the assumption in the October digest notes that 48 pages and a common article template are constraints. It does not supersede the writing, the lived origins, or the friendships that developed through the work.
+Written and revised 20 November 2026 after the ten-copy digest proof and the subsequent three-feature pass exposed a loss of visual character. This is the current guide for further design work. It supersedes the assumption in the October digest notes that 48 pages and a common article template are constraints. The later contributor pass also supersedes the premise of a strong single art editor. It does not supersede the writing, the lived origins, or the friendships that developed through the work.
+
+Current implementation and visual evidence: [contributed pages](20261120-contributed-pages/README.md). The earlier three-feature snapshot preserves an intermediate stage.
 
 ## What the object is
 
@@ -24,30 +26,31 @@ The [1 June 1976 issue of *Jericho*](https://habitat.scarp.ubc.ca/wp-content/upl
 
 [ITC's Avant Garde field guide](https://www.myfonts.com/a/font/content/font-field-guide/itc-avant-garde-gothic/) dates the typeface's formation to 1970; [Trade Gothic's publisher catalogue](https://www.myfonts.com/pages/fontshop-fontlists-trade-gothic/) identifies Jackson Burke's 1948 family. Both traditions are available to a 1977 editor. They perform different jobs. Availability does not justify using one face on every page.
 
-## Type has an editorial role
+## Several hands, several kinds of page
 
-- **Large editorial proposition:** Nimbus Roman Bold, a licensed digital substitute in the Times tradition. Close-set capitals, sharp serifs, strong contrasts. The ocean feature uses this at 43 pt. This is a harder alternative to rounded Bookman/Souvenir styling, not a return to the soft display experiment.
-- **Architectural and transport display:** Nimbus Sans Narrow Bold, a licensed condensed grotesque. Tall capitals at 29–49 pt, deliberate line breaks. The transport feature feels like an engineering proposal or a travel announcement. Do not stretch the glyphs to manufacture condensation.
-- **Reading:** Nimbus Roman, 9.4/12.2 pt in the new digest features. Two columns with approximately 16 pt between them; natural word spacing, ragged right. A feature may move a short passage across the full measure. Do not silently shrink the whole article to avoid another page.
-- **Reflective voice:** Roman italic, usually 12–18 pt. Used for a Spanish or Italian passage, a counterpoint, an intimate observation. Language changes carry new material; they are not ornamental repeated translations.
-- **Office and mechanical voice:** Nimbus Sans and Nimbus Mono, short notices, labels and working annotations. Avoid tiny all-cap paragraphs. Captions normally 6.4–7 pt at actual size; print one physical proof before enlarging a run.
-- **Existing families:** URW Gothic remains appropriate elsewhere, Bookman for quieter navigational matter; Amiri serves Arabic. The earlier Fraunces-derived files remain historical experiments and are not our default headline answer.
+The contributions should look as though different groups brought their own sheets. The office gathers them without making them all behave alike. A common trim, readable text, accurate folios and careful binding are enough shared discipline. Do not use a universal TITLE → deck → horizontal drawing → two columns sequence.
 
-Font files are digital revivals, not physical 1977 type. Sources and licenses live in `assets/fonts/`. Current named implementation choices are not claims that these exact font binaries existed then.
+- The French forms-of-life group brings an ochre/ultramarine photomontage crossing the gutter (digest 6–7), followed by its remaining argument on page 8. Its image is a metaphor, not a photograph of a real village or a tropical reef.
+- The excursion notebook brings a dark halftone photographic plate facing a quiet German essay (12–13).
+- The secretariat brings narrow reports, heavy condensed mastheads, boxed notices and ordinary accounts. It can disagree typographically with the excursion notebook.
+- Energy arrives as a yellow proposition; finance as a subscription prospectus with a restrained red frame. Their words remain the original essays, not advertising filler.
+- The film desk brings an overflowing ink castle across 48–49, followed by the richer Gilliam writing. The people and plants exceed the apparatus. The drawing belongs to the fictional film desk, not to Gilliam's authenticated oeuvre.
+- Ocean (14–17), hillside (28–31) and flight (40–43) retain the earlier individually drawn feature compositions. They are now surrounded by different sorts of contributions.
+- The final unsent letters have their own leaf (59). Poetry and Arabic are writing, not decorative filler.
 
-## Compose spreads, not boxes to fill
+## Type is a voice, not a decade filter
 
-Choose the subject's visual argument before placing its paragraphs. In a bound book, even-numbered pages are on the left and odd-numbered pages on the right. Never call two consecutive pages a spread without checking that they face one another.
+Nimbus Roman in mixed case, bold and italic replaces the geometric Gothic default for most interior headings. Condensed Nimbus Sans supplies the office and engineering voices. Bookman gives the film desk a slightly awkward, heavier literary heading. Mono belongs to annotations and accounts. Amiri supplies the Arabic. Gothic remains in the existing cover and viewer; it is no longer the answer to every interior title.
 
-The first three restorations each have four pages, in two facing spreads:
+The sharper letters matter, but a historically available face can still look generic when every page deploys it in the same way. Change scale, measure, position, case and relationship to pictures with purpose. One enormous word, an intimate italic heading and a newspaper masthead can coexist. Do not make every contribution equally loud. Do not add random rotations to compensate for an unchanged underlying template.
 
-1. **Ocean, pp. 10–13:** oversized serif title and opening prose face a full-page colour proposition. Following pages turn to the route, the maintenance section and the objections. The luminous room and its obligations belong together.
-2. **Hillside, pp. 24–27:** condensed headline and two-column account face a sectional perspective. Italian, ordinary domestic arrangements, a terrace and Machado supply the following spread's different tempo. The poem is a carried clipping, not whitespace filler.
-3. **Flight, pp. 36–39:** an industrial announcement and tall lift-station plate face the explanation. The next spread joins the glide sequence, energy account and last walk from the landing place to a friend's door.
+Reading type in the contributor compositor is fixed at 9–10.4 pt, generally two columns with natural spacing. When a page does not fit, reconsider the distribution before reducing type. The English opening and Drago gained room; the closing letters gained a leaf. Captions and smaller legacy notes need a physical 100% proof on the intended stock.
 
-These are three examples, not three templates to stamp across the issue. Future features might be a photo essay, an interview interrupted by corrections, a map with marginal notes, a foldout-like section or a dense correspondence page. Preserve a family resemblance through rules, folios, ink and editorial voices; permit different proportions, scales and type roles.
+## Compose the binding
 
-White space is useful when it frames a decision, a picture or a change of pace. It is not useful when it is the leftover output of halving a paragraph array. Do not add generic prose to fill a measured hole. First reconsider the image scale, the cut of the article, the neighbouring page and the reading sequence.
+Even folios are left-hand pages, odd folios right-hand pages. Cross-gutter artwork is one continuous composition; live text stays clear of the glue margin. Keep text as real type over artwork. Do not rasterise full essays into an image-generator facsimile. On small screens the two halves run sequentially and their paragraphs leave the image for a separate reading area.
+
+White space can be a deliberate change of pace. It should not be what remains after mechanically halving a paragraph array. Do not generate additional generic prose to fill holes. Preserve rich arguments, personal recollections and the difficult friendships; retire redundant pictures first.
 
 ## Pictures must earn their place
 
@@ -61,7 +64,7 @@ Tenerife matters: Teide's presence, volcanic stone, slopes, water, local paths a
 
 Use near-black text for readable print. Petrol blue and amber support the ocean, black and rust support the hillside section, vermilion and Prussian blue support flight. The common edition palette can include olive and cream without forcing every picture into brown wash. Uncoated stock supplies much of the physical warmth. Retain aged paper and the seam in the web viewer; do not bake shadows or fake folds into every print page.
 
-Editorial assembly is legible through changes in type size, rules, cuttings, captions and visible corrections. Use those devices to signal a real change of voice or purpose. Avoid gratuitous tape, dirt, stains and random rotations across reading text. A harried editor still cares whether a reader can read.
+Editorial assembly is legible through changes in type size, rules, cuttings, captions and visible corrections. Use those devices to signal a real change of voice or purpose. Avoid gratuitous tape, dirt, stains and random rotations across reading text. Each contributor still cares whether a reader can read. This is a gathering of different visual hands, not one simulated harried editor applying a finish to everything.
 
 ## Historical voices
 
@@ -71,8 +74,18 @@ Keep the attention distributed. Adding a famous guest should not push the local 
 
 ## Production and future revisions
 
-The 56-page digest supersedes the 48-page interior. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
+The 64-page digest, including its blank final endpaper, supersedes the 56- and 48-page interiors. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
 
-The older Letter edition is a preserved earlier layout, not an automatically updated equivalent. The new feature compositions are shared editorially with the website but drawn explicitly in the digest. Their compositor is `print/digest-features.py`; shared feature text and web compositions are in `magazine-features.js`. The remaining digest still adapts the older Letter renderer; do not pretend this pass has redesigned all pages.
+The older Letter edition is a preserved earlier layout, not an automatically updated equivalent. The new feature compositions are shared editorially with the website but drawn explicitly in the digest. The three-feature compositor is `print/digest-features.py`; the broader article/office pass is `print/digest-contributors.py`. Web compositions are in `magazine-features.js` and `contributor-pages.js`. Alexander, atlas, documents and notes still adapt the older renderer with revised headings. The cover is still the earlier design. This is a broader interior revision, not a claim that every page has been newly art-directed.
 
 Review every changed facing spread at reading size, all pages as contact sheets, paragraph preservation, references, image resolution, font embedding, glyphs and safe margins. There must be no clipped captions or text overlaps. A content-complete PDF is not a successful design by itself. Inspect a physical copy at 100% before another run.
+
+## Reference ladder for the contributor revision
+
+The supplied examples span periods. The modern *Dazed* spread is evidence for asymmetry and an image crossing a gutter, not for 1977 typography. The two historic newspaper pages show density and competing small images; the displayed “1970” cover has not been authenticated. The BOHN advertisement belongs to an earlier industrial-future tradition. Do not label every supplied image a seventies original.
+
+[MoMA's catalogue records *Fluxus cc V TRE Fluxus*, no. 2, in 1964](https://www.moma.org/collection/works/128175). [M+ holds *Archigram 1*, 1961](https://www.mplus.org.hk/en/collection/objects/magazine-archigram-1-ca36-t1/). These supply pre-1977 precedents for contributions that refuse a single polite visual voice. They do not justify copying their pages into ours.
+
+[Sofia Oaks's Countere essay](https://www.countere.com/home/the-allure-of-retrofuturism) is a contemporary mood reference: it ranges across advertising, architecture and illustrated futures, and connects their appeal to earlier desires. It is not our chronological authority. Our emotional compass also allows grief, imperfection and the ridiculous, rather than a flawless technological utopia.
+
+The [Science Museum's Times New Roman record](https://collection.sciencemuseumgroup.org.uk/objects/co8725748/0-2-inch-composition-punches-for-times-new-roman-typeface-series-number-327) dates its newspaper debut to 3 October 1932. Nimbus Roman is a digital substitute in that older typographic tradition, not an original period file.
