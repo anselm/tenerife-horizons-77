@@ -18,3 +18,10 @@ is a contemporary design inspired by Cooper, Windsor and Souvenir, not a face
 claimed to have been released in 1977. Bookman remains in quieter headings.
 
 The October 28 revision replaces the soft display setting with URW Gothic Demi. Opening headlines use capitals; continuation and workshop headings retain sentence case. The earlier Fraunces-derived files remain as historical design assets, but are no longer used in the print edition.
+
+The November 20 feature restoration adds unmodified NimbusSansNarrow-Bold.ttf
+from the same [Artifex URW collection](https://github.com/ArtifexSoftware/urw-base35-fonts/blob/master/fonts/NimbusSansNarrow-Bold.ttf).
+It supplies condensed industrial display type; Nimbus Roman Bold supplies
+sharp serif headlines in the ocean feature. Both are used in print and web.
+The existing URW license and embedding exception apply. See the current
+[design compass](../../devlog/20261120-editorial-and-design-compass.md).

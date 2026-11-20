@@ -12,25 +12,38 @@ The complete issue is one continuous numbered sequence, shown as facing pages on
 
 ## Print edition — digest first
 
-The **48-page, 5.5 × 8.5-inch digest** is the principal edition: two-column reading,
-individually sized illustrations, poetry clippings and multilingual workshop notes.
-It is prepared for 10 colour PUR-bound copies, 50lb uncoated interiors and an
-outside-only 80lb uncoated cover with a **0.14-inch spine**. Inside covers are blank.
+The principal edition is now a **56-page, 5.5 × 8.5-inch digest**. Three features
+have individually composed layouts: ocean habitats (pp. 10–13), hillside living
+(pp. 24–27), and glider lift stations (pp. 36–39). The richer essays, personal
+recollections and friendships remain. Arthur C. Clarke appears in a short
+imagined conversation, with the historical anchor and fiction explained at the end.
 
-- [Digest interior — upload as body](output/pdf/Horizons-77-digest-interior.pdf)
-- [Outside cover wrap — upload as cover](output/pdf/Horizons-77-digest-cover.pdf)
-- [Whole-book reading proof — do not upload](output/pdf/Horizons-77-digest-proof.pdf)
-- [Mixam setup and upload instructions](output/pdf/DIGEST-MIXAM.txt)
+- [Facing-spread design proof](output/pdf/Horizons-77-digest-spreads.pdf) — best for reviewing the new compositions.
+- [Whole-book reading proof](output/pdf/Horizons-77-digest-proof.pdf) — front/back and blank inside covers included.
+- [Digest interior](output/pdf/Horizons-77-digest-interior.pdf) — 56 single pages with trim and bleed boxes.
+- [Print setup and cover status](output/pdf/DIGEST-MIXAM.txt).
 
-The web edition has its own 52-folio reading sequence and shares the new editorial
-inserts. It is not the digest’s print pagination.
+**A new cover spine measurement is needed for 56 pages.** The previous
+[48-page cover wrap](output/pdf/Horizons-77-digest-cover-48pp.pdf) is preserved
+for the earlier order and must not be paired with this revised interior.
+The target stock remains 50lb uncoated text and 80lb uncoated outside-only cover.
 
-A secondary Letter edition remains available for ordinary local printing:
-[reader order](output/pdf/Horizons-77-print-letter.pdf),
-[imposed tabloid booklet](output/pdf/Horizons-77-booklet-tabloid.pdf), and
-[reader spreads](output/pdf/Horizons-77-reader-spreads.pdf).
-The additional digest reading panels are composed for the digest and web;
-the Letter edition retains its established layout. See [print source notes](print/README.md).
+The web edition has 59 folios and its own page references. The earlier
+[Letter edition](output/pdf/Horizons-77-print-letter.pdf),
+[tabloid imposition](output/pdf/Horizons-77-booklet-tabloid.pdf), and
+[Letter spreads](output/pdf/Horizons-77-reader-spreads.pdf) remain available
+as the previous layout. They do not contain this digest redesign.
+See [print source notes](print/README.md).
+
+## Current editorial and design guidance
+
+Read the [20 November design compass](devlog/20261120-editorial-and-design-compass.md)
+before changing type, layouts or tone. It replaces the fixed-page-count and
+uniform-template assumptions in earlier print notes. [Anselm's note on the
+dreamers](devlog/20261120-the-dreamers.md) preserves the emotional intent:
+friendships, quixotic hopes, mortality, and sympathy for those who keep imagining.
+[Restored spreads, prompts and proof evidence](devlog/20261120-restored-spreads/README.md)
+record what this pass changed and what remains to do.
 
 ## View locally
 
@@ -50,38 +63,13 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 
 ## Reading order
 
-| Pages | Material |
-| --- | --- |
-| 1–2 | Cover and contents |
-| 3–4 | An island is a beginning / English editorial |
-| 5–6 | La isla no está vacía / land, water and staying / Spanish |
-| 7 | Kitchen interview / questions and amendments |
-| 8–9 | Rêver à plusieurs / human scale, reef and village / French |
-| 10–11 | Una porta da chiudere / communal and private life / Italian |
-| 12–13 | Unter dem Drachenbaum / El Drago, Humboldt and friendship / German |
-| 14–15 | Ocean habitats |
-| 16 | Letters, objections and editorial cartoon |
-| 17–18 | Cousteau and the new odyssey |
-| 19–20 | Montaña Amarilla and the coastal notebook |
-| 21 | Oleaje / a future of his own |
-| 22–23 | Goodall and the new institute |
-| 24–25 | Maathai and the new Green Belt Movement |
-| 26–27 | Hillside settlements |
-| 28–31 | Alexander and Bocacangrejo |
-| 32 | Rahman and the right to refuse |
-| 33–34 | Island energy |
-| 35 | Provisional conference accounts |
-| 36–37 | Personal gliders and lift stations |
-| 38–39 | Island atlas and annotations |
-| 40–41 | Cooperative finance |
-| 42–43 | Gilliam after Jabberwocky |
-| 44–45 | Architectural portraits |
-| 46 | The closing desk |
-| 47–49 | Programme, delegate credential and cooperative certificate |
-| 50–51 | Closing editorial |
-| 52 | Edition notes and provenance |
+The in-magazine contents and numbered links are generated from the current
+web sequence. The restored features begin on web folios **14, 28 and 40**;
+Clarke appears on 44; edition notes begin on 59. These numbers differ from
+the digest's printed folios. `output/pdf/digest-pagination.json` records the
+print mapping; use the contents in the edition you are reading.
 
-The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See page 52 and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` and `COAST-NOTEBOOK-ART-V2.txt` for provenance.
+The magazine and conference are fictional. Real luminaries appear as imagined contributors without fabricated authentic quotations or claims of historical attendance. The landscape and Bocacangrejo plate are newly generated images; the maps and technical drawings are original graphics. See the final edition notes and `ART-DIRECTION.txt`, `BOCACANGREJO-ART.txt` and `OCEAN-OBSERVATORY-ART.txt` and `COAST-NOTEBOOK-ART.txt` and `COAST-NOTEBOOK-ART-V2.txt` for provenance.
 
 Conceived in a 2025 conversation; digital edition made in October 2026.
 
@@ -93,7 +81,7 @@ The horse photograph was supplied for this edition and is a contemporary image, 
 
 ## Development log
 
-Small steps through the project, grouped by year and numbered in reading order. Numbers mark the narrative sequence, not months or separate workdays. The original conversation began March 30, 2025; the web edition was built October 22, 2026. These notes were assembled on October 22, 2026 from the surviving conversation and repository history. No activity is implied in the intervening gap.
+The current dated guidance and restoration snapshot are linked above. Earlier entries below are grouped by year and numbered in reading order. Numbers mark the narrative sequence, not months or separate workdays. The original conversation began March 30, 2025; the web edition was built October 22, 2026. These notes were assembled on October 22, 2026 from the surviving conversation and repository history. No activity is implied in the intervening gap.
 
 ### 2025
 

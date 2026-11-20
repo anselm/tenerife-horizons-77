@@ -216,3 +216,26 @@ span[lang="ar"]{font-family:H77Arabic,serif;direction:rtl;unicode-bidi:isolate;f
 .reading-insert .insert-comments p{margin:0 0 1em;orphans:3;widows:3}
 .reading-insert figure{margin:1rem 0}.reading-insert figure img{width:100%;height:auto}
 @media(max-width:760px){.reading-insert .insert-comments{columns:1}.reading-insert .insert-verse:has(.verse-translation){grid-template-columns:1fr}}
+/* November 2026: composed features. These rules belong to three features only. */
+@font-face{font-family:H77Condensed;src:url('assets/fonts/NimbusSansNarrow-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+.mag-sheet.designed-feature{--feature-ink:#173d50;min-height:1050px}
+.designed-feature .feature-headline{font:700 clamp(50px,5.4vw,83px)/.9 H77Roman,Georgia,serif!important;letter-spacing:-2.3px;margin:24px 0 25px;color:var(--feature-ink)}
+.designed-feature.feature-slope{--feature-ink:#a74427}.designed-feature.feature-air{--feature-ink:#ba391f}
+.designed-feature.feature-slope .feature-headline,.designed-feature.feature-air .feature-headline{font-family:H77Condensed,'Arial Narrow',sans-serif!important;font-size:clamp(58px,5.7vw,88px)!important;letter-spacing:-1px}
+.feature-deck{font:italic 25px/1.18 var(--serif);margin:0 0 18px}.feature-byline{font:10px/1.4 var(--sans);text-transform:uppercase;margin-bottom:24px}
+.feature-prose{columns:2;column-gap:25px;font:18px/1.4 var(--serif);text-align:left;hyphens:auto;overflow-wrap:break-word}.feature-prose p{margin:0 0 1em;orphans:3;widows:3}
+.feature-figure{margin:0 0 25px}.feature-figure img{display:block;width:100%;height:auto;max-height:none;mix-blend-mode:multiply}.feature-figure figcaption{font:9px/1.35 var(--sans);margin:12px 0 0;letter-spacing:.35px;position:static}
+.feature-part-1.feature-below .feature-figure img{max-height:870px;object-fit:contain}.feature-part-1.feature-below .feature-figure{margin-bottom:18px}
+.plate-thought{font:italic 25px/1.2 var(--serif);color:var(--feature-ink)}
+.feature-subhead{font:700 43px/1 H77Roman,Georgia,serif;letter-spacing:-.8px;color:var(--feature-ink);margin:8px 0 30px}
+.feature-slope .feature-subhead,.feature-air .feature-subhead{font-family:H77Condensed,sans-serif;font-size:51px;text-transform:uppercase;letter-spacing:0}
+.feature-callout{font:italic 29px/1.23 var(--serif);color:var(--feature-ink);margin:30px 0;padding:20px 0;border-top:2px solid currentColor}
+.feature-technical{font:12px/1.5 H77Mono,monospace;border-top:1px solid var(--ink);padding-top:18px;margin-top:25px}
+.feature-notice{border-top:2px solid var(--ink);padding-top:17px;margin-top:27px}.feature-notice h3{font:700 27px/1.1 var(--serif);margin:10px 0}.feature-notice p{font:19px/1.4 var(--serif);margin-bottom:0}
+.feature-slips{margin-top:28px}.feature-slips section{display:grid;grid-template-columns:1fr 2.2fr;gap:20px;border-top:1px solid var(--ink);padding:12px 0}.feature-slips h3{font:700 11px/1.4 var(--sans);color:var(--feature-ink);margin:0}.feature-slips p{font:17px/1.4 var(--serif);margin:0}
+.feature-poem{margin:22px 0}.feature-poem h2{font:700 36px/1 var(--serif);margin:12px 0 20px}.feature-poem p{font:italic 22px/1.5 var(--serif)}.feature-poem small{font:10px/1.4 var(--sans)}
+.feature-air.feature-part-0 .feature-headline{font-size:68px!important;margin-bottom:18px}.feature-air.feature-part-0 .feature-deck,.feature-air.feature-part-0 .feature-byline{display:none}.feature-air.feature-part-0 img{max-height:690px;object-fit:contain}.feature-air .feature-figure svg{width:100%;height:auto}
+.clarke-leaf h1{font:normal 57px/.98 var(--serif);letter-spacing:-1px;margin:30px 0}.clarke-leaf .feature-deck{padding-bottom:20px;border-bottom:2px solid var(--ink)}.clarke-leaf .feature-callout{color:var(--rust)}
+@media(max-width:1100px){.mag-sheet.designed-feature{min-height:0}.designed-feature .feature-headline{font-size:76px!important}.feature-prose{font-size:20px;line-height:1.5}}
+@media(max-width:760px){.designed-feature .feature-headline,.designed-feature.feature-air .feature-headline,.designed-feature.feature-slope .feature-headline{font-size:52px!important}.feature-prose{columns:1}.feature-subhead,.feature-slope .feature-subhead,.feature-air .feature-subhead{font-size:37px}.feature-callout{font-size:25px}.feature-slips section{grid-template-columns:1fr}.clarke-leaf h1{font-size:42px}.feature-figure figcaption{font-size:10px}.feature-air.feature-part-0 .feature-headline{font-size:52px!important}}
+@media print{.feature-prose{font-size:10pt;columns:2}.designed-feature .feature-headline{font-size:40pt!important}.feature-figure img{max-height:170mm;object-fit:contain}.feature-callout{font-size:15pt}.feature-slips p{font-size:10pt}.feature-technical{font-size:8pt}.mag-sheet.designed-feature{min-height:0}}

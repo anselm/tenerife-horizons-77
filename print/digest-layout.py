@@ -2,7 +2,7 @@
 _base_art=art
 _plate_heights={9:245,12:245,14:310,17:225,19:230,21:290,28:210,31:270,35:230,37:220,39:175}
 def art(kind,top,h=165):
- return _base_art(kind,top,_plate_heights.get(N,h))
+ return _base_art(kind,top,_plate_heights.get(LEGACY_N,h))
 
 _base_supporting_leaf=supporting_leaf
 insertlog=[]

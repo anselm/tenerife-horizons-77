@@ -1,17 +1,22 @@
 # Print edition
 
-Revised 2026-10-31. The **5.5 × 8.5-inch, 48-page digest is the principal print edition**.
-It has mirrored glue margins, 0.125-inch bleed, a separate 0.14-inch-spine outside
-cover, and blank inside covers. The secondary Letter edition retains its 48-page
-layout and optional 11 × 17 saddle-stitch imposition. The web has 52 folios.
-Finished files are in [`output/pdf/`](../output/pdf/).
+Revised 20 November 2026. The primary digest is **56 pages at 5.5 × 8.5 inches**,
+with mirrored glue margins and 0.125-inch bleed. A new printer-calculated spine
+is required; the 0.14-inch wrap is retained only as `Horizons-77-digest-cover-48pp.pdf`
+for the previous 48-page order. Do not pair that wrap with the revised interior.
 
-Interiors use white paper without simulated yellowing or seams.
-Typesetting uses URW Gothic display capitals, URW Bookman, Nimbus Roman and Nimbus Sans, balanced columns, and protected
-short paragraph endings. Fixed print pagination is generated independently of
-web folios. Every placed image is used once. Four new editorial pages use three narrow columns, interview exchanges, correspondence, boxed notices and a dedicated editorial cartoon. A new terrace plate, a screening-room
-illustration and original working diagrams provide subject-specific artwork. Source citations print as readable titles and
-domains; complete URLs remain in the web edition.
+Read the [current design compass](../devlog/20261120-editorial-and-design-compass.md)
+and [restoration evidence](../devlog/20261120-restored-spreads/README.md).
+The web now has 59 folios. The Letter edition and its imposition are preserved
+as the earlier layout, not equivalent exports of the redesigned digest.
+
+The three features use explicit physical-point compositions in `digest-features.py`:
+sharp serif ocean headlines, condensed industrial headings for hillside and flight,
+large plates and different arrangements of text, notes and illustration. Body type
+is fixed at 9.4/12.2 pt in these features; column splitting is measured rather than
+solved by shrinking. Other pages retain their existing settings via logical legacy
+page mapping. The whole-book proof has 60 pages including front/back and two blank
+inside covers. The facing-spread PDF is for review, not printer imposition.
 
 ## Rebuild
 
@@ -20,8 +25,9 @@ The print fonts are bundled in `assets/fonts/`, with the publisher’s license.
 
 ```sh
 node print/export.cjs
-python3 print/build.py
 python3 print/build-digest.py
+# Optional: rebuild the earlier Letter layout separately
+python3 print/build.py
 ```
 
 `HORIZONS_PRINT_TMP` overrides the temporary cache directory;
@@ -34,11 +40,9 @@ The imposed PDF is a convenience for basic duplex printing. A shop should
 usually use the reader-order PDF and its own imposition software. Check a
 physical folded proof, particularly duplex orientation, before a full run.
 
-The new reader-spreads PDF places consecutive facing pages together for screen
+The digest-spreads PDF places consecutive facing pages together for screen
 reading; it is not a print imposition. The production files remain the ordinary
 reader-order PDF and the separately imposed tabloid PDF.
-
-The five opening papers now cover distinct topics rather than repeating one editorial in translation. The kitchen interview follows the Spanish land paper (print page 5), correspondence follows ocean habitats (page 11), and the provisional accounts follow energy (page 30). Only the production desk remains near the closing material (page 41). Web and print folios differ; both contents pages use their own current page numbers.
 
 The word أُنس is kept in logical reading order in the source and web edition, with a locally bundled Amiri font (SIL OFL). The print paragraph uses a verified joined, visual-order form of this single word in embedded Amiri. The four-line Arabic poem in `edition-inserts.js` likewise retains logical text for the web and a checked, shaped visual-order cache (`printLines`) for the fixed PDF lines. That cache was prepared with arabic-reshaper and python-bidi and visually proofed in Amiri; the regular build does not need those authoring dependencies. Any change to those Arabic lines requires re-shaping and visual proofing. Do not reverse arbitrary Arabic text.
 
