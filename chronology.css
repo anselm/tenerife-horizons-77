@@ -1,0 +1,38 @@
+/* One assembled archival leaf; its visual grammar is deliberately local. */
+.chronology-page{color:#211f1a}
+.chronology-heading{border-top:7px solid #25231e;padding-top:10px;position:relative}
+.chronology-label{font: .65rem H77Mono,monospace;letter-spacing:.06em}
+.chronology-heading h1{font:4.8rem/.87 H77Condensed,Impact,sans-serif;letter-spacing:-.025em;text-transform:none;margin:18px 0 15px}
+.chronology-heading h1 em{font:italic 4.6rem/.9 H77Roman,Georgia,serif;color:#93462f}
+.chronology-intro{font:1rem/1.25 H77Roman,Georgia,serif;max-width:32em;margin:0 0 18px}
+.chronology-slip{position:relative;padding:8px 9px;margin:0 0 9px;background:#f2e8cd;border-left:1px solid #8b8168;box-shadow:1px 1px 0 #aea48f}
+.chronology-slip:nth-of-type(3n){background:#fbf5e4;border:1px solid #aba18c;box-shadow:none}
+.chronology-slip:nth-of-type(4n){background:transparent;border-left:3px solid #93462f;box-shadow:none}
+.chronology-date{font:.7rem/1.15 H77Mono,monospace;margin-bottom:4px}
+.chronology-slip p{font:1rem/1.2 H77Roman,Georgia,serif;margin:0;text-align:left;overflow-wrap:anywhere}
+.chronology-slip p strong{font-weight:bold}
+.chronology-source{font-size:.7em;white-space:nowrap}
+.chronology-note{font:.7rem/1.3 H77Mono,monospace;padding:12px 9px;background:#e0d1a8;border:1px solid #a29470;margin-top:17px;position:relative}
+.chronology-note::before{content:"";position:absolute;top:-6px;left:20px;width:40px;height:11px;background:#c5b47c90;transform:rotate(-4deg)}
+.chronology-sources{font:.65rem/1.5 H77Mono,monospace;border-top:1px solid;margin-top:17px;padding-top:8px;overflow-wrap:anywhere}
+.chronology-sources a{color:inherit;text-decoration:none}
+.chronology-sources a:hover,.chronology-sources a:focus-visible{text-decoration:underline}
+@media(max-width:480px){.chronology-heading h1{font-size:3.7rem}.chronology-heading h1 em{font-size:3.6rem}.chronology-slip p{font-size:1.1rem}}
+
+.chronology-stack{display:block}
+.chronology-stack .chronology-slip{padding:10px 12px;margin-bottom:11px}
+.chronology-stack .chronology-date{font-size:.75rem}
+.chronology-stack .chronology-slip p{font-size:1.1rem;line-height:1.22}
+.chronology-heading h1.chronology-year{font-size:7rem;margin-bottom:4px}
+.chronology-subhead{font:italic 1.8rem/1 H77Roman,Georgia,serif;margin:0 0 20px}
+.chronology-1 .chronology-slip:nth-of-type(3){border-top:4px double #93462f;margin-top:24px}
+
+.plans-page .chronology-heading h1{font-size:3.7rem}
+.plans-page .chronology-heading h1 em{font-size:2.6rem;line-height:1.1}
+.plan-fragment{margin:18px 0;padding:12px 0;border-top:1px solid}
+.plan-fragment h2{font:1.8rem/1.05 H77Roman,Georgia,serif;margin:8px 0}
+.plan-fragment p{font:1.1rem/1.25 H77Roman,Georgia,serif;margin:0;text-align:left}
+.plan-1{background:#e5d9b8;padding:16px 13px;border:1px solid #9b8a69}
+.plan-1 h2{font-family:H77Condensed,Impact,sans-serif;font-size:2.1rem}
+.plan-2{border-top:4px double}
+.plans-dateline{font:.65rem/1.3 H77Mono,monospace;margin:15px 0 0}

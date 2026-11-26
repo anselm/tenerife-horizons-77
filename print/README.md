@@ -1,13 +1,13 @@
 # Print edition
 
-Revised 20 November 2026. The primary digest is **68 pages at 5.5 × 8.5 inches**,
+Revised 26 November 2026. The primary digest is **70 pages at 5.5 × 8.5 inches**,
 with mirrored glue margins and 0.125-inch bleed. A new printer-calculated spine
 is required; the 0.14-inch wrap is retained only as `Horizons-77-digest-cover-48pp.pdf`
 for the previous 48-page order. Do not pair that wrap with the revised interior.
 
 Read the [current design compass](../devlog/20261120-editorial-and-design-compass.md)
 and [current proof evidence](../devlog/20261120-spreads-as-worlds/README.md).
-The web now has 67 folios. The Letter edition and its imposition are preserved
+The web now has 70 folios. The Letter edition and its imposition are preserved
 as the earlier layout, not equivalent exports of the redesigned digest.
 
 The three features use explicit physical-point compositions in `digest-features.py`:
@@ -18,8 +18,13 @@ solved by shrinking. The contributor compositor in `digest-contributors.py` repl
 and office templates, uses fixed 9–10.4 pt reading type, and draws panoramic art
 in trim coordinates. The inhabited ocean, six-page Alexander essay and four-page architectural exchange
 use `digest-worlds.py`, including measured columns that change width beside the art.
-Atlas and document leaves retain their earlier body settings via logical legacy mapping. The whole-book proof has 72 pages including front/back and two blank
+Atlas and document leaves retain their earlier body settings via logical legacy mapping. The whole-book proof has 74 pages including front/back and two blank
 inside covers. The facing-spread PDF is for review, not printer imposition.
+
+The conference file on pp. 64–65 uses `digest-chronology.py` and shared
+`conference-timeline.js` data. Page 66 covers Tomorrowland, EPCOT and meetings already planned by 1977.
+The writing remains inside 1977; modern sourcing and the reveal follow on pp. 67–70. See the
+[assembled-page follow-up](../devlog/20261126-assembled-pages-and-conference-chronology.md).
 
 ## Rebuild
 

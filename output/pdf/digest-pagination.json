@@ -1,5 +1,5 @@
 {
-  "interiorPages": 68,
+  "interiorPages": 70,
   "trimInches": [
     5.5,
     8.5
@@ -70,7 +70,10 @@
     "afterword-continued": 62,
     "afterword-letters": 63,
     "certificate": 60,
-    "colophon": 64
+    "colophon": 67,
+    "conference-timeline": 64,
+    "conference-timeline-after": 65,
+    "conference-plans": 66
   },
   "virtualBodySizes": [
     [
@@ -98,16 +101,16 @@
       12
     ],
     [
-      64,
+      67,
       10.15
     ],
     [
-      65,
+      68,
       10.15
     ],
     [
-      66,
-      11.4
+      69,
+      10.15
     ]
   ],
   "scale": 0.625,
@@ -3979,7 +3982,460 @@
       "size": 10.4
     },
     {
-      "page": 67,
+      "page": 64,
+      "type": "text",
+      "x": 0,
+      "top": 523,
+      "bottom": 515,
+      "width": 327.5,
+      "size": 6.5
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 0,
+      "top": 507,
+      "bottom": 472,
+      "width": 327.5,
+      "size": 35
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 179,
+      "top": 475,
+      "bottom": 443,
+      "width": 148.5,
+      "size": 32
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 0,
+      "top": 437,
+      "bottom": 404,
+      "width": 327.5,
+      "size": 9.4
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 389,
+      "bottom": 381,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 393,
+      "bottom": 364,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1967
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 356,
+      "bottom": 348,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 360,
+      "bottom": 320,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1968
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 312,
+      "bottom": 304,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 316,
+      "bottom": 276,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1970
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 268,
+      "bottom": 260,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 272,
+      "bottom": 232,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1972
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 224,
+      "bottom": 216,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 228,
+      "bottom": 188,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1972
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 180,
+      "bottom": 172,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 184,
+      "bottom": 144,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1973
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 136,
+      "bottom": 128,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 140,
+      "bottom": 100,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1975
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 6,
+      "top": 92,
+      "bottom": 84,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 64,
+      "type": "chronology-slip",
+      "top": 96,
+      "bottom": 56,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1976
+    },
+    {
+      "page": 64,
+      "type": "text",
+      "x": 0,
+      "top": 37,
+      "bottom": 29,
+      "width": 327.5,
+      "size": 6.5
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 0,
+      "top": 523,
+      "bottom": 514,
+      "width": 327.5,
+      "size": 7
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 0,
+      "top": 505,
+      "bottom": 435,
+      "width": 327.5,
+      "size": 72
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 0,
+      "top": 428,
+      "bottom": 403,
+      "width": 327.5,
+      "size": 23
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 0,
+      "top": 391,
+      "bottom": 367,
+      "width": 327.5,
+      "size": 10
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 6,
+      "top": 354,
+      "bottom": 346,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 65,
+      "type": "chronology-slip",
+      "top": 358,
+      "bottom": 318,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1977
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 6,
+      "top": 310,
+      "bottom": 302,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 65,
+      "type": "chronology-slip",
+      "top": 314,
+      "bottom": 285,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1977
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 6,
+      "top": 269,
+      "bottom": 261,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 65,
+      "type": "chronology-slip",
+      "top": 273,
+      "bottom": 233,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1979
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 6,
+      "top": 225,
+      "bottom": 217,
+      "width": 315.5,
+      "size": 7.1
+    },
+    {
+      "page": 65,
+      "type": "chronology-slip",
+      "top": 229,
+      "bottom": 178,
+      "x": 0,
+      "width": 327.5,
+      "size": 9.4,
+      "year": 1979
+    },
+    {
+      "page": 65,
+      "type": "text",
+      "x": 0,
+      "top": 37,
+      "bottom": 29,
+      "width": 327.5,
+      "size": 6.5
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 523,
+      "bottom": 514,
+      "width": 327.5,
+      "size": 7
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 513,
+      "bottom": 481,
+      "width": 327.5,
+      "size": 31
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 478,
+      "bottom": 449,
+      "width": 327.5,
+      "size": 28
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 439,
+      "bottom": 403,
+      "width": 327.5,
+      "size": 10
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 389,
+      "bottom": 381,
+      "width": 327.5,
+      "size": 6.7
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 374,
+      "bottom": 354,
+      "width": 327.5,
+      "size": 17
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 347,
+      "bottom": 312.2,
+      "width": 327.5,
+      "size": 9.4
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 298.2,
+      "bottom": 290.2,
+      "width": 327.5,
+      "size": 6.7
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 283.2,
+      "bottom": 263.2,
+      "width": 327.5,
+      "size": 20
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 256.2,
+      "bottom": 209.79999999999998,
+      "width": 327.5,
+      "size": 9.4
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 195.79999999999998,
+      "bottom": 187.79999999999998,
+      "width": 327.5,
+      "size": 6.7
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 180.79999999999998,
+      "bottom": 160.79999999999998,
+      "width": 327.5,
+      "size": 17
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 153.79999999999998,
+      "bottom": 95.79999999999998,
+      "width": 327.5,
+      "size": 9.4
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 85.79999999999998,
+      "bottom": 58.79999999999998,
+      "width": 327.5,
+      "size": 7.2
+    },
+    {
+      "page": 66,
+      "type": "text",
+      "x": 0,
+      "top": 42.79999999999998,
+      "bottom": 35.09999999999998,
+      "width": 327.5,
+      "size": 6.3
+    },
+    {
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 530,
@@ -3988,7 +4444,7 @@
       "size": 28
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 478,
@@ -3997,7 +4453,7 @@
       "size": 10
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 384.8,
@@ -4006,7 +4462,7 @@
       "size": 10
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 291.6,
@@ -4015,7 +4471,7 @@
       "size": 10
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 224.8,
@@ -4024,7 +4480,7 @@
       "size": 10
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 171.20000000000002,
@@ -4033,7 +4489,7 @@
       "size": 10
     },
     {
-      "page": 67,
+      "page": 70,
       "type": "text",
       "x": 0,
       "top": 92.60000000000002,

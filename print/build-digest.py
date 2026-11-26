@@ -33,7 +33,10 @@ text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('
 '''+source[b:]
 # Use three readable note pages; the final interior page is not a redundant back cover.
 a=source.index("# Choose a paragraph boundary by actual typeset fit");b=source.index("page('Back cover',folio=False)",a)
-source=source[:a]+"""back=[t for t in back if not t.startswith(('The three November 2026 feature plates','The six November 2026 feature plates','The nine November 2026 feature plates','The November 2026 feature plates','The inhabited ocean, village stair'))]
+source=source[:a]+"""page('People kept meeting','THE CONFERENCE FILE');draw_chronology(0);finish()
+page('1977 and the rooms still to come','PRÓXIMAS REUNIONES');draw_chronology(1);finish()
+page('Already on the drawing board','PROPOSALS / 1977');draw_future_plans();finish()
+back=[t for t in back if not t.startswith(('The three November 2026 feature plates','The six November 2026 feature plates','The nine November 2026 feature plates','The November 2026 feature plates','The inhabited ocean, village stair'))]
 totals=[len(t) for t in back]
 cuts=min(((i,j) for i in range(1,len(back)-1) for j in range(i+1,len(back))),key=lambda z:max(sum(totals[:z[0]]),sum(totals[z[0]:z[1]]),sum(totals[z[1]:])))
 for pi,group in enumerate([back[:cuts[0]],back[cuts[0]:cuts[1]],back[cuts[1]:]]):
@@ -46,7 +49,7 @@ source=source.replace("if N>=46 and font=='G'", "if LEGACY_N>=46 and font=='G'")
 source=source.replace('assert N==45,N','assert N==len(sheets)+2,N')
 source=source.replace('pageCompression=1)',"pageCompression=1,initialFontName='A')")
 source=source.replace(" if k in ['article','continued','editorial']:"," if k=='village-world':draw_village_world(s)\n elif k=='table-world':draw_table_world(s)\n elif k=='letters-leaf':draw_letters_leaf()\n elif k=='drago-photo':draw_drago_photo()\n elif k=='panorama':draw_panorama(s)\n elif k=='designed':draw_feature(s)\n elif k=='clarke':draw_clarke()\n elif k in ['article','continued','editorial','assembly']:bottom=draw_contribution(s)\n elif k in ['article','continued','editorial']:")
-source=source.replace("C.save()\nassert N==48,N", "page('A note on the drawings','EDITION NOTES / PRODUCTION');draw_production_note();finish()\npage('Endpaper',folio=False);finish()\nC.save()\nassert N==len(sheets)+7,N")
+source=source.replace("C.save()\nassert N==48,N", "page('A note on the drawings','EDITION NOTES / PRODUCTION');draw_production_note();finish()\nC.save()\nassert N==len(sheets)+9,N")
 recompose = """
 # The three features are each two facing spreads. Other articles retain their copy.
 old_sheets=sheets;sheets=[];digest_legacy={};LEGACY_N=0
@@ -92,13 +95,19 @@ for old_index,s in enumerate(old_sheets,3):
 sheets.append(dict(key='afterword-letters',title='Write before it is finished',kind='letters-leaf'));digest_legacy[len(sheets)+2]=45
 first={s['key']:i for i,s in enumerate(sheets,3)}
 first['gilliam']=first['gilliam-plate-0'];first['arrival/de']=first['arrival/de-photo']
-first['certificate']=first['pass'];first['colophon']=len(sheets)+3
+first['certificate']=first['pass'];first['colophon']=len(sheets)+6
 for i in range(3):digest_legacy[first['colophon']+i]=46+i
+first['conference-timeline']=first['colophon']-3
+first['conference-timeline-after']=first['colophon']-2
+first['conference-plans']=first['colophon']-1
+contents.append(('conference-timeline','Other meetings / The conference file'))
 contents.append(('clarke','Arthur C. Clarke / Between sessions'))
 """
-source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+'\n'+(ROOT/'print/digest-contributors.py').read_text()+'\n'+(ROOT/'print/digest-worlds.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
+source=source.replace("MASTER=OUT/'Horizons-77-digest-interior.pdf';C=",recompose+(ROOT/'print/digest-features.py').read_text()+'\n'+(ROOT/'print/digest-contributors.py').read_text()+'\n'+(ROOT/'print/digest-worlds.py').read_text()+'\n'+(ROOT/'print/digest-chronology.py').read_text()+"\nMASTER=OUT/'Horizons-77-digest-interior.pdf';C=")
 source=source.replace("title if continued else title.upper(),size,size*1.06,'BD'","title,size,size*1.06,'GB'")
 source=source.replace("if i in [1,2]:pattern_leaf(bottom,i)","# Repeated generic path studies retired.")
+source=source.replace('contents[:14],contents[14:]','contents[:15],contents[15:]')
+source=source.replace("  p=para(title,11.3","  if key=='conference-timeline':title=D['conferenceTimeline']['title']\n  p=para(title,11.3")
 ns={'__file__':str(ROOT/'print/build.py')};exec(compile(source,str(ROOT/'print/build-digest.py'),'exec'),ns)
 from pypdf import PdfReader,PdfWriter,Transformation
 from pypdf.generic import RectangleObject

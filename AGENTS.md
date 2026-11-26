@@ -13,9 +13,13 @@ personal recollections, multilingual voices and the paired friendships. Do not
 shrink or omit material merely to retain a page count. Verify actual facing-page
 parity, captions and all prose when repaginating. New art must have a specific job.
 
-The current body is 68 pages, including a blank final endpaper. The 48-page cover wrap is an earlier-order artifact,
+Read [the assembled-page follow-up](devlog/20261126-assembled-pages-and-conference-chronology.md) for the conference file, strict 1977 viewpoint and next stylistic direction.
+
+The current body is 70 pages, with a three-page conference file before the final edition notes. The 48-page cover wrap is an earlier-order artifact,
 not the current cover. Do not invent a replacement spine width.
 
 Use `devlog/YYYYMMDD-description.md` or a dated snapshot directory for current
 thinking. Preserve the older year/number entries as history; do not migrate them
 wholesale. Keep README pointers to current guidance accurate.
+
+All magazine writing stays inside 1977. Future events require evidence of plans already made by then. The reveal, later outcomes, source links and modern production context belong only in the final edition notes.

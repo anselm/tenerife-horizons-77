@@ -12,8 +12,12 @@ The complete issue is one continuous numbered sequence, shown as facing pages on
 
 ## Print edition — digest first
 
-The principal edition is a **68-page, 5.5 × 8.5-inch digest**, including a blank
-endpaper. The newest experiments compose inhabited worlds across the binding:
+The principal edition is a **70-page, 5.5 × 8.5-inch digest**. The conference
+file on pp. 64–66 looks back at meetings from 1967 onwards and forward to two
+1979 conferences already being organised. Tomorrowland and EPCOT appear as
+places and proposals known in 1977. All three pages speak from inside that year;
+the reveal and modern sources follow in the final edition notes (67–70).
+The newest experiments compose inhabited worlds across the binding:
 the ocean room and tram (pp. 14–15), Alexander’s village stair (32–33), and an
 imagined architectural working table (54–55). The village essay now has six pages;
 the architectural exchange has four, including Fuller/Snelson and the Arabic poem.
@@ -24,15 +28,15 @@ hillside section (28–31), flight proposal (42–45), and film-desk fantasy (50
 
 - [Facing-spread design proof](output/pdf/Horizons-77-digest-spreads.pdf) — best for reviewing the new compositions.
 - [Whole-book reading proof](output/pdf/Horizons-77-digest-proof.pdf) — front/back and blank inside covers included.
-- [Digest interior](output/pdf/Horizons-77-digest-interior.pdf) — 68 single pages with trim and bleed boxes.
+- [Digest interior](output/pdf/Horizons-77-digest-interior.pdf) — 70 single pages with trim and bleed boxes.
 - [Print setup and cover status](output/pdf/DIGEST-MIXAM.txt).
 
-**A new cover spine measurement is needed for 68 pages.** The previous
+**A new cover spine measurement is needed for 70 pages.** The previous
 [48-page cover wrap](output/pdf/Horizons-77-digest-cover-48pp.pdf) is preserved
 for the earlier order and must not be paired with this revised interior.
 The target stock remains 50lb uncoated text and 80lb uncoated outside-only cover.
 
-The web edition has 67 folios and its own page references. The earlier
+The web edition has 70 folios and its own page references. The earlier
 [Letter edition](output/pdf/Horizons-77-print-letter.pdf),
 [tabloid imposition](output/pdf/Horizons-77-booklet-tabloid.pdf), and
 [Letter spreads](output/pdf/Horizons-77-reader-spreads.pdf) remain available
@@ -40,6 +44,9 @@ as the previous layout. They do not contain this digest redesign.
 See [print source notes](print/README.md).
 
 ## Current editorial and design guidance
+
+[26 November: assembled pages and the conference chronology](devlog/20261126-assembled-pages-and-conference-chronology.md)
+adds the conference file, establishes its strict 1977 viewpoint, and outlines a more visibly assembled edition.
 
 Read the [20 November design compass](devlog/20261120-editorial-and-design-compass.md)
 before changing type, layouts or tone. It replaces the fixed-page-count and
@@ -72,7 +79,7 @@ The magazine is published at [anselm.github.io/tenerife-horizons-77](https://ans
 The in-magazine contents and numbered links are generated from the current
 web sequence. Ocean begins on 16, hillside on 30, the village on 34, flight on 44,
 Clarke on 48, and the architecture discussion on 57 (its picture spans 58–59).
-The French panorama is 8–9; the film-desk panorama is 54–55; edition notes begin on 67.
+The French panorama is 8–9; the film-desk panorama is 54–55; the plans leaf is 67 and the facing chronology occupies 68–69; edition notes begin on 70.
 These differ from the digest’s printed folios. `output/pdf/digest-pagination.json`
 records the print mapping; use the contents in the edition you are reading.
 

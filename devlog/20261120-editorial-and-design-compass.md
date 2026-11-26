@@ -2,11 +2,14 @@
 
 Written and revised 20 November 2026 after the ten-copy digest proof and the subsequent three-feature pass exposed a loss of visual character. This is the current guide for further design work. It supersedes the assumption in the October digest notes that 48 pages and a common article template are constraints. The later contributor pass also supersedes the premise of a strong single art editor. It does not supersede the writing, the lived origins, or the friendships that developed through the work.
 
+The [26 November follow-up](20261126-assembled-pages-and-conference-chronology.md)
+adds a conference file written strictly from 1977 and updates the digest to 70 pages; earlier feature folios remain unchanged.
+
 Current implementation and visual evidence: [spreads as worlds](20261120-spreads-as-worlds/README.md). The contributed-page and three-feature snapshots preserve intermediate stages.
 
 ## What the object is
 
-A proceedings assembled at the close of an imaginary international conference on Tenerife in 1977. The delegates look fifty years ahead, to 2027. Its main form is a 5.5 × 8.5-inch portrait digest; the website carries the magazine's compositions and reading order, with its own folios. The reader should encounter an earnest object from another possible history. Fiction, modern authorship and sources are explained at the end.
+A proceedings assembled at the close of an imaginary international conference on Tenerife in 1977. The delegates look fifty years ahead, to 2027. Its main form is a 5.5 × 8.5-inch portrait digest; the website carries the magazine's compositions and reading order, with its own folios. The reader should encounter an earnest object from another possible history. Fiction, modern authorship and sources are explained only at the end. All preceding pages speak from inside 1977. For forthcoming real events, establish that they were already being planned by then; never import their eventual outcomes into a delegate’s knowledge.
 
 It is also a totem to friendships, new and old. The personal recollections are not intrusions into an architectural magazine: they are part of why these proposals matter. A pair of minds may see something neither could see alone. Keep their differences, their arguments and the particular things they do together. Do not resolve this into repeated declarations about the importance of friendship.
 
@@ -76,7 +79,7 @@ Keep the attention distributed. Adding a famous guest should not push the local 
 
 ## Production and future revisions
 
-The 68-page digest, including its blank final endpaper, supersedes the 64-, 56- and 48-page interiors. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
+The 70-page digest supersedes the 68-, 64-, 56- and 48-page interiors. The old 0.14-inch spine belongs to the 48-page order. A new printer-calculated spine is required before issuing another production cover; never scale the old wrap as a substitute. The front and back can still appear in a reading proof.
 
 The older Letter edition is a preserved earlier layout, not an automatically updated equivalent. The new feature compositions are shared editorially with the website but drawn explicitly in the digest. The three-feature compositor is `print/digest-features.py`; the broader article/office pass is `print/digest-contributors.py`. Web compositions are in `magazine-features.js` and `contributor-pages.js`. The new inhabited spreads and Alexander sequence use `print/digest-worlds.py`; web counterparts use `world-pages.js` and `worlds.css`. Atlas, documents and notes still adapt the older renderer with revised headings. The cover is still the earlier design. This is a broader interior revision, not a claim that every page has been newly art-directed.
 
