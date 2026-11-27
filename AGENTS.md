@@ -23,3 +23,6 @@ thinking. Preserve the older year/number entries as history; do not migrate them
 wholesale. Keep README pointers to current guidance accurate.
 
 All magazine writing stays inside 1977. Future events require evidence of plans already made by then. The reveal, later outcomes, source links and modern production context belong only in the final edition notes.
+
+[Earlier contributed sheets and upright headings](devlog/20261126-earlier-contributed-sheets.md) records the current opening-page treatment.
+[Reading level and editorial depth](devlog/20261126-reading-level-and-editorial-depth.md) analyses the English prose and proposes a selective, more demanding register; those prose trials are not yet applied.

@@ -144,3 +144,6 @@ The current dated guidance and restoration snapshot are linked above. Earlier en
 - [34 · The digest comes first](devlog/2026/34-the-digest-comes-first.md)
 
 - [35 · A table that can travel](devlog/2026/35-a-table-that-can-travel.md)
+
+[Earlier contributed sheets and upright headings](devlog/20261126-earlier-contributed-sheets.md) records the current opening-page treatment.
+[Reading level and editorial depth](devlog/20261126-reading-level-and-editorial-depth.md) analyses the English prose and proposes a selective, more demanding register; those prose trials are not yet applied.

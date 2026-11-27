@@ -14,13 +14,17 @@ def feature_clean(t):
  return re.sub(r'<span[^>]*>|</span>','',t)
 
 def fp(t,x,top,w,size=9.4,leading=None,font='G',color=FEATURE_BLACK,gap=8):
+ # Display lettering is upright; reading emphasis and book titles remain semantic.
+ if size>=16:
+  t=re.sub(r'</?(?:i|em)>','',t)
+  if font=='GI':font='GB'
  p=Paragraph(feature_clean(t).replace('<br>','<br/>'),ParagraphStyle('feature',fontName=font,fontSize=size,leading=leading or size*1.30,textColor=color,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1))
  _,h=p.wrap(w,2000)
  if top-h<0 or top>535:raise Exception(f'Feature text outside page {N}: {t[:60]} / {top-h}')
  p.drawOn(C,x,top-h);feature_checks.append({'page':N,'type':'text','x':x,'top':top,'bottom':top-h,'width':w,'size':size})
  return top-h-gap
 
-def fcols(ps,top,size=9.4,leading=12.2,paragraph_gap=9):
+def fcols(ps,top,size=9.4,leading=12.2,paragraph_gap=9,paper=None):
  # Let a paragraph cross columns; balance measured lines at a fixed readable size.
  style=ParagraphStyle('feature-column',fontName='G',fontSize=size,leading=leading,textColor=FEATURE_BLACK,alignment=0,allowWidows=0,allowOrphans=0,splitLongWords=1,spaceAfter=paragraph_gap)
  def compose(height):
@@ -44,6 +48,17 @@ def fcols(ps,top,size=9.4,leading=12.2,paragraph_gap=9):
   if compose(mid) is None:lo=mid
   else:hi=mid
  positions=compose(hi+.05)
+ if paper:
+  if paper=='letters':
+   for j,(p,x,y) in enumerate(positions):
+    C.setFillColor(CMYKColor(0,.02,.07,0) if j%2 else CMYKColor(0,0,0,.04));C.rect(x-4,y-3,163.75,p.height+6,fill=1,stroke=0)
+    C.setStrokeColor(CMYKColor(0,0,0,.4));C.setLineWidth(.35);C.line(x-4,y-3,x+159.75,y-3)
+  else:
+   for j,x in enumerate([0,171.75]):
+    bottom=min(y for p,xx,y in positions if xx==x)
+    C.setFillColor(CMYKColor(0,.025,.07,0) if j==0 else CMYKColor(0,0,0,.025));C.rect(x-5,bottom-6,165.75,top-bottom+11,fill=1,stroke=0)
+    C.setStrokeColor(CMYKColor(0,0,0,.38));C.setLineWidth(.4);C.line(x-5,bottom-6,x+160.75,bottom-6)
+    C.line(x+160.75,bottom-6,x+160.75,top+5)
  for p,x,y in positions:
   p.drawOn(C,x,y);feature_checks.append({'page':N,'type':'text','x':x,'top':y+p.height,'bottom':y,'width':155.75,'size':size})
  return min(y for p,x,y in positions)-9

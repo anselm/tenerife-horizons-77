@@ -45,9 +45,9 @@ The contributions should look as though different groups brought their own sheet
 
 ## Type is a voice, not a decade filter
 
-Nimbus Roman in mixed case, bold and italic replaces the geometric Gothic default for most interior headings. Condensed Nimbus Sans supplies the office and engineering voices. Bookman gives the film desk a slightly awkward, heavier literary heading. Mono belongs to annotations and accounts. Amiri supplies the Arabic. Gothic remains in the existing cover and viewer; it is no longer the answer to every interior title.
+Nimbus Roman in mixed case and upright bold replaces the geometric Gothic default for most interior headings. Condensed Nimbus Sans supplies the office and engineering voices. Bookman gives the film desk a slightly awkward, heavier literary heading. Mono belongs to annotations and accounts. Amiri supplies the Arabic. Gothic remains in the existing cover and viewer; it is no longer the answer to every interior title.
 
-The sharper letters matter, but a historically available face can still look generic when every page deploys it in the same way. Change scale, measure, position, case and relationship to pictures with purpose. One enormous word, an intimate italic heading and a newspaper masthead can coexist. Do not make every contribution equally loud. Do not add random rotations to compensate for an unchanged underlying template.
+The sharper letters matter, but a historically available face can still look generic when every page deploys it in the same way. Change scale, measure, position, case and relationship to pictures with purpose. One enormous word, a quiet upright serif heading and a newspaper masthead can coexist. Italic display headings are deprecated by the [earlier-sheet pass](20261126-earlier-contributed-sheets.md); book titles and ordinary body emphasis may retain italics. Do not make every contribution equally loud. Do not add random rotations to compensate for an unchanged underlying template.
 
 Reading type in the contributor compositor is fixed at 9–10.4 pt, generally two columns with natural spacing. When a page does not fit, reconsider the distribution before reducing type. The English opening and Drago gained room; the closing letters gained a leaf. Captions and smaller legacy notes need a physical 100% proof on the intended stock.
 

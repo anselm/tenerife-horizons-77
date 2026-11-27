@@ -1,5 +1,20 @@
 /* Different desks brought different paper objects; no universal article opener. */
-function contributorHeading(t,lang='en') { return `<div class="contribution-heading"><small>${t.author||t.tag||''}</small><h1 lang="${lang}">${t.title}</h1></div>`; }
+function contributorHeading(t,lang='en') {
+ const slips={
+  'An island is a beginning':['AN ISLAND','is a beginning.'],
+  'La isla no está vacía':['LA ISLA','NO ESTÁ VACÍA'],
+  'Sans centre unique':['SANS CENTRE','UNIQUE'],
+  'Unter dem Drachenbaum':['Unter dem Drachenbaum']
+ };
+ const lines=slips[t.title];
+ return `<div class="contribution-heading ${lines?'pasted-title':''}"><small>${t.author||t.tag||''}</small><h1 lang="${lang}">${lines?lines.map((line,i)=>`<span class="title-slip title-slip-${i}">${line}</span>`).join(''):t.title}</h1></div>`;
+}
+function assemblyBody(a){
+ if(a.id!=='kitchen-desk')return a.body.map(p=>`<p>${p}</p>`).join('');
+ let out='';for(let i=0;i<a.body.length;i+=2)out+=`<div class="interview-pair"><p>${a.body[i]}</p><p>${a.body[i+1]||''}</p></div>`;return out;
+}
+function deskMasthead(a){return `<div class="desk-masthead">${({'kitchen-desk':'DE LA COCINA','letters-desk':'CORREO','accounts-desk':'CAJA / 1977','closing-desk':'ÚLTIMA HORA'})[a.id]}</div>`;}
+
 function panoramaHalf(family,side,title,copy='') {
  const asset=family==='dream'?'dreaming-together-collage.png':'film-desk-castle.png';
  return `<div class="panorama-window panorama-${family} panorama-${side}"><img src="assets/${asset}" width="1424" height="1104" alt="${side?'Right':'Left'} half of ${family==='dream'?'a coastal photomontage of homes, terraces and Atlantic lives':'an ink fantasy of a municipal tower overflowing with life'}">${title?`<h1>${title}</h1>`:''}${copy?`<p class="panorama-copy">${copy}</p>`:''}</div>`;

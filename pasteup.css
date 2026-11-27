@@ -1,0 +1,51 @@
+/* Contributed paper, November pass. Reading text remains square and live. */
+.mag-sheet :is(h1,h2,h3,h4),.mag-sheet :is(h1,h2,h3,h4) :is(i,em),
+.mag-sheet :is(.contribution-continuation,.contribution-word,.contribution-deck,.sheet-deck,.feature-deck,.feature-callout,.plate-thought,.panorama-copy,.printed-crossref,.chronology-subhead),.world-heading>em{font-style:normal!important}
+.mag-sheet .contribution-continuation{font-family:H77Condensed,Impact,sans-serif;font-weight:700;letter-spacing:0;border-bottom:1px solid;padding-bottom:12px}
+.title-slip{display:table;padding:8px 14px 11px;background:#f3ead3;border-bottom:1px solid #574e3c;box-shadow:2px 2px 0 #c2b49a;transform:rotate(-.35deg);line-height:1.02;max-width:100%;text-wrap:balance}
+.title-slip+.title-slip{margin:8px 0 0 9%;transform:rotate(.45deg)}
+.voice-en .title-slip-0,.voice-es .title-slip-1,.voice-fr .title-slip-0{background:#27251f;color:#f4ecd9;font-family:H77Condensed,Impact,sans-serif;letter-spacing:0}
+.voice-en .title-slip-0{font-size:1.25em}
+.voice-en .title-slip-1{font-size:.8em;font-family:H77Roman,Georgia,serif}
+.voice-en .contribution-year{display:table;margin:0 0 16px auto;padding:4px 9px;border:2px solid;color:#923923;font-size:3rem;transform:rotate(1deg)}
+.voice-en .sheet-prose,.voice-it .sheet-prose{background:linear-gradient(90deg,#f4ecd880 0 47%,transparent 47% 53%,#eee9de80 53%);padding:12px 8px;border-bottom:1px solid #887c64}
+.contributed.voice-es .contribution-heading{border:0;padding:0}
+.voice-es .title-slip-1{font-size:.73em}
+.voice-es .sheet-prose{border-left:3px solid #3d3b30;padding-left:14px}
+.voice-es .sheet-prose p:nth-child(3){border-top:1px solid;padding-top:8px}
+.voice-fr:not(.panorama-page) .contribution-heading h1{font-family:H77Condensed,Impact,sans-serif;font-weight:700;letter-spacing:0}
+.voice-fr .title-slip-1{font-family:H77Bookman,Georgia,serif;margin-left:24%;font-size:.85em}
+.voice-fr .sheet-prose p{background:#f4ecd6;border-bottom:1px solid #a79778;padding:9px 8px;margin-bottom:12px}
+.voice-it .contribution-word{font-family:H77Condensed,Impact,sans-serif;font-weight:700;font-size:5rem;letter-spacing:0;display:table;background:#24251e;color:#f4ecd8;padding:8px 16px 12px;transform:rotate(.35deg)}
+.contributed.voice-it .contribution-heading h1{font-family:H77Bookman,Georgia,serif;font-size:2.4rem;line-height:1.1;margin-left:5%}
+.voice-de .title-slip{font-family:H77Condensed,Impact,sans-serif;font-size:.8em;letter-spacing:0}
+.voice-de .feature-figure{padding:8px;background:#eee9dd;border:1px solid #8d816d;box-shadow:2px 2px 0 #b3a68e}
+.voice-de .sheet-prose{border-left:1px solid #8d816d;padding-left:12px}
+.contributed.voice-goodall .contribution-heading h1,.contributed.voice-cousteau .contribution-heading h1{font-family:H77Condensed,Impact,sans-serif;font-weight:700;letter-spacing:0}
+.voice-goodall .contribution-heading small{border:1px solid;padding:5px 8px;display:inline-block;transform:rotate(-.5deg)}
+.voice-cousteau .feature-figure{padding:9px;background:#ede8dc;border-bottom:2px solid #6c7268}
+.desk-masthead{font:700 3.1rem/1 H77Condensed,Impact,sans-serif;letter-spacing:0;background:#f4ead3;padding:9px 12px;margin:15px 0 13px;border-bottom:1px solid;transform:rotate(-.3deg)}
+.assembly-kitchen-desk .desk-masthead{font-family:H77Mono,monospace;font-size:2rem}
+.assembly-page .sheet-title h1{font:700 1.8rem/1.1 H77Roman,Georgia,serif!important;border:0;padding:0;margin:14px 0 16px;letter-spacing:0;text-transform:none}
+.assembly-kitchen-desk .assembly-prose{columns:auto;column-rule:none}
+.interview-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:16px}
+.interview-pair p{padding:10px 8px;border-top:1px solid;margin:0!important}
+.interview-pair p:first-child{background:#f3ead2}
+.assembly-letters-desk .desk-masthead{background:#28251f;color:#f5ecd6}
+.assembly-letters-desk .assembly-prose p{padding:10px;background:#f5edd9;border-bottom:1px solid #95856b;box-shadow:1px 1px 0 #c6b798;margin-bottom:14px}
+.assembly-accounts-desk .desk-masthead{border:3px double;display:table;transform:rotate(.5deg)}
+.assembly-accounts-desk .assembly-prose{border-left:3px double;padding-left:13px}
+.assembly-notice{position:relative;background:#e8d8a8;border:0;border-bottom:1px solid;padding:16px 12px;transform:none;margin-top:25px}
+.assembly-notice:before{content:"";position:absolute;top:-5px;left:21px;width:40px;height:11px;background:#b8a57188;transform:rotate(-3deg)}
+.chronology-heading h1 em{font-family:H77Condensed,Impact,sans-serif;font-weight:700}
+.chronology-subhead{font-family:H77Roman,Georgia,serif;font-weight:700}
+@media(max-width:760px){
+ .voice-en .sheet-prose,.voice-it .sheet-prose{background:#f3ead680}
+ .interview-pair{grid-template-columns:1fr;gap:0}
+ .interview-pair p:last-child{margin-left:12px!important;border-top:0;border-left:1px solid #988b74}
+ .title-slip{padding:7px 9px;transform:none}
+ .title-slip+.title-slip{max-width:91%}
+ .voice-it .contribution-word{font-size:3.6rem}
+ .voice-de .title-slip{font-size:.9em}
+ .assembly-kitchen-desk .desk-masthead{font-size:1.55rem}
+}
