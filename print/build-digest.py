@@ -27,7 +27,7 @@ a=source.index("page('Cover',folio=False)");b=source.index("page('Contents'",a)
 source=source[:a]+'''page('Title page',folio=False)
 text('HORIZONS ’77',44,840,48,'COND');rule(810)
 p=para('Friendship and the art<br/>of seeing together',27,32,'GB');_,h=p.wrap(524,160);p.drawOn(C,44,735-h)
-p=para('Papers, drawings, walks and conversations<br/>among friends new and old.',15,22,'GI');_,h=p.wrap(480,100);p.drawOn(C,44,610-h)
+p=para('Papers, drawings, walks and conversations<br/>among friends new and old.',15,22,'G');_,h=p.wrap(480,100);p.drawOn(C,44,610-h)
 p=para('Tenerife / 1977<br/>International conference on possible futures<br/>Notes towards life in 2027 and beyond.',15,22,'G');_,h=p.wrap(480,130);p.drawOn(C,44,470-h)
 text('ENGLISH / ESPAÑOL / FRANÇAIS / ITALIANO / DEUTSCH',44,230,9,'AB');text('EDICIÓN DEL CONGRESO / NÚMERO 1',44,175,10,'A');finish()
 '''+source[b:]

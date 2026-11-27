@@ -5,13 +5,13 @@ def draw_chronology(side):
  if side==0:
   fp('FROM THE CONFERENCE FILE / 1967–1976',0,523,327.5,6.5,8,'MONO')
   fp('People kept',0,507,327.5,35,35,'COND')
-  fp('meeting.',179,475,148.5,32,32,'GI',FEATURE_RED)
+  fp('meeting.',179,475,148.5,32,32,'GB',FEATURE_RED)
   fp(d['intro'],0,437,327.5,9.4,11,'G',gap=0)
   rows=d['events'][:8];y=393
  else:
   fp('THE HINGE / HERE & AFTER',0,523,327.5,7,9,'MONO')
   fp('1977',0,505,327.5,72,70,'COND',FEATURE_RED)
-  fp('and the rooms still to come.',0,428,327.5,23,25,'GI')
+  fp('and the rooms still to come.',0,428,327.5,23,25,'GB')
   fp('From this year’s festivals and assemblies to the meetings now being prepared: the conversation travels on.',0,391,327.5,10,12,'G')
   rows=d['events'][8:];y=358
  for i,e in enumerate(rows):
@@ -47,7 +47,7 @@ def draw_future_plans():
  frule(532,FEATURE_BLACK,weight=3)
  fp('PROPOSALS / NOT PROPHECIES',0,523,327.5,7,9,'MONO')
  fp('Already on',0,513,327.5,31,32,'COND')
- fp('the drawing board.',0,478,327.5,28,29,'GI',FEATURE_RED)
+ fp('the drawing board.',0,478,327.5,28,29,'GB',FEATURE_RED)
  y=fp(d['intro'],0,439,327.5,10,12,'G',gap=10)
  for i,item in enumerate(d['items']):
   # Different kinds of paper: a short report, an exhibition prospectus, a notice.

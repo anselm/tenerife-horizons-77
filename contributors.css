@@ -6,16 +6,16 @@
 .contributed .sheet-prose{columns:2;column-gap:1.4rem;font-family:H77Roman,Georgia,serif;font-size:1.05rem;line-height:1.38;text-align:left}
 .contributed .sheet-prose p{margin:0 0 .8em;hyphens:auto;overflow-wrap:break-word}
 .contributed .sheet-prose p.first:first-letter{float:none;font-size:inherit}
-.contribution-deck{font-family:H77Roman,Georgia,serif;font-style:italic;font-size:1.13rem;line-height:1.3;margin:1.6rem 0 .5rem;border-top:1px solid;padding-top:14px}
+.contribution-deck{font-family:H77Roman,Georgia,serif;font-style:normal;font-size:1.13rem;line-height:1.3;margin:1.6rem 0 .5rem;border-top:1px solid;padding-top:14px}
 .contribution-year{font-family:H77Condensed,Impact,sans-serif;font-size:6rem;line-height:.85;color:#a32f20;margin:1rem 0 2rem}
-.contribution-word{font-family:H77Roman,Georgia,serif;font-style:italic;font-size:6.5rem;line-height:1;color:#9a3d26;margin:1rem 0}
+.contribution-word{font-family:H77Roman,Georgia,serif;font-style:normal;font-size:6.5rem;line-height:1;color:#9a3d26;margin:1rem 0}
 .contribution-stamp{font: .8rem/1.4 H77Mono,monospace;border:3px double;padding:1rem;color:#91432c;margin:1rem 0}
 .contributed.voice-es .contribution-heading{border-top:6px solid;border-bottom:2px solid;padding:12px 0 0}
 .contributed.voice-es .contribution-heading h1{font-family:H77Condensed,Impact,sans-serif;font-size:4.8rem;line-height:.95;letter-spacing:0}
-.contributed.voice-it .contribution-heading h1{font-size:2.5rem;font-style:italic}
+.contributed.voice-it .contribution-heading h1{font-size:2.5rem;font-style:normal}
 .contributed.voice-de .feature-figure{float:right;width:48%;margin:0 0 1.2rem 1.2rem}
 .contributed.voice-de .sheet-prose{columns:1}
-.contributed.voice-goodall .contribution-heading h1,.contributed.voice-cousteau .contribution-heading h1{font-weight:400;font-style:italic}
+.contributed.voice-goodall .contribution-heading h1,.contributed.voice-cousteau .contribution-heading h1{font-weight:400;font-style:normal}
 .contributed.voice-goodall .contribution-heading{border-bottom:4px double #526248;margin-bottom:22px}
 .contributed.voice-maathai .contribution-year{color:#526248}
 .contributed.voice-sun .contribution-heading{background:#e9b52c;padding:18px 14px 1px;margin-bottom:24px}
@@ -23,7 +23,7 @@
 .contributed.voice-credit .contribution-heading{border:2px solid #91432c;padding:12px;margin-bottom:24px}
 .contributed.voice-credit .contribution-heading h1{color:#91432c;font-size:3.4rem}
 .contributed.voice-gilliam .contribution-heading h1{font-family:H77Bookman,Georgia,serif;font-size:3.1rem;letter-spacing:-.045em}
-.contribution-continuation{font:italic 2rem/1.07 H77Roman,Georgia,serif;margin:0 0 24px;letter-spacing:-.025em;text-transform:none}
+.contribution-continuation{font:normal 2rem/1.07 H77Roman,Georgia,serif;margin:0 0 24px;letter-spacing:-.025em;text-transform:none}
 .contributed.voice-fr{color:#203c79}
 .contributed .feature-figure{margin:1.4rem 0}
 .contributed .feature-figure img{max-height:none;width:100%;height:auto}
@@ -44,7 +44,7 @@
 .contributed .panorama-window h1{position:absolute;top:7%;left:8%;right:8%;font:700 clamp(2.7rem,4.6vw,5.2rem)/.9 H77Roman,Georgia,serif;letter-spacing:-.04em;color:#203c79;margin:0;text-transform:none}
 .panorama-copy{position:absolute;bottom:5%;left:8%;right:8%;font:1rem/1.22 H77Roman,Georgia,serif;color:#26231e;margin:0}
 .panorama-film h1{font-weight:400!important;color:#26231e!important;font-size:clamp(2.2rem,3.6vw,4rem)!important;right:22%!important}
-.panorama-film .panorama-copy{bottom:12%;right:38%;font-style:italic;font-size:1.5rem}
+.panorama-film .panorama-copy{bottom:12%;right:38%;font-style:normal;font-size:1.5rem}
 @media(min-width:1100px){.mag-spread:has(.panorama-page){gap:0}.mag-spread:has(.panorama-page) .panorama-page{align-self:stretch}}
 @media(max-width:760px){.contributed .sheet-prose{columns:1}.contributed .contribution-heading h1{font-size:2.6rem}.contribution-word{font-size:4.5rem}.contributed.voice-de .feature-figure{float:none;width:100%;margin:1rem 0}.contributed .panorama-window h1{font-size:2.5rem}.panorama-copy{font-size:.84rem}.panorama-film .panorama-copy{font-size:1.1rem}}
 

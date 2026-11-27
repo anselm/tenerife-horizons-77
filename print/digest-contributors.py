@@ -35,9 +35,9 @@ def draw_panorama(s):
   fp(a['body'][side],0,62,327.5,9.2,11.5,gap=0)
  else:
   if side==0:
-   fp('The plan<br/><i>has tenants.</i>',0,520,275,36,35,'G',FEATURE_BLACK)
+   fp('The plan<br/>has tenants.',0,520,275,36,35,'G',FEATURE_BLACK)
    fp('FILM DESK / A MARGINAL DRAWING',0,431,270,6.8,9,'MONO')
-   fp('Allow room<br/>for the people.',0,122,168,19,22,'GI')
+   fp('Allow room<br/>for the people.',0,122,168,19,22,'GB')
   else:
    C.setFillColor(CREAM);C.rect(132,0,195,34,fill=1,stroke=0)
    fp('LÁMINA / A MUNICIPALITY OF DRAWERS,\nBALCONIES & UNFORESEEN INHABITANTS'.replace('\n','<br/>'),140,25,180,6.3,8,'MONO')
@@ -199,7 +199,7 @@ def draw_drago_photo():
 def draw_letters_leaf():
  contribution_frame();a=D['editionInserts']['afterword-continued']
  y=fp('CORRESPONDANCE',0,530,327.5,8,10,'MONO',FEATURE_RED,gap=24)
- y=fp(a['title'],0,y,327.5,34,36,'GI',gap=27)
+ y=fp(a['title'],0,y,327.5,34,36,'GB',gap=27)
  for i,p in enumerate(a['body']):
   y=fp(p,18 if i%2 else 0,y,300,10.4,13.7,'G',gap=15)
  C.restoreState()

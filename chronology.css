@@ -3,7 +3,7 @@
 .chronology-heading{border-top:7px solid #25231e;padding-top:10px;position:relative}
 .chronology-label{font: .65rem H77Mono,monospace;letter-spacing:.06em}
 .chronology-heading h1{font:4.8rem/.87 H77Condensed,Impact,sans-serif;letter-spacing:-.025em;text-transform:none;margin:18px 0 15px}
-.chronology-heading h1 em{font:italic 4.6rem/.9 H77Roman,Georgia,serif;color:#93462f}
+.chronology-heading h1 em{font:normal 4.6rem/.9 H77Roman,Georgia,serif;color:#93462f}
 .chronology-intro{font:1rem/1.25 H77Roman,Georgia,serif;max-width:32em;margin:0 0 18px}
 .chronology-slip{position:relative;padding:8px 9px;margin:0 0 9px;background:#f2e8cd;border-left:1px solid #8b8168;box-shadow:1px 1px 0 #aea48f}
 .chronology-slip:nth-of-type(3n){background:#fbf5e4;border:1px solid #aba18c;box-shadow:none}
@@ -24,7 +24,7 @@
 .chronology-stack .chronology-date{font-size:.75rem}
 .chronology-stack .chronology-slip p{font-size:1.1rem;line-height:1.22}
 .chronology-heading h1.chronology-year{font-size:7rem;margin-bottom:4px}
-.chronology-subhead{font:italic 1.8rem/1 H77Roman,Georgia,serif;margin:0 0 20px}
+.chronology-subhead{font:normal 1.8rem/1 H77Roman,Georgia,serif;margin:0 0 20px}
 .chronology-1 .chronology-slip:nth-of-type(3){border-top:4px double #93462f;margin-top:24px}
 
 .plans-page .chronology-heading h1{font-size:3.7rem}

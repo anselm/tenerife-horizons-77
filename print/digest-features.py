@@ -89,7 +89,7 @@ def fslips(key,top,rows=None):
 def fhead(a,d,font,size):
  y=fp(d['label'],0,530,327.5,7.1,9,'AB',gap=15)
  y=fp('<br/>'.join(d['lines']),0,y,327.5,size,size*.91,font,FEATURE_BLUE if a['id']=='below' else FEATURE_BLACK,gap=18)
- y=fp(a['subtitle'],0,y,310,12.3,15.2,'GI',gap=12)
+ y=fp(a['subtitle'],0,y,310,12.3,15.2,'G',gap=12)
  return fp(a['author'],0,y,327.5,6.8,9,'A',gap=17)
 
 def draw_feature(s):
@@ -170,8 +170,8 @@ def draw_feature(s):
 def draw_clarke():
  C.saveState();C.translate(44,76);C.scale(1.6,1.6)
  a=D['clarkeLeaf'];y=fp('BETWEEN SESSIONS / COLOMBO — TENERIFE',0,530,327.5,7,9,'AB',RUST,gap=25)
- y=fp('Another island,<br/><i>another horizon.</i>',0,y,327.5,33,34,'G',gap=20)
- y=fp(a['deck'],0,y,327.5,12,15,'GI',gap=22)
+ y=fp('Another island,<br/>another horizon.',0,y,327.5,33,34,'G',gap=20)
+ y=fp(a['deck'],0,y,327.5,12,15,'G',gap=22)
  frule(y+7)
  y=fcols(a['body'],y-6,size=9.4,leading=12.2)
  y=fp(a['note'],0,y-22,327.5,14,18,'GI',RUST)

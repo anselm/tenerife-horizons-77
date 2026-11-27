@@ -49,3 +49,7 @@
  .voice-de .title-slip{font-size:.9em}
  .assembly-kitchen-desk .desk-masthead{font-size:1.55rem}
 }
+
+/* Upright heading typography also covers the older reading views and small decks. */
+:is(h1,h2,h3,h4,h5,h6),:is(h1,h2,h3,h4,h5,h6) :is(i,em),
+.reader-subtitle,.world-heading em,.alexander-revelation{font-style:normal!important}
